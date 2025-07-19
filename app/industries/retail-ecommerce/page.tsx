@@ -26,9 +26,23 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Retail & E-commerce AI Solutions | Confer Solutions",
+  title: "AI-Driven Retail & E-commerce Solutions | Confer Solutions AI",
   description:
-    "AI-Driven Retail & E-commerce Solutions. Revolutionizing customer experiences with intelligent automation and personalized commerce.",
+    "Transform retail operations with AI-powered content generation, production support, and vendor intelligence. Reduce costs by 85% with 24/7 automation.",
+  keywords: [
+    "retail AI",
+    "e-commerce automation",
+    "AI content generation",
+    "vendor intelligence",
+    "retail automation",
+    "marketplace AI",
+  ],
+  openGraph: {
+    title: "AI-Driven Retail & E-commerce Solutions | Confer Solutions AI",
+    description:
+      "Transform retail operations with AI-powered content generation, production support, and vendor intelligence. Reduce costs by 85% with 24/7 automation.",
+    type: "website",
+  },
 }
 
 export default function RetailEcommercePage() {
@@ -505,6 +519,20 @@ export default function RetailEcommercePage() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Confer Solutions AI",
+            description:
+              "AI-powered business solutions specializing in autonomous mortgage banking and business automation",
+            url: "https://confersolutions.ai",
+          }),
+        }}
+      />
     </div>
   )
 }

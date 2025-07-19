@@ -11,35 +11,50 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Confer Solutions | AI-Powered Financial Solutions",
-    template: "%s | Confer Solutions",
+    default: "Confer Solutions AI - Autonomous AI Mortgage Banking & Business Automation",
+    template: "%s | Confer Solutions AI",
   },
   description:
-    "Cutting-edge AI solutions for financial services, empowering businesses with intelligent automation and data-driven insights.",
-  keywords: ["AI", "fintech", "financial services", "automation", "machine learning", "artificial intelligence"],
-  authors: [{ name: "Confer Solutions" }],
-  creator: "Confer Solutions",
+    "Transform your mortgage operations with AI agents that automate underwriting, compliance, and customer service. 99.7% accuracy, 85% time reduction, 24/7 operations.",
+  keywords: [
+    "AI mortgage banking",
+    "autonomous underwriting",
+    "mortgage automation",
+    "AI agents",
+    "fintech",
+    "business automation",
+    "artificial intelligence",
+  ],
+  authors: [{ name: "Confer Solutions AI" }],
+  creator: "Confer Solutions AI",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://confersolutions.ai",
-    title: "Confer Solutions | AI-Powered Financial Solutions",
+    title: "Confer Solutions AI - Autonomous AI Mortgage Banking & Business Automation",
     description:
-      "Cutting-edge AI solutions for financial services, empowering businesses with intelligent automation and data-driven insights.",
-    siteName: "Confer Solutions",
+      "Transform your mortgage operations with AI agents that automate underwriting, compliance, and customer service. 99.7% accuracy, 85% time reduction, 24/7 operations.",
+    siteName: "Confer Solutions AI",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Confer Solutions | AI-Powered Financial Solutions",
+    title: "Confer Solutions AI - Autonomous AI Mortgage Banking & Business Automation",
     description:
-      "Cutting-edge AI solutions for financial services, empowering businesses with intelligent automation and data-driven insights.",
+      "Transform your mortgage operations with AI agents that automate underwriting, compliance, and customer service. 99.7% accuracy, 85% time reduction, 24/7 operations.",
     creator: "@confersolutions",
   },
   robots: {
     index: true,
     follow: true,
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -49,6 +64,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Confer Solutions AI",
+              description:
+                "AI-powered business solutions specializing in autonomous mortgage banking and business automation",
+              url: "https://confersolutions.ai",
+            }),
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <ScrollToTop />

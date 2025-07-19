@@ -25,9 +25,22 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Healthcare AI Innovation | Confer Solutions",
+  title: "AI Healthcare Solutions | Confer Solutions AI",
   description:
     "AI-Powered Healthcare Innovation. Advancing patient care through intelligent automation, research collaboration, and clinical decision support.",
+  keywords: [
+    "healthcare AI",
+    "clinical decision support",
+    "medical research AI",
+    "healthcare automation",
+    "HIPAA compliant AI",
+  ],
+  openGraph: {
+    title: "AI Healthcare Solutions | Confer Solutions AI",
+    description:
+      "AI-Powered Healthcare Innovation. Advancing patient care through intelligent automation, research collaboration, and clinical decision support.",
+    type: "website",
+  },
 }
 
 export default function HealthcarePage() {
@@ -577,6 +590,20 @@ export default function HealthcarePage() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Confer Solutions AI",
+            description:
+              "AI-powered business solutions specializing in autonomous mortgage banking and business automation",
+            url: "https://confersolutions.ai",
+          }),
+        }}
+      />
     </div>
   )
 }

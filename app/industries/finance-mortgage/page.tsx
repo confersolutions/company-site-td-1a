@@ -20,9 +20,23 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "AI-Powered Finance & Mortgage Solutions | Confer Solutions",
+  title: "AI-Powered Finance & Mortgage Solutions | Confer Solutions AI",
   description:
-    "Transforming mortgage banking with cutting-edge AI agents and autonomous processing. Advanced underwriting, compliance, and document intelligence.",
+    "Revolutionize mortgage banking with AI agents for underwriting, compliance, and document processing. LP/DU/GUS integration, TRID compliance, 99.7% accuracy.",
+  keywords: [
+    "mortgage AI",
+    "automated underwriting",
+    "TRID compliance",
+    "LP DU GUS integration",
+    "mortgage automation",
+    "financial AI",
+  ],
+  openGraph: {
+    title: "AI-Powered Finance & Mortgage Solutions | Confer Solutions AI",
+    description:
+      "Revolutionize mortgage banking with AI agents for underwriting, compliance, and document processing. LP/DU/GUS integration, TRID compliance, 99.7% accuracy.",
+    type: "website",
+  },
 }
 
 export default function FinanceMortgagePage() {
@@ -499,6 +513,20 @@ export default function FinanceMortgagePage() {
           </div>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Confer Solutions AI",
+            description:
+              "AI-powered business solutions specializing in autonomous mortgage banking and business automation",
+            url: "https://confersolutions.ai",
+          }),
+        }}
+      />
     </div>
   )
 }

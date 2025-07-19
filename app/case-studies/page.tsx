@@ -21,13 +21,19 @@ import {
   Clock,
   Target,
   Award,
-  Sparkles,
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Case Studies | Confer Solutions AI - Real Results, Real Impact",
+  title: "AI Success Stories & Case Studies | Confer Solutions AI",
   description:
-    "Discover how our AI solutions have transformed businesses across industries, delivering measurable outcomes and operational excellence. 50+ successful deployments, $10M+ cost savings.",
+    "Real-world AI implementations delivering measurable results. See how we reduced copywriting teams by 85% and automated production support 24/7.",
+  keywords: ["AI case studies", "automation success stories", "AI implementation", "business transformation", "AI ROI"],
+  openGraph: {
+    title: "AI Success Stories & Case Studies | Confer Solutions AI",
+    description:
+      "Real-world AI implementations delivering measurable results. See how we reduced copywriting teams by 85% and automated production support 24/7.",
+    type: "website",
+  },
 }
 
 export default function CaseStudiesPage() {
@@ -61,7 +67,7 @@ export default function CaseStudiesPage() {
       tags: ["Operational Efficiency", "Automation Success"],
       completionDate: "2024",
       clientSize: "Enterprise",
-      comingSoon: true,
+      comingSoon: false,
     },
     {
       id: "dynamic-seo-optimization",
@@ -370,59 +376,41 @@ export default function CaseStudiesPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
-              Success by Industry
+              Industry Success Stories
             </h2>
-            <p className="text-xl text-muted-foreground">Quick overview of our impact across different sectors</p>
+            <p className="text-xl text-muted-foreground">
+              Discover how our AI solutions have transformed different industries
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industryOverview.map((industry, index) => (
-              <Card key={index} className="border-0 bg-gradient-to-br from-background to-secondary/20">
-                <CardHeader className="text-center pb-4">
-                  <div
-                    className={`w-16 h-16 rounded-full ${industry.color} flex items-center justify-center mx-auto mb-4 text-white`}
-                  >
-                    {industry.icon}
+            {industryOverview.map((industry) => (
+              <Card key={industry.industry} className="border-0 bg-gradient-to-br from-background to-secondary/20">
+                <CardHeader className="pb-4">
+                  <div className="flex items-start justify-between mb-4">
+                    <div
+                      className={`w-12 h-12 rounded-full ${industry.color} flex items-center justify-center text-white`}
+                    >
+                      {industry.icon}
+                    </div>
+                    <Badge variant="outline" className="text-xs">
+                      {industry.industry}
+                    </Badge>
                   </div>
-                  <CardTitle className="text-xl">{industry.industry}</CardTitle>
+                  <CardTitle className="text-xl font-bold leading-tight">{industry.industry}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {industry.solutions.map((solution, solutionIndex) => (
-                      <li key={solutionIndex} className="text-sm text-muted-foreground flex items-center">
-                        <Sparkles className="h-3 w-3 mr-2 text-fintech-500" />
+
+                <CardContent className="space-y-4">
+                  <div className="flex flex-wrap gap-1">
+                    {industry.solutions.map((solution) => (
+                      <Badge key={solution} variant="secondary" className="text-xs">
                         {solution}
-                      </li>
+                      </Badge>
                     ))}
-                  </ul>
+                  </div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-700 dark:to-fintech-900">
-        <div className="container mx-auto text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Create Your Own Success Story?</h2>
-            <p className="text-xl text-fintech-100 mb-8">
-              Join leading companies who have transformed their operations with our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ConsultationButton size="lg" className="px-8 py-3 bg-white text-fintech-600 hover:bg-fintech-50">
-                Schedule Consultation
-              </ConsultationButton>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-3 border-white text-white hover:bg-white hover:text-fintech-600 bg-transparent"
-              >
-                Download Case Study Collection
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
           </div>
         </div>
       </section>
