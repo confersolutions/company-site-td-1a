@@ -51,6 +51,44 @@ export function Header() {
                 Home
               </Link>
 
+              {/* Industries Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => toggleDropdown("industries")}
+                  className="flex items-center text-foreground/80 hover:text-foreground transition-colors focus:outline-none"
+                >
+                  Industries
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                {activeDropdown === "industries" && (
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-md shadow-lg z-50">
+                    <div className="py-2">
+                      <Link
+                        href="/industries/finance-mortgage"
+                        className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
+                        onClick={closeDropdowns}
+                      >
+                        Finance & Mortgage
+                      </Link>
+                      <Link
+                        href="/industries/retail-ecommerce"
+                        className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
+                        onClick={closeDropdowns}
+                      >
+                        Retail & E-commerce
+                      </Link>
+                      <Link
+                        href="/industries/healthcare"
+                        className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
+                        onClick={closeDropdowns}
+                      >
+                        Healthcare
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {/* Our AI Agents Dropdown */}
               <div className="relative">
                 <button
@@ -258,6 +296,31 @@ export function Header() {
               <Link href="/" className="text-foreground/80 hover:text-foreground transition-colors py-2">
                 Home
               </Link>
+
+              {/* Mobile Industries Menu */}
+              <div className="py-2">
+                <div className="text-foreground/80 font-medium mb-2">Industries</div>
+                <div className="pl-4 space-y-2">
+                  <Link
+                    href="/industries/finance-mortgage"
+                    className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                  >
+                    Finance & Mortgage
+                  </Link>
+                  <Link
+                    href="/industries/retail-ecommerce"
+                    className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                  >
+                    Retail & E-commerce
+                  </Link>
+                  <Link
+                    href="/industries/healthcare"
+                    className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                  >
+                    Healthcare
+                  </Link>
+                </div>
+              </div>
 
               {/* Mobile AI Agents Menu */}
               <div className="py-2">
