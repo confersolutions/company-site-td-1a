@@ -1,65 +1,217 @@
-import { TrendingUp, Target, Shield, Zap } from "lucide-react"
+"use client"
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { ConsultationButton } from "@/components/consultation-button"
+import { Zap, Target, Shield, TrendingUp, ArrowRight, Clock, Users, BarChart3, Sparkles } from "lucide-react"
 import Image from "next/image"
 
 export function WhyConferSection() {
   const benefits = [
     {
-      icon: <Zap className="h-10 w-10 text-fintech-600" />,
-      title: "Automation",
-      description:
-        "Streamline operations and reduce manual tasks with intelligent automation powered by cutting-edge AI technology.",
+      icon: <Zap className="h-8 w-8 text-fintech-500" />,
+      title: "Lightning-Fast Automation",
+      description: "Deploy AI solutions that work 24/7, processing thousands of tasks in minutes instead of hours.",
+      metrics: "95% faster processing",
       image: "/placeholder.jpg",
     },
     {
-      icon: <Target className="h-10 w-10 text-fintech-600" />,
-      title: "Accuracy",
-      description:
-        "Enhance decision-making with precise data analysis and insights, minimizing errors and improving outcomes.",
+      icon: <Target className="h-8 w-8 text-fintech-500" />,
+      title: "Precision Accuracy",
+      description: "Machine learning models trained on your data deliver consistent, error-free results every time.",
+      metrics: "99.7% accuracy rate",
       image: "/placeholder.jpg",
     },
     {
-      icon: <Shield className="h-10 w-10 text-fintech-600" />,
-      title: "Compliance",
-      description:
-        "Stay ahead of regulatory requirements with AI-powered compliance monitoring and risk assessment tools.",
+      icon: <Shield className="h-8 w-8 text-fintech-500" />,
+      title: "Enterprise-Grade Compliance",
+      description: "Built-in regulatory compliance and audit trails ensure your operations meet industry standards.",
+      metrics: "100% compliance record",
       image: "/placeholder.jpg",
     },
     {
-      icon: <TrendingUp className="h-10 w-10 text-fintech-600" />,
-      title: "Speed",
-      description:
-        "Accelerate processes and response times, delivering faster service to your customers and stakeholders.",
+      icon: <TrendingUp className="h-8 w-8 text-fintech-500" />,
+      title: "Exponential Speed Gains",
+      description: "Transform weeks of manual work into minutes of automated processing with intelligent workflows.",
+      metrics: "10x productivity boost",
       image: "/placeholder.jpg",
     },
   ]
 
+  const successMetrics = [
+    { value: "$8.5M+", label: "Cost Savings", description: "Delivered to clients" },
+    { value: "95%", label: "Automation Rate", description: "Average across projects" },
+    { value: "50+", label: "Successful Deployments", description: "Enterprise implementations" },
+    { value: "99.8%", label: "Uptime", description: "System reliability" },
+  ]
+
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-background to-fintech-50/30 dark:to-fintech-950/30">
+      <div className="container mx-auto">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Why Top Companies Choose Confer Inc. for AI Powered Solutions
+          <Badge variant="outline" className="mb-6 px-4 py-2 text-sm font-medium">
+            Why Choose Confer Solutions
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
+            The AI Advantage That Transforms Business
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Our AI-powered solutions deliver tangible benefits that transform how financial institutions operate and
-            serve their customers.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            We don't just build AI solutions—we architect intelligent systems that revolutionize how your business
+            operates, delivering measurable results from day one.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Success Metrics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          {successMetrics.map((metric, index) => (
+            <Card
+              key={index}
+              className="text-center border-0 bg-gradient-to-br from-background to-fintech-50/50 dark:to-fintech-950/50"
+            >
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-fintech-600 dark:text-fintech-400 mb-2">{metric.value}</div>
+                <div className="font-semibold mb-1">{metric.label}</div>
+                <div className="text-sm text-muted-foreground">{metric.description}</div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Benefits Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover">
-              <div className="relative h-48 w-full">
-                <Image src={benefit.image || "/placeholder.svg"} alt={benefit.title} fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 bg-white/90 p-2 rounded-lg">{benefit.icon}</div>
+            <Card
+              key={index}
+              className="group border-0 bg-gradient-to-br from-background to-fintech-50/30 dark:to-fintech-950/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <CardHeader className="pb-4">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-16 h-16 bg-fintech-100 dark:bg-fintech-900 rounded-2xl flex items-center justify-center group-hover:bg-fintech-500 group-hover:text-white transition-colors">
+                    {benefit.icon}
+                  </div>
+                  <Badge
+                    variant="secondary"
+                    className="bg-fintech-100 text-fintech-700 dark:bg-fintech-900 dark:text-fintech-300"
+                  >
+                    {benefit.metrics}
+                  </Badge>
+                </div>
+                <CardTitle className="text-2xl font-bold mb-3 group-hover:text-fintech-600 dark:group-hover:text-fintech-400 transition-colors">
+                  {benefit.title}
+                </CardTitle>
+                <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <div className="relative h-48 rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src={benefit.image || "/placeholder.svg"}
+                    alt={benefit.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
+                <div className="flex items-center text-fintech-600 dark:text-fintech-400 font-medium group-hover:text-fintech-700 dark:group-hover:text-fintech-300 transition-colors">
+                  <span>Learn more</span>
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Key Differentiators */}
+        <Card className="border-0 bg-gradient-to-r from-fintech-50 to-fintech-100 dark:from-fintech-950/50 dark:to-fintech-900/50 mb-16">
+          <CardContent className="p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-fintech-700 dark:text-fintech-300">What Sets Us Apart</h3>
+              <p className="text-muted-foreground">
+                Our unique approach combines cutting-edge AI with deep industry expertise
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-fintech-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-semibold mb-2">Rapid Deployment</h4>
+                <p className="text-sm text-muted-foreground">From concept to production in weeks, not months</p>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
+
+              <div className="text-center">
+                <div className="w-12 h-12 bg-fintech-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-semibold mb-2">Expert Team</h4>
+                <p className="text-sm text-muted-foreground">AI specialists with deep domain knowledge</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 bg-fintech-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BarChart3 className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-semibold mb-2">Proven Results</h4>
+                <p className="text-sm text-muted-foreground">Track record of measurable business impact</p>
               </div>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Process Overview */}
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
+            Our Proven Process
+          </h3>
+          <p className="text-xl text-muted-foreground mb-8">
+            From discovery to deployment, we ensure success at every step
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+          {[
+            {
+              step: "01",
+              title: "Discovery",
+              description: "Deep dive into your business challenges and opportunities",
+            },
+            { step: "02", title: "Design", description: "Custom AI architecture tailored to your specific needs" },
+            { step: "03", title: "Deploy", description: "Rapid implementation with minimal business disruption" },
+            { step: "04", title: "Optimize", description: "Continuous improvement and performance monitoring" },
+          ].map((phase, index) => (
+            <Card
+              key={index}
+              className="text-center border-0 bg-gradient-to-br from-background to-fintech-50/30 dark:to-fintech-950/30"
+            >
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold text-fintech-500 mb-3">{phase.step}</div>
+                <h4 className="font-semibold mb-2">{phase.title}</h4>
+                <p className="text-sm text-muted-foreground">{phase.description}</p>
+              </CardContent>
+            </Card>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>
+            <p className="text-muted-foreground mb-8">
+              Join industry leaders who have already revolutionized their operations with our AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ConsultationButton size="lg" className="px-8 py-3">
+                <Sparkles className="mr-2 h-5 w-5" />
+                Get Started Today
+              </ConsultationButton>
+              <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent">
+                View Case Studies
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
