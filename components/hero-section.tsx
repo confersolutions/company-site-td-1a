@@ -79,7 +79,7 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 relative">
             <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src="/placeholder.jpg"
                 alt="Financial technology dashboard"
                 fill
                 className="object-cover"
