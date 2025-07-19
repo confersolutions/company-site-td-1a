@@ -48,7 +48,12 @@ export function CaseStudiesSection() {
         <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="relative h-64 lg:h-auto">
-              <Image src="/placeholder.jpg" alt="Business team analyzing data" fill className="object-cover" />
+              <Image
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Business team analyzing data"
+                fill
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-r from-fintech-900/70 via-fintech-800/50 to-transparent"></div>
               <div className="absolute inset-0 flex items-center p-8">
                 <div className="max-w-md">

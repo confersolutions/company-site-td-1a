@@ -10,7 +10,7 @@ export function SolutionsSection() {
       title: "AI Mortgage Agent",
       description:
         "Automate mortgage processing with AI agents that handle applications, verification, and customer inquiries.",
-      image: "/placeholder.jpg",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-blue-600 to-indigo-700",
       link: "/solutions/ai-mortgage-agent",
     },
@@ -19,7 +19,8 @@ export function SolutionsSection() {
       title: "RAG Chatbot",
       description:
         "Deploy intelligent chatbots with retrieval-augmented generation for accurate, context-aware customer support.",
-      image: "/placeholder.jpg",
+      image:
+        "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-purple-600 to-indigo-700",
       link: "/solutions/rag-chatbot",
     },
@@ -28,7 +29,7 @@ export function SolutionsSection() {
       title: "Document Processing",
       description:
         "Extract, analyze, and process financial documents including LE (Loan Estimate) and CD (Closing Disclosure) documents with high accuracy using advanced OCR and NLP technology.",
-      image: "/placeholder.jpg",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-cyan-600 to-blue-700",
       link: "/solutions/document-processing",
     },
@@ -36,7 +37,8 @@ export function SolutionsSection() {
       icon: <BarChart3 className="h-8 w-8 text-white" />,
       title: "Risk Assessment",
       description: "Identify and mitigate financial risks with predictive analytics and machine learning models.",
-      image: "/placeholder.jpg",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-green-600 to-emerald-700",
       link: "/solutions/risk-assessment",
     },
@@ -44,7 +46,7 @@ export function SolutionsSection() {
       icon: <Database className="h-8 w-8 text-white" />,
       title: "Data Analytics",
       description: "Transform raw financial data into actionable insights with AI-powered analytics and visualization.",
-      image: "/placeholder.jpg",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-amber-600 to-orange-700",
       link: "/solutions/data-analytics",
     },
@@ -53,7 +55,7 @@ export function SolutionsSection() {
       title: "Fraud Detection",
       description:
         "Detect and prevent fraudulent activities in real-time with behavioral analysis and anomaly detection.",
-      image: "/placeholder.jpg",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-red-600 to-rose-700",
       link: "/solutions/fraud-detection",
     },

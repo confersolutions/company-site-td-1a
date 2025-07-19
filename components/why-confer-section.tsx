@@ -4,30 +4,38 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ConsultationButton } from "@/components/consultation-button"
-import { CheckCircle, Zap, Shield, TrendingUp, ArrowRight, Clock, Users, BarChart3, Sparkles } from "lucide-react"
+import { Zap, Target, Shield, TrendingUp, ArrowRight, Clock, Users, BarChart3, Sparkles } from "lucide-react"
 import Image from "next/image"
 
 export function WhyConferSection() {
   const benefits = [
     {
-      icon: <Zap className="h-8 w-8 text-primary" />,
-      title: "Lightning Fast Automation",
-      description: "Reduce processing time by up to 85% with intelligent automation that works 24/7.",
+      icon: <Zap className="h-8 w-8 text-fintech-500" />,
+      title: "Lightning-Fast Automation",
+      description: "Deploy AI solutions that work 24/7, processing thousands of tasks in minutes instead of hours.",
+      metrics: "95% faster processing",
+      image: "/placeholder.jpg",
     },
     {
-      icon: <CheckCircle className="h-8 w-8 text-primary" />,
-      title: "Unmatched Accuracy",
-      description: "Achieve 99.7% accuracy rates with AI models trained on millions of financial documents.",
+      icon: <Target className="h-8 w-8 text-fintech-500" />,
+      title: "Precision Accuracy",
+      description: "Machine learning models trained on your data deliver consistent, error-free results every time.",
+      metrics: "99.7% accuracy rate",
+      image: "/placeholder.jpg",
     },
     {
-      icon: <Shield className="h-8 w-8 text-primary" />,
-      title: "Enterprise-Grade Security",
-      description: "Bank-level security with SOC 2 compliance and end-to-end encryption.",
+      icon: <Shield className="h-8 w-8 text-fintech-500" />,
+      title: "Enterprise-Grade Compliance",
+      description: "Built-in regulatory compliance and audit trails ensure your operations meet industry standards.",
+      metrics: "100% compliance record",
+      image: "/placeholder.jpg",
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-primary" />,
-      title: "Measurable ROI",
-      description: "See immediate returns with reduced operational costs and increased efficiency.",
+      icon: <TrendingUp className="h-8 w-8 text-fintech-500" />,
+      title: "Exponential Speed Gains",
+      description: "Transform weeks of manual work into minutes of automated processing with intelligent workflows.",
+      metrics: "10x productivity boost",
+      image: "/placeholder.jpg",
     },
   ]
 
@@ -39,19 +47,23 @@ export function WhyConferSection() {
   ]
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-background to-fintech-50/30 dark:to-fintech-950/30">
+      <div className="container mx-auto">
+        {/* Header */}
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-6 px-4 py-2 text-sm font-medium">
             Why Choose Confer Solutions
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">The AI Advantage That Transforms Business</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
+            The AI Advantage That Transforms Business
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We don't just build AI solutions—we architect intelligent systems that revolutionize how your business
             operates, delivering measurable results from day one.
           </p>
         </div>
 
+        {/* Success Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {successMetrics.map((metric, index) => (
             <Card
@@ -67,6 +79,7 @@ export function WhyConferSection() {
           ))}
         </div>
 
+        {/* Benefits Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {benefits.map((benefit, index) => (
             <Card
@@ -82,7 +95,7 @@ export function WhyConferSection() {
                     variant="secondary"
                     className="bg-fintech-100 text-fintech-700 dark:bg-fintech-900 dark:text-fintech-300"
                   >
-                    {/* Placeholder for metrics, as they are not present in the updated code */}
+                    {benefit.metrics}
                   </Badge>
                 </div>
                 <CardTitle className="text-2xl font-bold mb-3 group-hover:text-fintech-600 dark:group-hover:text-fintech-400 transition-colors">
@@ -93,7 +106,7 @@ export function WhyConferSection() {
               <CardContent className="pt-0">
                 <div className="relative h-48 rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/placeholder.jpg"
+                    src={benefit.image || "/placeholder.svg"}
                     alt={benefit.title}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -109,6 +122,7 @@ export function WhyConferSection() {
           ))}
         </div>
 
+        {/* Key Differentiators */}
         <Card className="border-0 bg-gradient-to-r from-fintech-50 to-fintech-100 dark:from-fintech-950/50 dark:to-fintech-900/50 mb-16">
           <CardContent className="p-8">
             <div className="text-center mb-8">
@@ -146,6 +160,7 @@ export function WhyConferSection() {
           </CardContent>
         </Card>
 
+        {/* Process Overview */}
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
             Our Proven Process
@@ -179,6 +194,7 @@ export function WhyConferSection() {
           ))}
         </div>
 
+        {/* CTA */}
         <div className="text-center">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with AI?</h3>

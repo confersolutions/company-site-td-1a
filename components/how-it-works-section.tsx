@@ -10,19 +10,22 @@ export function HowItWorksSection() {
       number: "01",
       title: "Consultation & Assessment",
       description: "We analyze your current processes and identify opportunities for AI-powered optimization.",
-      image: "/placeholder.jpg",
+      image:
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       number: "02",
       title: "Custom Solution Development",
       description: "Our team develops tailored AI solutions that integrate seamlessly with your existing systems.",
-      image: "/placeholder.jpg",
+      image:
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       number: "03",
       title: "Implementation & Continuous Improvement",
       description: "We deploy, monitor, and continuously improve your AI solutions to maximize ROI.",
-      image: "/placeholder.jpg",
+      image:
+        "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
   ]
 
