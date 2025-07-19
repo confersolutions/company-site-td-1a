@@ -240,7 +240,7 @@ export function Header() {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 {activeDropdown === "about" && (
-                  <div className="absolute top-full left-0 mt-2 w-40 bg-background border border-border rounded-md shadow-lg z-50">
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-md shadow-lg z-50">
                     <div className="py-2">
                       <Link
                         href="/about"
@@ -248,6 +248,20 @@ export function Header() {
                         onClick={closeDropdowns}
                       >
                         About Us
+                      </Link>
+                      <Link
+                        href="/case-studies"
+                        className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
+                        onClick={closeDropdowns}
+                      >
+                        Case Studies
+                      </Link>
+                      <Link
+                        href="/about/pricing"
+                        className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
+                        onClick={closeDropdowns}
+                      >
+                        Pricing
                       </Link>
                       <Link
                         href="/blog"
@@ -262,6 +276,20 @@ export function Header() {
                         onClick={closeDropdowns}
                       >
                         Newsroom
+                      </Link>
+                      <Link
+                        href="/ai-news"
+                        className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
+                        onClick={closeDropdowns}
+                      >
+                        AI News
+                      </Link>
+                      <Link
+                        href="/login"
+                        className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
+                        onClick={closeDropdowns}
+                      >
+                        Login
                       </Link>
                     </div>
                   </div>
@@ -433,6 +461,18 @@ export function Header() {
                   <Link href="/about" className="block text-foreground/60 hover:text-foreground transition-colors py-1">
                     About Us
                   </Link>
+                  <Link
+                    href="/case-studies"
+                    className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                  >
+                    Case Studies
+                  </Link>
+                  <Link
+                    href="/about/pricing"
+                    className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                  >
+                    Pricing
+                  </Link>
                   <Link href="/blog" className="block text-foreground/60 hover:text-foreground transition-colors py-1">
                     Blog
                   </Link>
@@ -441,6 +481,15 @@ export function Header() {
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Newsroom
+                  </Link>
+                  <Link
+                    href="/ai-news"
+                    className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                  >
+                    AI News
+                  </Link>
+                  <Link href="/login" className="block text-foreground/60 hover:text-foreground transition-colors py-1">
+                    Login
                   </Link>
                 </div>
               </div>
