@@ -114,7 +114,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/autonomous-mortgage-bank"
+                  href="/ai-agents/autonomous-mortgage-bank"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Autonomous AI Bank
@@ -127,13 +127,13 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-6">Our AI Agents</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/sales-agent" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/ai-agents/sales-agent" className="text-muted-foreground hover:text-foreground transition-colors">
                   Sales Agent
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/processing-agent"
+                  href="/ai-agents/processing-agent"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Processing Agent
@@ -141,32 +141,32 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/underwriting-agent"
+                  href="/ai-agents/underwriting-agent"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Underwriting Agent
                 </Link>
               </li>
               <li>
-                <Link href="/closing-agent" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/ai-agents/closing-agent" className="text-muted-foreground hover:text-foreground transition-colors">
                   Closing Agent
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/post-closing-agent"
+                  href="/ai-agents/post-closing-agent"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Post-Closing Agent
                 </Link>
               </li>
               <li>
-                <Link href="/voice-agent" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/ai-agents/voice-agent" className="text-muted-foreground hover:text-foreground transition-colors">
                   Voice Agent
                 </Link>
               </li>
               <li>
-                <Link href="/worker-agent" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/ai-agents/worker-agent" className="text-muted-foreground hover:text-foreground transition-colors">
                   Worker Agent
                 </Link>
               </li>
@@ -205,16 +205,16 @@ export function Footer() {
               Copyright © 2025 | All Rights Reserved Confer Inc
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/about/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/eula" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/about/eula" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 End User License Agreement
               </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/about/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/disclaimers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/about/disclaimers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Disclaimers
               </Link>
             </div>

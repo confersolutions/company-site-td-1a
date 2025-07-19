@@ -64,7 +64,7 @@ export function Header() {
                   <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-md shadow-lg z-50">
                     <div className="py-2">
                       <Link
-                        href="/autonomous-mortgage-bank"
+                        href="/ai-agents/autonomous-mortgage-bank"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
@@ -72,49 +72,49 @@ export function Header() {
                       </Link>
                       <div className="border-t border-border my-1"></div>
                       <Link
-                        href="/sales-agent"
+                        href="/ai-agents/sales-agent"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
                         Sales Agent
                       </Link>
                       <Link
-                        href="/processing-agent"
+                        href="/ai-agents/processing-agent"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
                         Processing Agent
                       </Link>
                       <Link
-                        href="/underwriting-agent"
+                        href="/ai-agents/underwriting-agent"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
                         Underwriting Agent
                       </Link>
                       <Link
-                        href="/closing-agent"
+                        href="/ai-agents/closing-agent"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
                         Closing Agent
                       </Link>
                       <Link
-                        href="/post-closing-agent"
+                        href="/ai-agents/post-closing-agent"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
                         Post-Closing Agent
                       </Link>
                       <Link
-                        href="/voice-agent"
+                        href="/ai-agents/voice-agent"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
                         Voice Agent
                       </Link>
                       <Link
-                        href="/worker-agent"
+                        href="/ai-agents/worker-agent"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
@@ -219,7 +219,7 @@ export function Header() {
                         Blog
                       </Link>
                       <Link
-                        href="/newsroom"
+                        href="/about/newsroom"
                         className="block px-4 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-accent transition-colors"
                         onClick={closeDropdowns}
                       >
@@ -230,7 +230,7 @@ export function Header() {
                 )}
               </div>
 
-              <Link href="/contact" className="text-foreground/80 hover:text-foreground transition-colors">
+              <Link href="/about/contact" className="text-foreground/80 hover:text-foreground transition-colors">
                 Contact
               </Link>
             </nav>
@@ -264,49 +264,49 @@ export function Header() {
                 <div className="text-foreground/80 font-medium mb-2">Our AI Agents</div>
                 <div className="pl-4 space-y-2">
                   <Link
-                    href="/autonomous-mortgage-bank"
+                    href="/ai-agents/autonomous-mortgage-bank"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Autonomous AI Mortgage Bank
                   </Link>
                   <Link
-                    href="/sales-agent"
+                    href="/ai-agents/sales-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Sales Agent
                   </Link>
                   <Link
-                    href="/processing-agent"
+                    href="/ai-agents/processing-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Processing Agent
                   </Link>
                   <Link
-                    href="/underwriting-agent"
+                    href="/ai-agents/underwriting-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Underwriting Agent
                   </Link>
                   <Link
-                    href="/closing-agent"
+                    href="/ai-agents/closing-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Closing Agent
                   </Link>
                   <Link
-                    href="/post-closing-agent"
+                    href="/ai-agents/post-closing-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Post-Closing Agent
                   </Link>
                   <Link
-                    href="/voice-agent"
+                    href="/ai-agents/voice-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Voice Agent
                   </Link>
                   <Link
-                    href="/worker-agent"
+                    href="/ai-agents/worker-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Worker Agent
@@ -374,7 +374,7 @@ export function Header() {
                     Blog
                   </Link>
                   <Link
-                    href="/newsroom"
+                    href="/about/newsroom"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
                   >
                     Newsroom
@@ -382,7 +382,7 @@ export function Header() {
                 </div>
               </div>
 
-              <Link href="/contact" className="text-foreground/80 hover:text-foreground transition-colors py-2">
+              <Link href="/about/contact" className="text-foreground/80 hover:text-foreground transition-colors py-2">
                 Contact
               </Link>
               <ConsultationButton className="w-full mt-2">Get a Demo</ConsultationButton>

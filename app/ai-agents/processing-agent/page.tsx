@@ -652,13 +652,13 @@ export default function ProcessingAgentPage() {
 
                 <p className="text-xs text-slate-500 text-center">
                   By submitting this form, you agree to our{" "}
-                  <Link href="/privacy" className="text-cyan-600 hover:underline">
-                    Privacy Policy
-                  </Link>{" "}
+                                  <Link href="/about/privacy" className="text-cyan-600 hover:underline">
+                  Privacy Policy
+                </Link>{" "}
                   and{" "}
-                  <Link href="/terms" className="text-cyan-600 hover:underline">
-                    Terms of Service
-                  </Link>
+                                  <Link href="/about/terms" className="text-cyan-600 hover:underline">
+                  Terms of Service
+                </Link>
                   .
                 </p>
               </form>
