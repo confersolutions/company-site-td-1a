@@ -8,8 +8,7 @@ export function WhyConferEnhanced() {
       title: "Automation",
       description:
         "Streamline operations and reduce manual tasks with intelligent automation powered by cutting-edge AI technology.",
-      image:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/placeholder.jpg",
       stats: "85% reduction in manual processing",
       gradient: "from-blue-600 to-indigo-700",
     },
@@ -18,8 +17,7 @@ export function WhyConferEnhanced() {
       title: "Accuracy",
       description:
         "Enhance decision-making with precise data analysis and insights, minimizing errors and improving outcomes.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/placeholder.jpg",
       stats: "99.5% accuracy rate",
       gradient: "from-green-600 to-emerald-700",
     },
@@ -28,8 +26,7 @@ export function WhyConferEnhanced() {
       title: "Compliance",
       description:
         "Stay ahead of regulatory requirements with AI-powered compliance monitoring and risk assessment tools.",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/placeholder.jpg",
       stats: "100% regulatory compliance",
       gradient: "from-purple-600 to-indigo-700",
     },
@@ -38,7 +35,7 @@ export function WhyConferEnhanced() {
       title: "Speed",
       description:
         "Accelerate processes and response times, delivering faster service to your customers and stakeholders.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/placeholder.jpg",
       stats: "10x faster processing",
       gradient: "from-amber-600 to-orange-700",
     },

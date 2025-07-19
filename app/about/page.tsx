@@ -52,9 +52,6 @@ export default function AboutPage() {
               <ConsultationButton size="lg" className="px-8 py-3">
                 Get in Touch
               </ConsultationButton>
-              <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent" asChild>
-                <Link href="#our-story">Learn Our Story</Link>
-              </Button>
             </div>
           </div>
         </div>
@@ -717,14 +714,6 @@ export default function AboutPage() {
               <ConsultationButton size="lg" className="px-8 py-3 bg-white text-fintech-600 hover:bg-fintech-50">
                 Schedule a Consultation
               </ConsultationButton>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-3 border-white text-white hover:bg-white hover:text-fintech-600 bg-transparent"
-                asChild
-              >
-                <Link href="/about/contact">Contact Our Team</Link>
-              </Button>
             </div>
           </div>
         </div>
