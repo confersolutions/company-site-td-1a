@@ -11,7 +11,7 @@
 
 ### Quick Fix Steps
 1. **Fix API Route Build Issue**:
-   ```typescript
+   \`\`\`typescript
    // In app/api/send-email/route.ts
    // MOVE Resend initialization INSIDE the POST handler:
    export async function POST(request: NextRequest) {
@@ -24,15 +24,15 @@
      const resend = new Resend(process.env.RESEND_API_KEY)
      // ... rest of handler
    }
-   ```
+   \`\`\`
 
 2. **Coolify Environment Variables**:
-   ```bash
+   \`\`\`bash
    NIXPACKS_NODE_VERSION=20
    NODE_ENV=production
    NEXT_TELEMETRY_DISABLED=1
    RESEND_API_KEY=your_actual_api_key
-   ```
+   \`\`\`
 
 3. **Required Files**:
    - `.nvmrc` with `20` (forces Node.js 20)
@@ -54,27 +54,27 @@
 
 ### Docker Configuration
 1. **Use Node.js 20 (not Alpine)**:
-   ```dockerfile
+   \`\`\`dockerfile
    FROM node:20 AS base
-   ```
+   \`\`\`
 
 2. **Handle Build-Time Environment**:
-   ```dockerfile
+   \`\`\`dockerfile
    # Build phase - API key not needed during build anymore
    ENV NODE_ENV=production
    ENV NEXT_TELEMETRY_DISABLED=1
-   ```
+   \`\`\`
 
 3. **Explicit File Copying**:
-   ```dockerfile
+   \`\`\`dockerfile
    COPY package*.json ./
    RUN npm ci --omit=dev
    COPY . .
    RUN npm run build
-   ```
+   \`\`\`
 
 ### Docker Build Commands
-```bash
+\`\`\`bash
 # Clear cache and build
 docker system prune -f
 docker build -t confer-website . --no-cache
@@ -83,7 +83,7 @@ docker build -t confer-website . --no-cache
 docker run -d -p 3001:3000 --name confer-test confer-website
 curl http://localhost:3001
 docker stop confer-test && docker rm confer-test
-```
+\`\`\`
 
 ## Key Lessons Learned
 
@@ -128,18 +128,18 @@ docker stop confer-test && docker rm confer-test
 ## Environment Variables Reference
 
 ### Production (Coolify)
-```bash
+\`\`\`bash
 NIXPACKS_NODE_VERSION=20
 NODE_ENV=production
 NEXT_TELEMETRY_DISABLED=1
 RESEND_API_KEY=re_eGqjWKQh_LjshaPK9gFxaHuT7FJAe44Js
-```
+\`\`\`
 
 ### Local Development (.env.local)
-```bash
+\`\`\`bash
 RESEND_API_KEY=re_eGqjWKQh_LjshaPK9gFxaHuT7FJAe44Js
 NEXT_TELEMETRY_DISABLED=1
-```
+\`\`\`
 
 ## Success Indicators
 - ✅ Build completes without "Failed to collect page data" errors
@@ -148,4 +148,4 @@ NEXT_TELEMETRY_DISABLED=1
 - ✅ Local development unaffected
 - ✅ No need to modify working application code
 
-**Remember**: The goal is deployment without changing working application code. Environment and configuration issues should be solved at the deployment layer, not the application layer. 
+**Remember**: The goal is deployment without changing working application code. Environment and configuration issues should be solved at the deployment layer, not the application layer.
