@@ -372,4 +372,76 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Industry Success Stories */}
-      <section className="py-16 px-4 sm:px-6 lg:px\
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
+              Industry Expertise
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Specialized solutions tailored to industry-specific challenges
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {industryOverview.map((industry, index) => (
+              <Card key={index} className="text-center border-0 bg-gradient-to-br from-background to-secondary/20">
+                <CardContent className="p-6">
+                  <div
+                    className={`w-16 h-16 rounded-full ${industry.color} flex items-center justify-center text-white mx-auto mb-4`}
+                  >
+                    {industry.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">{industry.industry}</h3>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    {industry.solutions.map((solution, idx) => (
+                      <li key={idx}>• {solution}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-fintech-600 to-fintech-800 text-white">
+        <div className="container mx-auto text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join the companies already benefiting from AI-powered automation and intelligence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <ConsultationButton size="lg" className="bg-white text-fintech-600 hover:bg-gray-100">
+                Schedule a Consultation
+              </ConsultationButton>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-fintech-600 bg-transparent"
+              >
+                Explore Solutions
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Confer Solutions AI",
+            description:
+              "AI-powered business solutions specializing in autonomous mortgage banking and business automation",
+            url: "https://confersolutions.ai",
+          }),
+        }}
+      />
+    </div>
+  )
+}
