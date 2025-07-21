@@ -73,7 +73,6 @@ export function FlowiseChat() {
             "What AI solutions does Confer offer?",
             "How can AI transform my business?",
             "I need a custom AI application",
-            "Tell me about your pricing",
             "Can you integrate with my existing systems?"
           ],
           starterPromptFontSize: 14,
