@@ -1,4 +1,4 @@
-'use client'
+avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'            avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'          titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',          customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg','use client'
 import dynamic from 'next/dynamic'
 
 const BubbleChat = dynamic(() => import('flowise-embed-react').then(mod => ({ default: mod.BubbleChat })), {
