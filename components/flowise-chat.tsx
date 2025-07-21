@@ -40,7 +40,7 @@ export function FlowiseChat() {
         },
         disclaimer: {
           title: 'AI Consultation Chat',
-          message: "Connect with our AI experts. By continuing, you agree to our <a target=\"_blank\" href=\"https://confersolutions.ai/privacy\" style=\"color: #3b82f6; text-decoration: underline;\">Privacy Policy</a>",
+          message: "Connect with our AI experts (AI Chatbot). By continuing, you agree to our <a target=\"_blank\" href=\"https://confersolutions.ai/privacy\" style=\"color: #3b82f6; text-decoration: underline;\">Privacy Policy</a>",
           textColor: '#1a1a1a',
           buttonColor: '#1a1a1a',
           buttonText: 'Start Consultation',
@@ -63,8 +63,8 @@ export function FlowiseChat() {
           showAgentMessages: true,
           title: 'Confer AI Assistant',
           titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-          welcomeMessage: 'Hello! I\'m here to help you explore AI solutions for your business. What challenges are you looking to solve?',
-          errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at hello@confersolutions.ai',
+          welcomeMessage: 'Hi! I'm an AI chatbot here to help with questions about our AI solutions. How can I assist you today?',
+          errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at info@confersolutions.ai',
           backgroundColor: '#ffffff',
           height: 600,
           width: 380,
@@ -72,8 +72,6 @@ export function FlowiseChat() {
           starterPrompts: [
             "What AI solutions does Confer offer?",
             "How can AI transform my business?",
-            "I need a custom AI application",
-            "Tell me about your pricing",
             "Can you integrate with my existing systems?"
           ],
           starterPromptFontSize: 14,
@@ -113,7 +111,7 @@ export function FlowiseChat() {
           footer: {
             textColor: '#64748b',
             text: 'Powered by',
-            company: 'Confer Solutions',
+            company: 'Confer Solutions AI',
             companyLink: 'https://confersolutions.ai'
           }
         }
