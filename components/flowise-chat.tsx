@@ -1,5 +1,4 @@
 'use client'
-
 import dynamic from 'next/dynamic'
 
 const BubbleChat = dynamic(() => import('flowise-embed-react').then(mod => ({ default: mod.BubbleChat })), {
@@ -19,93 +18,102 @@ export function FlowiseChat() {
       }}
       theme={{    
         button: {
-          backgroundColor: '#3B81F6',
-          right: 20,
-          bottom: 20,
-          size: 48,
+          backgroundColor: '#1a1a1a', // More professional dark color
+          right: 24,
+          bottom: 24,
+          size: 56, // Slightly larger for better visibility
           dragAndDrop: true,
-          iconColor: 'white',
-          customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+          iconColor: '#ffffff',
+          customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/brain-js.svg', // AI-themed icon
           autoWindowOpen: {
-            autoOpen: true,
-            openDelay: 2,
+            autoOpen: false, // Less intrusive - let users choose when to engage
+            openDelay: 5, // If auto-open enabled, wait longer
             autoOpenOnMobile: false
           }
         },
         tooltip: {
           showTooltip: true,
-          tooltipMessage: 'Hi There 👋!',
-          tooltipBackgroundColor: 'black',
-          tooltipTextColor: 'white',
-          tooltipFontSize: 16
+          tooltipMessage: 'Need AI solutions? Let\'s chat! 🤖',
+          tooltipBackgroundColor: '#1a1a1a',
+          tooltipTextColor: '#ffffff',
+          tooltipFontSize: 14
         },
         disclaimer: {
-          title: 'Disclaimer',
-          message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
-          textColor: 'black',
-          buttonColor: '#3b82f6',
-          buttonText: 'Start Chatting',
-          buttonTextColor: 'white',
-          blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
-          backgroundColor: 'white'
+          title: 'AI Consultation Chat',
+          message: "Connect with our AI experts. By continuing, you agree to our <a target=\"_blank\" href=\"https://confersolutions.ai/privacy\" style=\"color: #3b82f6; text-decoration: underline;\">Privacy Policy</a>",
+          textColor: '#1a1a1a',
+          buttonColor: '#1a1a1a',
+          buttonText: 'Start Consultation',
+          buttonTextColor: '#ffffff',
+          blurredBackgroundColor: 'rgba(0, 0, 0, 0.6)',
+          backgroundColor: '#ffffff'
         },
-        customCSS: ``,
+        customCSS: `
+          .bubble-button {
+            box-shadow: 0 8px 25px rgba(26, 26, 26, 0.15);
+            transition: all 0.3s ease;
+          }
+          .bubble-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(26, 26, 26, 0.25);
+          }
+        `,
         chatWindow: {
           showTitle: true,
           showAgentMessages: true,
-          title: 'Flowise Bot',
-          titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-          welcomeMessage: 'Hello! This is custom welcome message',
-          errorMessage: 'This is a custom error message',
+          title: 'Confer AI Assistant',
+          titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/brain-js.svg',
+          welcomeMessage: 'Hello! I\'m here to help you explore AI solutions for your business. What challenges are you looking to solve?',
+          errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at hello@confersolutions.ai',
           backgroundColor: '#ffffff',
-          backgroundImage: 'enter image path or link',
-          height: 700,
-          width: 400,
-          fontSize: 16,
+          height: 600,
+          width: 380,
+          fontSize: 15,
           starterPrompts: [
-            "Can Confer help me with my AI needs?",
-            "How can I help me?"
+            "What AI solutions does Confer offer?",
+            "How can AI transform my business?",
+            "I need a custom AI application",
+            "Tell me about your pricing",
+            "Can you integrate with my existing systems?"
           ],
-          starterPromptFontSize: 15,
+          starterPromptFontSize: 14,
           clearChatOnReload: false,
-          sourceDocsTitle: 'Sources:',
+          sourceDocsTitle: 'References:',
           renderHTML: true,
           botMessage: {
-            backgroundColor: '#f7f8ff',
-            textColor: '#303235',
+            backgroundColor: '#f8fafc',
+            textColor: '#1e293b',
             showAvatar: true,
-            avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+            avatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/brain-js.svg'
           },
           userMessage: {
-            backgroundColor: '#3B81F6',
+            backgroundColor: '#1a1a1a',
             textColor: '#ffffff',
             showAvatar: true,
-            avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
+            avatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/user.svg'
           },
           textInput: {
-            placeholder: 'How can I help you?',
+            placeholder: 'Describe your AI needs...',
             backgroundColor: '#ffffff',
-            textColor: '#303235',
-            sendButtonColor: '#3B81F6',
-            maxChars: 100,
-            maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 100 characters.',
-            autoFocus: true,
-            sendMessageSound: true,
-            sendSoundLocation: 'send_message.mp3',
-            receiveMessageSound: true,
-            receiveSoundLocation: 'receive_message.mp3'
+            textColor: '#1e293b',
+            sendButtonColor: '#1a1a1a',
+            maxChars: 500, // Allow longer, more detailed questions
+            maxCharsWarningMessage: 'Please keep your message under 500 characters for the best response.',
+            autoFocus: false, // Less intrusive
+            sendMessageSound: false, // Professional - no sounds
+            receiveMessageSound: false
           },
           feedback: {
-            color: '#303235'
+            color: '#64748b'
           },
           dateTimeToggle: {
             date: true,
             time: true
           },
           footer: {
-            textColor: '#303235',
+            textColor: '#64748b',
             text: 'Powered by',
-            company: 'Confer Solutions AI',
+            company: 'Confer Solutions',
             companyLink: 'https://confersolutions.ai'
           }
         }
