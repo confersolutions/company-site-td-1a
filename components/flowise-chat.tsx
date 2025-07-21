@@ -24,7 +24,7 @@ export function FlowiseChat() {
           size: 56, // Slightly larger for better visibility
           dragAndDrop: true,
           iconColor: '#ffffff',
-          customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/brain-js.svg', // AI-themed icon
+          customIconSrc: 'https://cdn.jsdelivr.net/npm/lucide@latest/icons/bot.svg',
           autoWindowOpen: {
             autoOpen: false, // Less intrusive - let users choose when to engage
             openDelay: 5, // If auto-open enabled, wait longer
@@ -62,7 +62,7 @@ export function FlowiseChat() {
           showTitle: true,
           showAgentMessages: true,
           title: 'Confer AI Assistant',
-          titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/brain-js.svg',
+          titleAvatarSrc: 'https://cdn.jsdelivr.net/npm/lucide@latest/icons/bot.svg',
           welcomeMessage: 'Hello! I\'m here to help you explore AI solutions for your business. What challenges are you looking to solve?',
           errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at hello@confersolutions.ai',
           backgroundColor: '#ffffff',
@@ -84,13 +84,13 @@ export function FlowiseChat() {
             backgroundColor: '#f8fafc',
             textColor: '#1e293b',
             showAvatar: true,
-            avatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/brain-js.svg'
+            avatarSrc: 'https://cdn.jsdelivr.net/npm/lucide@latest/icons/bot.svg'
           },
           userMessage: {
             backgroundColor: '#1a1a1a',
             textColor: '#ffffff',
             showAvatar: true,
-            avatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/user.svg'
+            avatarSrc: 'https://cdn.jsdelivr.net/npm/lucide@latest/icons/user.svg'
           },
           textInput: {
             placeholder: 'Describe your AI needs...',
