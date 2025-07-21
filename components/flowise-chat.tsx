@@ -68,16 +68,14 @@ export function FlowiseChat() {
           title: 'Confer AI Assistant',
           titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
           welcomeMessage: 'Hello! I\'m here to help you explore AI solutions for your business. What challenges are you looking to solve?',
-          errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at hello@confersolutions.ai',
+          errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at info@confersolutions.ai',
           backgroundColor: '#ffffff',
           height: 600,
           width: 380,
           fontSize: 15,
           starterPrompts: [
             "What AI solutions does Confer offer?",
-            "How can AI transform my business?",
             "I need a custom AI application",
-            "Tell me about your pricing",
             "Can you integrate with my existing systems?"
           ],
           starterPromptFontSize: 14,
