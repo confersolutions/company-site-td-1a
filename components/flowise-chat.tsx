@@ -24,7 +24,7 @@ export function FlowiseChat() {
           size: 56, // Slightly larger for better visibility
           dragAndDrop: true,
           iconColor: '#ffffff',
-          customIconSrc: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSJ3aGl0ZSI+🤖PC90ZXh0Pgo8L3N2Zz4K',
+
           autoWindowOpen: {
             autoOpen: false, // Less intrusive - let users choose when to engage
             openDelay: 5, // If auto-open enabled, wait longer
@@ -62,7 +62,7 @@ export function FlowiseChat() {
           showTitle: true,
           showAgentMessages: true,
           title: 'Confer AI Assistant',
-          titleAvatarSrc: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7wn6SAUEMvdGV4dD4KPC9zdmc+Cg==',
+
           welcomeMessage: 'Hello! I\'m here to help you explore AI solutions for your business. What challenges are you looking to solve?',
           errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at hello@confersolutions.ai',
           backgroundColor: '#ffffff',
@@ -73,6 +73,7 @@ export function FlowiseChat() {
             "What AI solutions does Confer offer?",
             "How can AI transform my business?",
             "I need a custom AI application",
+            "Tell me about your pricing",
             "Can you integrate with my existing systems?"
           ],
           starterPromptFontSize: 14,
@@ -83,13 +84,13 @@ export function FlowiseChat() {
             backgroundColor: '#f8fafc',
             textColor: '#1e293b',
             showAvatar: true,
-            avatarSrc: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7wn6SAUEMvdGV4dD4KPC9zdmc+Cg=='
+
           },
           userMessage: {
             backgroundColor: '#1a1a1a',
             textColor: '#ffffff',
             showAvatar: true,
-            avatarSrc: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj7wn5GKUEM/dGV4dD4KPC9zdmc+Cg=='
+
           },
           textInput: {
             placeholder: 'Describe your AI needs...',
