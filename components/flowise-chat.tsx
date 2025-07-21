@@ -1,4 +1,4 @@
-avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'            avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'          titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',          customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg','use client'
+'use client'
 import dynamic from 'next/dynamic'
 
 const BubbleChat = dynamic(() => import('flowise-embed-react').then(mod => ({ default: mod.BubbleChat })), {
@@ -18,16 +18,16 @@ export function FlowiseChat() {
       }}
       theme={{    
         button: {
-          backgroundColor: '#1a1a1a', // More professional dark color
+          backgroundColor: '#1a1a1a',
           right: 24,
           bottom: 24,
-          size: 56, // Slightly larger for better visibility
+          size: 56,
           dragAndDrop: true,
           iconColor: '#ffffff',
-
+          customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
           autoWindowOpen: {
-            autoOpen: false, // Less intrusive - let users choose when to engage
-            openDelay: 5, // If auto-open enabled, wait longer
+            autoOpen: false,
+            openDelay: 5,
             autoOpenOnMobile: false
           }
         },
@@ -62,7 +62,7 @@ export function FlowiseChat() {
           showTitle: true,
           showAgentMessages: true,
           title: 'Confer AI Assistant',
-
+          titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
           welcomeMessage: 'Hello! I\'m here to help you explore AI solutions for your business. What challenges are you looking to solve?',
           errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at hello@confersolutions.ai',
           backgroundColor: '#ffffff',
@@ -84,23 +84,23 @@ export function FlowiseChat() {
             backgroundColor: '#f8fafc',
             textColor: '#1e293b',
             showAvatar: true,
-
+            avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
           },
           userMessage: {
             backgroundColor: '#1a1a1a',
             textColor: '#ffffff',
             showAvatar: true,
-
+            avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
           },
           textInput: {
             placeholder: 'Describe your AI needs...',
             backgroundColor: '#ffffff',
             textColor: '#1e293b',
             sendButtonColor: '#1a1a1a',
-            maxChars: 500, // Allow longer, more detailed questions
+            maxChars: 500,
             maxCharsWarningMessage: 'Please keep your message under 500 characters for the best response.',
-            autoFocus: false, // Less intrusive
-            sendMessageSound: false, // Professional - no sounds
+            autoFocus: false,
+            sendMessageSound: false,
             receiveMessageSound: false
           },
           feedback: {
