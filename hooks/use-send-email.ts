@@ -55,3 +55,5 @@ export function useSendEmail(): UseSendEmailReturn {
 
   return { sendEmail, isLoading, error }
 }
+
+export default useSendEmail;

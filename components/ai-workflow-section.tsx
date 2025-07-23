@@ -64,3 +64,5 @@ export function AIWorkflowSection() {
     </section>
   )
 }
+
+export default AIWorkflowSection;

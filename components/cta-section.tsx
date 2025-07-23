@@ -20,3 +20,5 @@ export function CTASection({ className, ...props }: CTASectionProps) {
     </section>
   )
 }
+
+export default CTASection;

@@ -163,3 +163,5 @@ export function ConsultationModal({
     </div>
   )
 }
+
+export default ConsultationModal;

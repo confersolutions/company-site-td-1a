@@ -115,3 +115,5 @@ export function HowItWorksSection() {
     </section>
   )
 }
+
+export default HowItWorksSection;

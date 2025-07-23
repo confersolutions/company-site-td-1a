@@ -365,3 +365,5 @@ export function WhyConferEnhanced() {
     </section>
   )
 }
+
+export default WhyConferEnhanced;
