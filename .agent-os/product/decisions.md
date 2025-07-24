@@ -40,4 +40,43 @@
 ## Dependency Management
 - **Package overrides** used to resolve React 19 compatibility issues
 - **flowise-embed-react** integrated with custom configuration
-- **Testing libraries** properly configured for React 19 compatibility 
+- **Testing libraries** properly configured for React 19 compatibility
+
+## V0 Deployment & Flowise Integration Learnings
+
+### V0 Platform Compatibility Challenges
+- **JSX Import Errors:** V0's environment has strict constraints on React component imports
+- **React Version Conflicts:** `flowise-embed-react` package requires React 18, but project uses React 19
+- **Dependency Resolution:** V0's build system rejects packages with peer dependency conflicts
+- **Module Resolution:** ES modules and dynamic imports behave differently on V0 vs local/VPS environments
+
+### Flowise Integration Solution
+- **CDN Approach:** Using `flowise-embed` web.js from CDN instead of npm package
+- **Dynamic Script Loading:** Loading Flowise via `document.createElement('script')` with module type
+- **Runtime Initialization:** Initializing chat component after script loads using `window.FlowiseChatbot`
+- **Fallback Strategy:** Iframe approach as backup when React components fail
+
+### Implementation Details
+```javascript
+// CDN Loading Strategy
+const script = document.createElement('script')
+script.type = 'module'
+script.innerHTML = `
+  import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+  window.FlowiseChatbot = Chatbot
+`
+document.head.appendChild(script)
+
+// Runtime Initialization
+chatInstanceRef.current = window.FlowiseChatbot.init({
+  chatflowid: "5440e748-320e-4b27-8849-bed8e9f924f9",
+  apiHost: "https://flowise.confersolutions.ai",
+  theme: { /* custom configuration */ }
+})
+```
+
+### Key Learnings
+- **Platform-Specific Solutions:** Different deployment platforms require different integration approaches
+- **CDN Reliability:** CDN approach provides better compatibility across platforms
+- **Dynamic Loading:** Runtime script injection bypasses build-time dependency issues
+- **Branding Consistency:** Custom theme configuration ensures consistent branding across platforms
