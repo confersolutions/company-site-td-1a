@@ -82,9 +82,9 @@ export function ConsultationModal({
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999] p-4 overflow-y-auto">
-      <div className="bg-background rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto my-8">
+      <div className="bg-background text-foreground rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto my-8">
         <div className="flex items-center justify-between p-6 border-b">
-          <h2 className="text-xl font-semibold">{title}</h2>
+          <h2 className="text-xl font-semibold text-left">{title}</h2>
           <Button variant="ghost" size="icon" onClick={onClose}>
             <X className="h-4 w-4" />
           </Button>

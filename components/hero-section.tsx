@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { ConsultationButton } from "@/components/consultation-button"
+import Link from "next/link"
 
 export function HeroSection() {
   const backgroundRef = useRef<HTMLDivElement>(null)
@@ -69,8 +70,9 @@ export function HeroSection() {
                   size="lg"
                   variant="outline"
                   className="bg-white/10 text-white border-white/20 hover:bg-white/20 text-base"
+                  asChild
                 >
-                  Explore Solutions
+                  <Link href="/solutions">Explore Solutions</Link>
                 </Button>
               </div>
             </div>

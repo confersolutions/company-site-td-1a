@@ -62,7 +62,7 @@ export function SolutionsSection() {
   ]
 
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="pt-8 pb-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Solutions</h2>
@@ -99,7 +99,9 @@ export function SolutionsSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg">View All Solutions</Button>
+          <Button size="lg" asChild>
+            <Link href="/solutions">View All Solutions</Link>
+          </Button>
         </div>
       </div>
     </section>

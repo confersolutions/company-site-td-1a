@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { ConsultationButton } from "@/components/consultation-button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Shield, FileText, TrendingUp, Phone, Users, AlertTriangle, Target } from "lucide-react"
+import PostClosingCTA from "@/components/post-closing-cta"
 
 export const metadata: Metadata = {
   title: "Post-Closing Agent | Automated Compliance & Quality Assurance | Confer Solutions AI",
@@ -10,6 +11,33 @@ export const metadata: Metadata = {
 }
 
 export default function PostClosingAgentPage() {
+  // Add state for CTA form
+  // Remove useState and useSendEmail imports
+  // const [ctaSubmitted, setCtaSubmitted] = useState(false)
+  // const [ctaLoading, setCtaLoading] = useState(false)
+  // const [ctaError, setCtaError] = useState<string | null>(null)
+  // const { sendEmail } = useSendEmail()
+
+  // async function handleCtaSubmit(e: React.FormEvent<HTMLFormElement>) {
+  //   e.preventDefault()
+  //   setCtaLoading(true)
+  //   setCtaError(null)
+  //   const form = e.currentTarget
+  //   const name = (form.elements.namedItem("name") as HTMLInputElement)?.value || ""
+  //   const email = (form.elements.namedItem("email") as HTMLInputElement)?.value || ""
+  //   const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value || ""
+  //   // Compose a message for post-closing compliance demo
+  //   const message = `Request for Post-Closing Compliance Demo\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`
+  //   const subject = "Post-Closing Compliance Demo Request"
+  //   const success = await sendEmail(name, email, message, subject, "consultation")
+  //   setCtaLoading(false)
+  //   if (success) {
+  //     setCtaSubmitted(true)
+  //   } else {
+  //     setCtaError("There was a problem sending your request. Please try again.")
+  //   }
+  // }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Hero Section */}
@@ -26,9 +54,6 @@ export default function PostClosingAgentPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConsultationButton size="lg">Schedule Demo</ConsultationButton>
-                <ConsultationButton variant="outline" size="lg">
-                  View Audit Checklist
-                </ConsultationButton>
               </div>
             </div>
             {/* Interactive Post-Closing Compliance Dashboard */}
@@ -408,27 +433,8 @@ export default function PostClosingAgentPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-fintech-600 text-white">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Bulletproof Your Compliance?</h2>
-          <p className="text-xl mb-8 opacity-90">
-            See how Post-Closing Agent can ensure perfect compliance while reducing audit overhead.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ConsultationButton size="lg" variant="secondary">
-              Schedule Compliance Demo
-            </ConsultationButton>
-            <ConsultationButton
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-fintech-600"
-            >
-              Download Audit Guide
-            </ConsultationButton>
-          </div>
-        </div>
-      </section>
+      {/* CTA Section: Ready to Bulletproof Your Post-Closing Compliance? */}
+      <PostClosingCTA />
     </div>
   )
 }

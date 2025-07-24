@@ -38,9 +38,6 @@ export default function VoiceAgentPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConsultationButton size="lg">Schedule Demo</ConsultationButton>
-                <ConsultationButton variant="outline" size="lg">
-                  Hear Voice Samples
-                </ConsultationButton>
               </div>
             </div>
             {/* Interactive Voice Agent Dashboard */}
@@ -458,13 +455,6 @@ export default function VoiceAgentPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ConsultationButton size="lg" variant="secondary">
               Schedule Voice Demo
-            </ConsultationButton>
-            <ConsultationButton
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-indigo-600"
-            >
-              Hear Sample Calls
             </ConsultationButton>
           </div>
         </div>

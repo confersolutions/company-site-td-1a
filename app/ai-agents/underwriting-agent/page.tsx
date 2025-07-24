@@ -47,13 +47,6 @@ export default function UnderwritingAgentPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConsultationButton size="lg">Schedule Demo</ConsultationButton>
-                <ConsultationButton
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-white text-white bg-white/10 hover:bg-white hover:text-purple-600"
-                >
-                  View Decision Matrix
-                </ConsultationButton>
               </div>
             </div>
             {/* Interactive Underwriting Dashboard Overlay */}

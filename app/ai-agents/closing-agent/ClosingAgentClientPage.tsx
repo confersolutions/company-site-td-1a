@@ -63,13 +63,6 @@ export default function ClosingAgentClientPage() {
                 <ConsultationButton size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
                   Schedule Demo
                 </ConsultationButton>
-                <ConsultationButton
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-600"
-                >
-                  View Closing Checklist
-                </ConsultationButton>
               </div>
             </div>
             {/* Interactive Closing Coordination Dashboard */}

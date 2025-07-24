@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function ProcessingAgentPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900 text-slate-900 dark:text-white overflow-hidden">
+    <div className="min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900 text-slate-900 dark:text-white">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -75,16 +75,6 @@ export default function ProcessingAgentPage() {
                   <Brain className="w-5 h-5 mr-2" />
                   Schedule Demo
                 </ConsultationButton>
-                <Link href="/case-studies">
-                  <ConsultationButton
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-cyan-500 text-cyan-600 hover:bg-cyan-500 hover:text-white bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm"
-                  >
-                    <Workflow className="w-5 h-5 mr-2" />
-                    View Processing Workflow
-                  </ConsultationButton>
-                </Link>
               </div>
 
               {/* Key Stats */}

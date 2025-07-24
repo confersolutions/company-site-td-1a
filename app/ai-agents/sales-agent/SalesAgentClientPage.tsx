@@ -27,20 +27,31 @@ import {
   Activity,
 } from "lucide-react"
 import { useState } from "react"
+import { useSendEmail } from "@/hooks/use-send-email"
 
 export default function SalesAgentClientPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const { sendEmail } = useSendEmail()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    setIsSubmitted(true)
+    setError(null)
+    const form = e.currentTarget as HTMLFormElement
+    const name = (form.elements.namedItem("name") as HTMLInputElement)?.value || ""
+    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value || ""
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value || ""
+    const message = `Sales Agent Demo Request\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`
+    const subject = "Sales Agent Demo Request"
+    const success = await sendEmail(name, email, message, subject, "consultation")
     setIsLoading(false)
+    if (success) {
+      setIsSubmitted(true)
+    } else {
+      setError("There was a problem sending your request. Please try again.")
+    }
   }
 
   return (
@@ -78,13 +89,6 @@ export default function SalesAgentClientPage() {
                   >
                     Schedule Demo
                   </ConsultationButton>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold bg-transparent"
-                  >
-                    View ROI Calculator
-                  </Button>
                 </div>
               </div>
 
@@ -588,17 +592,20 @@ export default function SalesAgentClientPage() {
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <Input
+                    name="name"
                     placeholder="Your Name"
                     className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
                     required
                   />
                   <Input
+                    name="email"
                     placeholder="Company Email"
                     type="email"
                     className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
                     required
                   />
                   <Input
+                    name="phone"
                     placeholder="Phone Number"
                     type="tel"
                     className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
@@ -612,6 +619,7 @@ export default function SalesAgentClientPage() {
                   >
                     {isLoading ? "Submitting..." : "Schedule Demo Now"}
                   </Button>
+                  {error && <div className="text-red-200 text-sm mt-2">{error}</div>}
                 </form>
               ) : (
                 <div className="text-center py-8">

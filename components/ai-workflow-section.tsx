@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function AIWorkflowSection() {
   const workflowSteps = [
@@ -54,9 +55,11 @@ export function AIWorkflowSection() {
           </div>
 
           <div className="mt-16 text-center">
-            <Button size="lg" variant="secondary">
-              Learn More About Our Process
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/case-studies">
+                Learn More About Our Process
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>

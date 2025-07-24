@@ -26,9 +26,6 @@ export default function WorkerAgentPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConsultationButton size="lg">Schedule Demo</ConsultationButton>
-                <ConsultationButton variant="outline" size="lg">
-                  View Task Library
-                </ConsultationButton>
               </div>
             </div>
             {/* Interactive Worker Agent Dashboard */}
@@ -510,13 +507,6 @@ export default function WorkerAgentPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ConsultationButton size="lg" variant="secondary">
               Schedule Automation Demo
-            </ConsultationButton>
-            <ConsultationButton
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-fintech-600"
-            >
-              Download Task Library
             </ConsultationButton>
           </div>
         </div>
