@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { FlowiseChat } from "@/components/flowise-chat";
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
@@ -86,6 +87,7 @@ export default function RootLayout({
           <Header />
           <main className="min-h-screen pt-16 md:pt-20">{children}</main>
           <Footer />
+          <FlowiseChat />
         </ThemeProvider>
       </body>
     </html>
