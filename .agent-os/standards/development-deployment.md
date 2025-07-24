@@ -419,6 +419,62 @@ docker logs <container-name>
 - Implement rate limiting
 - Regular security scans
 
+## V0 Deployment Considerations
+
+### Platform-Specific Challenges
+- **Environment Constraints:** V0 has stricter limitations on npm packages and dependencies
+- **Build System Differences:** V0's build process differs from local/VPS environments
+- **Module Resolution:** ES modules and dynamic imports may behave differently
+- **Runtime Limitations:** Some packages that work locally may fail on V0
+
+### Flowise Integration Best Practices
+
+#### Recommended Approach: CDN Integration
+```javascript
+// ✅ Preferred: CDN approach for V0 compatibility
+const loadFlowise = async () => {
+  const script = document.createElement('script')
+  script.type = 'module'
+  script.innerHTML = `
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    window.FlowiseChatbot = Chatbot
+  `
+  document.head.appendChild(script)
+}
+```
+
+#### Alternative Approaches
+```javascript
+// ⚠️ May fail on V0: npm package approach
+import { BubbleChat } from 'flowise-embed-react'
+
+// ✅ Fallback: iframe approach
+<iframe src="https://your-flowise-instance.com/chatbot/chatflow-id" />
+```
+
+#### V0-Specific Configuration
+- **Dynamic Loading:** Use runtime script injection instead of build-time imports
+- **Error Handling:** Implement fallback strategies for failed component loads
+- **Theme Configuration:** Ensure custom branding works across platforms
+- **Testing:** Test on V0 before deploying to production
+
+### Deployment Platform Differences
+
+#### V0 Platform
+- **Pros:** Fast deployment, integrated with GitHub
+- **Cons:** Limited dependency support, strict environment constraints
+- **Best For:** Simple applications, static sites, basic integrations
+
+#### VPS/Coolify Platform
+- **Pros:** Full control, all dependencies supported, custom configurations
+- **Cons:** More complex setup, requires server management
+- **Best For:** Complex applications, custom integrations, full-stack apps
+
+#### Hybrid Approach
+- **Development:** Use VPS/Coolify for full feature testing
+- **Staging:** Test V0 compatibility before production
+- **Production:** Deploy to both platforms with platform-specific configurations
+
 ## Documentation Standards
 
 ### Required Documentation
