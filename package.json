@@ -12,10 +12,7 @@
     "test:watch": "jest --watch"
   },
   "overrides": {
-    "@testing-library/react": "^16.0.0",
-    "flowise-embed-react": {
-      "react": "^19"
-    }
+    "@testing-library/react": "^16.0.0"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -53,10 +50,9 @@
     "cmdk": "latest",
     "date-fns": "4.1.0",
     "embla-carousel-react": "latest",
-    "flowise-embed-react": "^1.0.0",
     "input-otp": "latest",
     "lucide-react": "^0.454.0",
-    "next": "15.2.4",
+    "next": "15.4.2",
     "next-themes": "latest",
     "react": "^19",
     "react-day-picker": "latest",
