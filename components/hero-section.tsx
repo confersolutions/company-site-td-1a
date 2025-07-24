@@ -27,7 +27,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-fintech-950 via-fintech-900 to-fintech-800 min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden bg-gradient-to-br from-fintech-950 via-fintech-900 to-fintech-800 flex items-start">
       {/* Abstract background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(56,128,255,0.4)_0%,rgba(0,0,0,0)_60%)]"></div>

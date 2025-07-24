@@ -28,7 +28,7 @@ export function SolutionsSection() {
       icon: <FileText className="h-8 w-8 text-white" />,
       title: "Document Processing",
       description:
-        "Extract, analyze, and process financial documents including LE (Loan Estimate) and CD (Closing Disclosure) documents with high accuracy using advanced OCR and NLP technology.",
+        "Extract, analyze, and process any document including financial documents with high accuracy using advanced OCR and NLP technology.",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-cyan-600 to-blue-700",
       link: "/solutions/document-processing",
@@ -62,7 +62,7 @@ export function SolutionsSection() {
   ]
 
   return (
-    <section className="pt-8 pb-24 bg-secondary/30">
+    <section className="pt-8 pb-12 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Solutions</h2>

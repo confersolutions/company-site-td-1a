@@ -27,7 +27,7 @@ export function AIWorkflowSection() {
   ]
 
   return (
-    <section className="py-24 bg-fintech-900 text-white">
+    <section className="pt-12 pb-12 bg-fintech-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
