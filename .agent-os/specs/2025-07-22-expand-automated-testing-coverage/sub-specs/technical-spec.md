@@ -36,4 +36,4 @@ This is the technical specification for the spec detailed in @.agent-os/specs/20
 - **@testing-library/react** - React component testing
 - **playwright** or **cypress** - E2E testing
 - **@testing-library/jest-dom** - Custom matchers for DOM assertions
-- **Justification:** These are industry-standard tools for React/Next.js projects and provide comprehensive coverage. 
+- **Justification:** These are industry-standard tools for React/Next.js projects and provide comprehensive coverage.

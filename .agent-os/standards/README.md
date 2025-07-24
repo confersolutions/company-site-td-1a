@@ -47,4 +47,4 @@ When updating these standards:
 
 ---
 
-*These standards ensure consistency across all Agent OS projects while allowing for project-specific customization.* 
+*These standards ensure consistency across all Agent OS projects while allowing for project-specific customization.*

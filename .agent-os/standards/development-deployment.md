@@ -26,7 +26,7 @@ This file is part of the Agent OS standards system. These global development and
 ### Initial Setup
 
 #### 1. Clone and Install
-```bash
+\`\`\`bash
 # Clone repository
 git clone <repository-url>
 cd <project-name>
@@ -39,11 +39,11 @@ npm install
 
 # Verify installation
 npm run build
-```
+\`\`\`
 
 #### 2. Environment Configuration
 Create `.env.local` for local development:
-```env
+\`\`\`env
 # Email Configuration (Required for forms)
 RESEND_API_KEY=your_resend_api_key
 
@@ -57,10 +57,10 @@ NEXT_PUBLIC_FLOWISE_URL=your_flowise_chat_url
 # Development Settings
 NODE_ENV=development
 NEXT_TELEMETRY_DISABLED=1
-```
+\`\`\`
 
 #### 3. Development Scripts
-```bash
+\`\`\`bash
 # Start development server
 npm run dev          # http://localhost:3000
 
@@ -77,12 +77,12 @@ npm run test:coverage # With coverage report
 
 # Lint code
 npm run lint
-```
+\`\`\`
 
 ### Development Workflow
 
 #### 1. Daily Development
-```bash
+\`\`\`bash
 # Start development
 npm run dev
 
@@ -91,10 +91,10 @@ npm run test:watch
 
 # Check for issues
 npm run lint
-```
+\`\`\`
 
 #### 2. Before Committing
-```bash
+\`\`\`bash
 # Run all tests
 npm test
 
@@ -103,10 +103,10 @@ npm run lint
 
 # Build to catch any issues
 npm run build
-```
+\`\`\`
 
 #### 3. Common Development Tasks
-```bash
+\`\`\`bash
 # Add new dependency
 npm install <package-name>
 
@@ -118,22 +118,22 @@ npm update
 
 # Check for security issues
 npm audit
-```
+\`\`\`
 
 ## Testing Strategy
 
 ### Test Structure
-```
+\`\`\`
 tests/
 ├── components/          # Component tests
 ├── integration/         # Integration tests
 ├── deployment/          # API route tests
 ├── seo/                # SEO/metadata tests
 └── setup.ts            # Test configuration
-```
+\`\`\`
 
 ### Testing Commands
-```bash
+\`\`\`bash
 # Run all tests
 npm test
 
@@ -145,7 +145,7 @@ npm run test:coverage
 
 # Watch mode for development
 npm run test:watch
-```
+\`\`\`
 
 ### Test Best Practices
 - Write tests for all new functionality
@@ -162,12 +162,12 @@ npm run test:watch
 - **TypeScript**: Strict type checking
 
 ### Pre-commit Checks
-```bash
+\`\`\`bash
 # Run before committing
 npm run lint
 npm test
 npm run build
-```
+\`\`\`
 
 ### Code Review Checklist
 - [ ] Tests pass
@@ -182,7 +182,7 @@ npm run build
 ### Container Deployment (Recommended)
 
 #### Docker Configuration
-```dockerfile
+\`\`\`dockerfile
 # Multi-stage build for optimization
 FROM node:20 AS base
 FROM base AS deps
@@ -204,10 +204,10 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 EXPOSE 3000
 CMD ["node", "server.js"]
-```
+\`\`\`
 
 #### Docker Commands
-```bash
+\`\`\`bash
 # Build image
 docker build -t <app-name> .
 
@@ -218,12 +218,12 @@ docker run -p 3000:3000 <app-name>
 docker run -d -p 3001:3000 --name test-container <app-name>
 curl http://localhost:3001
 docker stop test-container && docker rm test-container
-```
+\`\`\`
 
 ### Platform-Specific Deployment
 
 #### Vercel (Next.js Optimized)
-```bash
+\`\`\`bash
 # Install Vercel CLI
 npm i -g vercel
 
@@ -232,16 +232,16 @@ vercel
 
 # Production deploy
 vercel --prod
-```
+\`\`\`
 
 #### Netlify
-```bash
+\`\`\`bash
 # Build command
 npm run build
 
 # Publish directory
 .next/standalone
-```
+\`\`\`
 
 #### Coolify (Self-hosted)
 - **Repository**: Public GitHub repository
@@ -253,7 +253,7 @@ npm run build
 ### Environment Configuration
 
 #### Production Environment Variables
-```env
+\`\`\`env
 # Required
 NODE_ENV=production
 RESEND_API_KEY=your_production_api_key
@@ -265,10 +265,10 @@ NEXT_PUBLIC_FLOWISE_URL=your_production_flowise_url
 
 # Performance
 NEXT_TELEMETRY_DISABLED=1
-```
+\`\`\`
 
 #### Build Configuration
-```javascript
+\`\`\`javascript
 // next.config.mjs
 const nextConfig = {
   output: 'standalone',  // Required for container deployment
@@ -282,12 +282,12 @@ const nextConfig = {
     unoptimized: true,         // For static export
   },
 }
-```
+\`\`\`
 
 ## CI/CD Pipeline
 
 ### GitHub Actions Example
-```yaml
+\`\`\`yaml
 name: Deploy
 on:
   push:
@@ -306,7 +306,7 @@ jobs:
       - run: npm run build
       - name: Deploy to platform
         # Platform-specific deployment step
-```
+\`\`\`
 
 ### Deployment Checklist
 - [ ] All tests pass
@@ -319,7 +319,7 @@ jobs:
 ## Monitoring & Maintenance
 
 ### Health Checks
-```bash
+\`\`\`bash
 # Application health
 curl http://your-domain.com/api/health
 
@@ -328,7 +328,7 @@ npm run build
 
 # Test health
 npm test
-```
+\`\`\`
 
 ### Performance Monitoring
 - **Core Web Vitals**: Monitor LCP, FID, CLS
@@ -337,7 +337,7 @@ npm test
 - **Performance Budgets**: Set performance targets
 
 ### Maintenance Tasks
-```bash
+\`\`\`bash
 # Update dependencies
 npm update
 
@@ -349,14 +349,14 @@ npm audit fix
 npm cache clean --force
 rm -rf node_modules package-lock.json
 npm install
-```
+\`\`\`
 
 ## Troubleshooting
 
 ### Common Issues
 
 #### Build Failures
-```bash
+\`\`\`bash
 # Clear cache
 rm -rf .next
 npm run build
@@ -368,19 +368,19 @@ nvm use
 # Reinstall dependencies
 rm -rf node_modules package-lock.json
 npm install
-```
+\`\`\`
 
 #### Test Failures
-```bash
+\`\`\`bash
 # Clear Jest cache
 npm test -- --clearCache
 
 # Run specific failing test
 npm test -- --testNamePattern="test name"
-```
+\`\`\`
 
 #### Deployment Issues
-```bash
+\`\`\`bash
 # Check environment variables
 echo $NODE_ENV
 echo $RESEND_API_KEY
@@ -391,7 +391,7 @@ npm start
 
 # Check container logs
 docker logs <container-name>
-```
+\`\`\`
 
 ### Performance Issues
 - **Bundle Size**: Use `npm run build` to check bundle size
@@ -430,7 +430,7 @@ docker logs <container-name>
 ### Flowise Integration Best Practices
 
 #### Recommended Approach: CDN Integration
-```javascript
+\`\`\`javascript
 // ✅ Preferred: CDN approach for V0 compatibility
 const loadFlowise = async () => {
   const script = document.createElement('script')
@@ -441,16 +441,16 @@ const loadFlowise = async () => {
   `
   document.head.appendChild(script)
 }
-```
+\`\`\`
 
 #### Alternative Approaches
-```javascript
+\`\`\`javascript
 // ⚠️ May fail on V0: npm package approach
 import { BubbleChat } from 'flowise-embed-react'
 
 // ✅ Fallback: iframe approach
 <iframe src="https://your-flowise-instance.com/chatbot/chatflow-id" />
-```
+\`\`\`
 
 #### V0-Specific Configuration
 - **Dynamic Loading:** Use runtime script injection instead of build-time imports
@@ -492,4 +492,4 @@ import { BubbleChat } from 'flowise-embed-react'
 
 ---
 
-*Customize this file with your organization's specific development and deployment practices. These guidelines apply to all projects using Agent OS.* 
+*Customize this file with your organization's specific development and deployment practices. These guidelines apply to all projects using Agent OS.*

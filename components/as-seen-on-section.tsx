@@ -43,5 +43,3 @@ export function AsSeenOnSection() {
     </section>
   )
 }
-
-export default AsSeenOnSection;

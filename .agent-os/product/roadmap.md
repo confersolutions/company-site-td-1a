@@ -24,4 +24,4 @@
 - [ ] Advanced AI agent integrations
 - [ ] Real-time collaboration features
 - [ ] Mobile app development
-- [ ] Enterprise SSO and advanced authentication 
+- [ ] Enterprise SSO and advanced authentication

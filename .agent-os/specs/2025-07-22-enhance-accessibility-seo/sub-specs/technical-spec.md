@@ -32,4 +32,4 @@
 - Passes automated accessibility audits (Lighthouse, axe)
 - No critical accessibility issues in manual review
 - Improved Lighthouse SEO and accessibility scores
-- Improved Core Web Vitals metrics 
+- Improved Core Web Vitals metrics

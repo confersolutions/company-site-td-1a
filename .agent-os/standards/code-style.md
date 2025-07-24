@@ -38,7 +38,7 @@ This file is part of the Agent OS standards system. These global code style rule
 
 ### Example HTML Structure
 
-```html
+\`\`\`html
 <div class="container">
   <header class="flex flex-col space-y-2
                  md:flex-row md:space-y-0 md:space-x-4">
@@ -58,7 +58,7 @@ This file is part of the Agent OS standards system. These global code style rule
     </nav>
   </header>
 </div>
-```
+\`\`\`
 
 ## Tailwind CSS preferences
 
@@ -97,13 +97,13 @@ This file is part of the Agent OS standards system. These global code style rule
 - Keep comments concise and relevant
 
 ### Comment Format
-```ruby
+\`\`\`ruby
 # Calculate compound interest with monthly contributions
 # Uses the formula: A = P(1 + r/n)^(nt) + PMT × (((1 + r/n)^(nt) - 1) / (r/n))
 def calculate_compound_interest(principal, rate, time, monthly_payment)
   # Implementation here
 end
-```
+\`\`\`
 
 ---
 

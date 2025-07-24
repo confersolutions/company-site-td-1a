@@ -118,5 +118,3 @@ export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProp
     </div>
   )
 }
-
-export { NewsletterModal };

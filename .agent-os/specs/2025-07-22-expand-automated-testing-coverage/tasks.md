@@ -64,4 +64,4 @@ These are the tasks to be completed for the spec detailed in @.agent-os/specs/20
 - [ ] 6. Documentation
   - [ ] 6.1 Document test strategy in `.agent-os/product/tech-stack.md`
   - [ ] 6.2 Add "How to run tests" to `README.md`
-  - [ ] 6.3 Verify documentation is clear and complete 
+  - [ ] 6.3 Verify documentation is clear and complete

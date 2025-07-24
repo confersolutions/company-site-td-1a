@@ -39,4 +39,4 @@ This is the tests coverage details for the spec detailed in @.agent-os/specs/202
 
 - **Resend API:** Mock email sending
 - **External APIs:** Mock responses for integration/E2E
-- **Time-based tests:** Use fake timers for date/time logic 
+- **Time-based tests:** Use fake timers for date/time logic

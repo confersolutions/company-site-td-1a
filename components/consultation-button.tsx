@@ -33,5 +33,3 @@ export function ConsultationButton({
     </>
   )
 }
-
-export default ConsultationButton;

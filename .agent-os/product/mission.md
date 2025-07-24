@@ -30,4 +30,4 @@ To become the leading provider of autonomous AI solutions for financial services
 - 99.9% accuracy in automated decisions
 - 24/7 operational capability
 - 85% improvement in customer satisfaction
-- 60% reduction in operational costs 
+- 60% reduction in operational costs

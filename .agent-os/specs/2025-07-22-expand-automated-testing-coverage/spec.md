@@ -44,4 +44,4 @@ As a developer, I want to quickly know if my changes break anything, so that I c
 
 - Tasks: @.agent-os/specs/2025-07-22-expand-automated-testing-coverage/tasks.md
 - Technical Specification: @.agent-os/specs/2025-07-22-expand-automated-testing-coverage/sub-specs/technical-spec.md
-- Tests Specification: @.agent-os/specs/2025-07-22-expand-automated-testing-coverage/sub-specs/tests.md 
+- Tests Specification: @.agent-os/specs/2025-07-22-expand-automated-testing-coverage/sub-specs/tests.md

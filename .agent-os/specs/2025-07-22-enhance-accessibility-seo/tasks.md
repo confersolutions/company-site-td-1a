@@ -23,4 +23,4 @@
 
 ## Documentation
 - [ ] Document accessibility and SEO strategy in `.agent-os/product/tech-stack.md`
-- [ ] Add “How to test accessibility/SEO” to `README.md` 
+- [ ] Add “How to test accessibility/SEO” to `README.md`

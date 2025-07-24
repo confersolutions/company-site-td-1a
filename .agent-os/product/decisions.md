@@ -57,7 +57,7 @@
 - **Fallback Strategy:** Iframe approach as backup when React components fail
 
 ### Implementation Details
-```javascript
+\`\`\`javascript
 // CDN Loading Strategy
 const script = document.createElement('script')
 script.type = 'module'
@@ -73,7 +73,7 @@ chatInstanceRef.current = window.FlowiseChatbot.init({
   apiHost: "https://flowise.confersolutions.ai",
   theme: { /* custom configuration */ }
 })
-```
+\`\`\`
 
 ### Key Learnings
 - **Platform-Specific Solutions:** Different deployment platforms require different integration approaches

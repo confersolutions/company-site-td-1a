@@ -53,4 +53,4 @@
 
 ---
 
-*See tasks.md for detailed breakdown and progress tracking.* 
+*See tasks.md for detailed breakdown and progress tracking.*

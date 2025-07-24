@@ -13,4 +13,4 @@ Confer Solutions AI is an AI consultancy company website designed to showcase th
 - Flowise chat integration for real-time customer inquiries and lead generation
 - Modern, responsive design with strong branding
 - Case studies, blog, and newsroom sections to demonstrate expertise and thought leadership
-- Contact and consultation forms for client engagement 
+- Contact and consultation forms for client engagement

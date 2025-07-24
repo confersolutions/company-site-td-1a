@@ -68,5 +68,3 @@ export function WhyConferSection() {
     </section>
   )
 }
-
-export default WhyConferSection;

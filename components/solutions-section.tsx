@@ -105,5 +105,3 @@ export function SolutionsSection() {
     </section>
   )
 }
-
-export default SolutionsSection;

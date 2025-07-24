@@ -119,5 +119,3 @@ export function DocumentProcessingDetail() {
     </section>
   )
 }
-
-export default DocumentProcessingDetail;

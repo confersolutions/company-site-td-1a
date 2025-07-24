@@ -18,7 +18,7 @@
 ### Project-Specific Environment Variables
 Configure these in Coolify dashboard:
 
-```env
+\`\`\`env
 # Email Configuration (Required)
 RESEND_API_KEY=your_resend_api_key
 
@@ -32,7 +32,7 @@ NEXT_PUBLIC_FLOWISE_URL=your_flowise_chat_url
 # Performance Settings
 NODE_ENV=production
 NEXT_TELEMETRY_DISABLED=1
-```
+\`\`\`
 
 ### Build Configuration (Project-Specific)
 - **Build Command**: `npm run build`
@@ -84,4 +84,4 @@ NEXT_TELEMETRY_DISABLED=1
 
 ---
 
-*For general development and deployment guidance, see `.agent-os/standards/development-deployment.md`* 
+*For general development and deployment guidance, see `.agent-os/standards/development-deployment.md`*

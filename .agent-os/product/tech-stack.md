@@ -39,4 +39,4 @@
 - **Icons:** Lucide React
 - **Date Handling:** date-fns (with React 19 compatibility)
 - **Utility Libraries:** clsx, class-variance-authority
-- **Chat Widget:** flowise-embed-react with custom theming 
+- **Chat Widget:** flowise-embed-react with custom theming

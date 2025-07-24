@@ -5,16 +5,16 @@
 ## 🚀 Immediate Setup (5 minutes)
 
 ### 1. Prerequisites Check
-```bash
+\`\`\`bash
 # Check Node.js version
 node --version  # Should be 20.x
 
 # Check if nvm is available
 nvm --version   # If not installed, install nvm first
-```
+\`\`\`
 
 ### 2. Clone & Setup
-```bash
+\`\`\`bash
 # Clone repository
 git clone <repository-url>
 cd <project-name>
@@ -24,34 +24,34 @@ nvm use
 
 # Install dependencies
 npm install
-```
+\`\`\`
 
 ### 3. Environment Setup
-```bash
+\`\`\`bash
 # Create environment file
 cp .env.example .env.local  # If example exists
 # OR create manually:
 touch .env.local
-```
+\`\`\`
 
 Add to `.env.local`:
-```env
+\`\`\`env
 RESEND_API_KEY=your_api_key_here
 NODE_ENV=development
-```
+\`\`\`
 
 ### 4. Start Development
-```bash
+\`\`\`bash
 # Start dev server
 npm run dev
 
 # Open browser
 open http://localhost:3000
-```
+\`\`\`
 
 ## 🔧 Common Commands
 
-```bash
+\`\`\`bash
 # Development
 npm run dev          # Start development server
 npm run build        # Build for production
@@ -62,7 +62,7 @@ npm run lint         # Check code quality
 npm run build        # Check for build issues
 npm audit            # Security audit
 npm update           # Update dependencies
-```
+\`\`\`
 
 ## 📚 Full Documentation
 
@@ -73,25 +73,25 @@ npm update           # Update dependencies
 ## 🆘 Quick Troubleshooting
 
 ### Build Fails
-```bash
+\`\`\`bash
 rm -rf .next node_modules package-lock.json
 npm install
 npm run build
-```
+\`\`\`
 
 ### Tests Fail
-```bash
+\`\`\`bash
 npm test -- --clearCache
 npm test
-```
+\`\`\`
 
 ### Port Already in Use
-```bash
+\`\`\`bash
 # Kill process on port 3000
 lsof -ti:3000 | xargs kill -9
 npm run dev
-```
+\`\`\`
 
 ---
 
-*Need more details? Check the full development guide in `.agent-os/standards/development-deployment.md`* 
+*Need more details? Check the full development guide in `.agent-os/standards/development-deployment.md`*

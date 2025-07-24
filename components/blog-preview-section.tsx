@@ -17,5 +17,3 @@ export function BlogPreviewSection({ title, description }: Props) {
     
   )
 }
-
-export default BlogPreviewSection;
