@@ -75,33 +75,32 @@ export function FlowiseChat() {
       {/* Chat Toggle Button */}
       <Button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full shadow-lg bg-blue-700 hover:bg-blue-800 text-white border-2 border-blue-600"
+        className="fixed bottom-4 right-4 z-50 h-14 w-14 rounded-full shadow-lg bg-[#1e40af] hover:bg-[#1e3a8a] text-white border-2 border-[#1e40af]"
         size="icon"
       >
-        {isOpen ? <X className="h-7 w-7" /> : <MessageCircle className="h-7 w-7" />}
+        {isOpen ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
       </Button>
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-28 right-6 z-40 w-96 h-[500px] shadow-2xl border-2 border-blue-100">
-          <CardHeader className="pb-3 bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-t-lg">
-            <CardTitle className="text-lg flex items-center gap-2">
-              <MessageCircle className="h-5 w-5" />
+        <Card className="fixed bottom-20 right-4 z-40 w-96 h-[500px] shadow-2xl border border-gray-200 rounded-lg">
+          <CardHeader className="pb-3 bg-white text-gray-800 border-b border-gray-200 rounded-t-lg">
+            <CardTitle className="text-lg font-semibold text-gray-800">
               Confer AI Assistant
             </CardTitle>
-            <p className="text-blue-100 text-sm">Mortgage Automation Expert</p>
+            <p className="text-gray-600 text-sm">Mortgage Automation Expert</p>
           </CardHeader>
 
           <CardContent className="flex flex-col h-full p-0">
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50">
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#f8fafc]">
               {messages.map((message) => (
                 <div key={message.id} className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}>
                   <div
                     className={`max-w-[85%] p-3 rounded-lg text-sm shadow-sm ${
                       message.isUser
-                        ? "bg-blue-700 text-white rounded-br-none"
-                        : "bg-white text-gray-800 rounded-bl-none border border-gray-200"
+                        ? "bg-[#1e40af] text-white rounded-br-none"
+                        : "bg-white text-[#1f2937] rounded-bl-none border border-gray-200"
                     }`}
                   >
                     {message.text}
@@ -111,15 +110,15 @@ export function FlowiseChat() {
 
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="bg-white text-gray-800 p-3 rounded-lg rounded-bl-none text-sm border border-gray-200 shadow-sm">
+                  <div className="bg-white text-[#1f2937] p-3 rounded-lg rounded-bl-none text-sm border border-gray-200 shadow-sm">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-[#1e40af] rounded-full animate-bounce"></div>
                       <div
-                        className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-[#1e40af] rounded-full animate-bounce"
                         style={{ animationDelay: "0.1s" }}
                       ></div>
                       <div
-                        className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-[#1e40af] rounded-full animate-bounce"
                         style={{ animationDelay: "0.2s" }}
                       ></div>
                     </div>
@@ -129,26 +128,26 @@ export function FlowiseChat() {
             </div>
 
             {/* Input Area */}
-            <div className="p-4 border-t bg-white">
+            <div className="p-4 border-t border-gray-200 bg-white">
               <div className="flex gap-2">
                 <Input
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about our AI solutions, mortgage automation, or schedule a consultation..."
-                  className="flex-1 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                  className="flex-1 border-gray-300 focus:border-[#1e40af] focus:ring-[#1e40af] text-[#1f2937]"
                   disabled={isLoading}
                 />
                 <Button
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim() || isLoading}
                   size="icon"
-                  className="bg-blue-700 hover:bg-blue-800 text-white"
+                  className="bg-[#1e40af] hover:bg-[#1e3a8a] text-white"
                 >
                   <Send className="h-4 w-4" />
                 </Button>
               </div>
-              <p className="text-xs text-gray-500 mt-2 text-center">Powered by Confer AI Technology</p>
+              <p className="text-xs text-[#6b7280] mt-2 text-center">Powered by Confer AI Technology</p>
             </div>
           </CardContent>
         </Card>
