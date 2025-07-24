@@ -35,46 +35,109 @@ export function FlowiseChat() {
   useEffect(() => {
     if (isOpen && chatContainerRef.current && window.FlowiseChatbot && !chatInstanceRef.current) {
       try {
-        // Initialize the chat
+        // Initialize the chat with the complete original configuration
         chatInstanceRef.current = window.FlowiseChatbot.init({
           chatflowid: "5440e748-320e-4b27-8849-bed8e9f924f9",
           apiHost: "https://flowise.confersolutions.ai",
           theme: {
             button: {
-              backgroundColor: "#1e40af",
-              right: 20,
-              bottom: 20,
-              size: "large",
+              backgroundColor: '#1a1a1a',
+              right: 24,
+              bottom: 24,
+              size: 56,
+              dragAndDrop: true,
+              iconColor: '#ffffff',
+              customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+              autoWindowOpen: {
+                autoOpen: false,
+                openDelay: 5,
+                autoOpenOnMobile: false
+              }
             },
+            tooltip: {
+              showTooltip: true,
+              tooltipMessage: 'Need AI solutions? Let\'s chat! 🤖',
+              tooltipBackgroundColor: '#1a1a1a',
+              tooltipTextColor: '#ffffff',
+              tooltipFontSize: 14
+            },
+            disclaimer: {
+              title: 'AI Consultation Chat',
+              message: "Connect with our AI experts. By continuing, you agree to our <a target=\"_blank\" href=\"https://confersolutions.ai/privacy\" style=\"color: #3b82f6; text-decoration: underline;\">Privacy Policy</a>",
+              textColor: '#1a1a1a',
+              buttonColor: '#1a1a1a',
+              buttonText: 'Start Consultation',
+              buttonTextColor: '#ffffff',
+              blurredBackgroundColor: 'rgba(0, 0, 0, 0.6)',
+              backgroundColor: '#ffffff'
+            },
+            customCSS: `
+              .bubble-button {
+                box-shadow: 0 8px 25px rgba(26, 26, 26, 0.15);
+                transition: all 0.3s ease;
+              }
+              .bubble-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 35px rgba(26, 26, 26, 0.25);
+              }
+            `,
             chatWindow: {
-              title: "Confer AI Assistant",
-              welcomeMessage: "Welcome to Confer! I'm here to help you with mortgage automation, AI solutions, and financial technology questions. How can I assist you today?",
-              backgroundColor: "#ffffff",
-              fontSize: 16,
-              poweredByTextColor: "#6b7280",
+              showTitle: true,
+              showAgentMessages: true,
+              title: 'Confer AI Assistant',
+              titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+              welcomeMessage: 'Hello! I\'m here to help you explore AI solutions for your business. What challenges are you looking to solve?',
+              errorMessage: 'I apologize for the technical difficulty. Please try again or contact us directly at info@confersolutions.ai',
+              backgroundColor: '#ffffff',
+              height: 600,
+              width: 380,
+              fontSize: 15,
+              starterPrompts: [
+                "What AI solutions does Confer offer?",
+                "I need a custom AI application",
+                "Can you integrate with my existing systems?"
+              ],
+              starterPromptFontSize: 14,
+              clearChatOnReload: false,
+              sourceDocsTitle: 'References:',
+              renderHTML: true,
               botMessage: {
-                backgroundColor: "#f8fafc",
-                textColor: "#1f2937",
-                fontSize: 14,
+                backgroundColor: '#f8fafc',
+                textColor: '#1e293b',
+                showAvatar: true,
+                avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
               },
               userMessage: {
-                backgroundColor: "#1e40af",
-                textColor: "#ffffff",
-                fontSize: 14,
+                backgroundColor: '#1a1a1a',
+                textColor: '#ffffff',
+                showAvatar: true,
+                avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
               },
               textInput: {
-                placeholder: "Ask about our AI solutions, mortgage automation, or schedule a consultation...",
-                backgroundColor: "#ffffff",
-                textColor: "#1f2937",
-                fontSize: 14,
-                borderColor: "#e5e7eb",
+                placeholder: 'Describe your AI needs...',
+                backgroundColor: '#ffffff',
+                textColor: '#1e293b',
+                sendButtonColor: '#1a1a1a',
+                maxChars: 500,
+                maxCharsWarningMessage: 'Please keep your message under 500 characters for the best response.',
+                autoFocus: false,
+                sendMessageSound: false,
+                receiveMessageSound: false
               },
-              sendButtonColor: "#1e40af",
-              userBubbleColor: "#1e40af",
-              botBubbleColor: "#f8fafc",
-              userTextColor: "#ffffff",
-              botTextColor: "#1f2937",
-            },
+              feedback: {
+                color: '#64748b'
+              },
+              dateTimeToggle: {
+                date: true,
+                time: true
+              },
+              footer: {
+                textColor: '#64748b',
+                text: 'Powered by',
+                company: 'Confer Solutions',
+                companyLink: 'https://confersolutions.ai'
+              }
+            }
           }
         })
       } catch (error) {
