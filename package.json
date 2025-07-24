@@ -81,8 +81,9 @@
     "typescript": "^5"
   },
   "overrides": {
-    "@testing-library/react": {
-      "@types/react": "$@types/react"
+    "@testing-library/react": "^16.0.0",
+    "flowise-embed-react": {
+      "react": "^19"
     }
   }
 }
