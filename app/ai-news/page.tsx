@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ConsultationButton } from "@/components/consultation-button"
 import Link from "next/link"
-import { Calendar, Clock, ArrowRight, RefreshCw, Rss } from "lucide-react"
+import { Calendar, Clock, ArrowRight, RefreshCw, Rss, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Latest AI News | Confer Solutions AI",
@@ -18,44 +18,49 @@ interface RSSItem {
   link: string
   pubDate: string
   description: string
+  content?: string
   guid?: string
+  enclosure?: {
+    url: string
+    type: string
+  } | null
 }
 
-// Simple XML parser for RSS
-function parseRSSXML(xmlText: string): RSSItem[] {
+interface RSSResponse {
+  success: boolean
+  articles: RSSItem[]
+  lastUpdated: string
+  error?: string
+}
+
+// Server-side function to fetch RSS data from our API
+async function fetchRSSFeed(): Promise<RSSResponse> {
   try {
-    // Extract items using regex (simple approach for RSS)
-    const itemRegex = /<item>([\s\S]*?)<\/item>/gi
-    const items: RSSItem[] = []
-    let match
+    // Use absolute URL for server-side fetch
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NODE_ENV === "development"
+        ? "http://localhost:3000"
+        : "https://confersolutions.ai"
 
-    while ((match = itemRegex.exec(xmlText)) !== null) {
-      const itemContent = match[1]
+    const response = await fetch(`${baseUrl}/api/rss-feed`, {
+      cache: "no-store", // Always fetch fresh data
+    })
 
-      // Extract individual fields
-      const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>|<title>(.*?)<\/title>/i)
-      const linkMatch = itemContent.match(/<link>(.*?)<\/link>/i)
-      const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/i)
-      const descriptionMatch = itemContent.match(
-        /<description><!\[CDATA\[(.*?)\]\]><\/description>|<description>(.*?)<\/description>/i,
-      )
-      const guidMatch = itemContent.match(/<guid.*?>(.*?)<\/guid>/i)
-
-      if (titleMatch && linkMatch && pubDateMatch) {
-        items.push({
-          title: (titleMatch[1] || titleMatch[2] || "").trim(),
-          link: linkMatch[1].trim(),
-          pubDate: pubDateMatch[1].trim(),
-          description: (descriptionMatch?.[1] || descriptionMatch?.[2] || "").trim(),
-          guid: guidMatch?.[1]?.trim(),
-        })
-      }
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
     }
 
-    return items
+    const data: RSSResponse = await response.json()
+    return data
   } catch (error) {
-    console.error("Error parsing RSS XML:", error)
-    return []
+    console.error("Error fetching RSS feed:", error)
+    return {
+      success: false,
+      articles: [],
+      lastUpdated: new Date().toISOString(),
+      error: "Failed to fetch RSS feed",
+    }
   }
 }
 
@@ -85,65 +90,30 @@ function calculateReadingTime(content: string): string {
 
 // Clean HTML from description
 function cleanHTML(html: string): string {
-  return html.replace(/<[^>]*>/g, "").substring(0, 150) + "..."
+  if (!html) return ""
+  return html.replace(/<[^>]*>/g, "").substring(0, 200) + "..."
 }
 
 // Extract image from HTML content
 function extractImageFromHTML(html: string): string | null {
+  if (!html) return null
   const imgRegex = /<img[^>]+src="([^">]+)"/i
   const match = html.match(imgRegex)
   return match ? match[1] : null
 }
 
-// Static fallback articles in case RSS fails
-const fallbackArticles: RSSItem[] = [
-  {
-    title: "AI Breakthrough in Natural Language Processing",
-    link: "https://news.smol.ai",
-    pubDate: new Date().toISOString(),
-    description: "Recent advances in AI language models are transforming how we interact with technology.",
-    guid: "fallback-1",
-  },
-  {
-    title: "Machine Learning Applications in Healthcare",
-    link: "https://news.smol.ai",
-    pubDate: new Date(Date.now() - 86400000).toISOString(),
-    description: "Exploring how AI is revolutionizing medical diagnosis and treatment planning.",
-    guid: "fallback-2",
-  },
-  {
-    title: "The Future of Autonomous AI Systems",
-    link: "https://news.smol.ai",
-    pubDate: new Date(Date.now() - 172800000).toISOString(),
-    description: "Understanding the potential and challenges of fully autonomous artificial intelligence.",
-    guid: "fallback-3",
-  },
-  {
-    title: "AI Ethics and Responsible Development",
-    link: "https://news.smol.ai",
-    pubDate: new Date(Date.now() - 259200000).toISOString(),
-    description: "Examining the importance of ethical considerations in AI development and deployment.",
-    guid: "fallback-4",
-  },
-  {
-    title: "Quantum Computing Meets Artificial Intelligence",
-    link: "https://news.smol.ai",
-    pubDate: new Date(Date.now() - 345600000).toISOString(),
-    description: "The intersection of quantum computing and AI promises unprecedented computational power.",
-    guid: "fallback-5",
-  },
-]
-
 // News Articles Component
-function NewsArticles({ articles }: { articles: RSSItem[] }) {
-  if (articles.length === 0) {
+function NewsArticles({ articles, error }: { articles: RSSItem[]; error?: string }) {
+  if (error || articles.length === 0) {
     return (
       <div className="text-center py-16">
         <div className="w-16 h-16 rounded-full bg-gradient-to-r from-fintech-500 to-fintech-600 flex items-center justify-center mx-auto mb-4">
           <Rss className="h-8 w-8 text-white" />
         </div>
-        <h3 className="text-xl font-semibold mb-2">No articles available</h3>
-        <p className="text-muted-foreground">Unable to fetch the latest news at this time. Please try again later.</p>
+        <h3 className="text-xl font-semibold mb-2">{error ? "Unable to load articles" : "No articles available"}</h3>
+        <p className="text-muted-foreground">
+          {error || "Unable to fetch the latest news at this time. Please try again later."}
+        </p>
       </div>
     )
   }
@@ -151,9 +121,9 @@ function NewsArticles({ articles }: { articles: RSSItem[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {articles.map((article, index) => {
-        const imageUrl = extractImageFromHTML(article.description)
+        const imageUrl = article.enclosure?.url || extractImageFromHTML(article.content || article.description)
         const cleanDescription = cleanHTML(article.description)
-        const readingTime = calculateReadingTime(article.description)
+        const readingTime = calculateReadingTime(article.description || article.content || "")
 
         return (
           <Card
@@ -206,7 +176,7 @@ function NewsArticles({ articles }: { articles: RSSItem[] }) {
                   className="flex items-center justify-center"
                 >
                   Read Full Article
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </CardContent>
@@ -217,11 +187,11 @@ function NewsArticles({ articles }: { articles: RSSItem[] }) {
   )
 }
 
-// Main page component - Regular component (not async)
-export default function AINewsPage() {
-  // Use fallback articles for now to avoid async issues
-  const articles = fallbackArticles.slice(0, 5) // Show only first 5 articles
-  const lastUpdated = new Date().toLocaleString()
+// Main page component - Server Component that fetches real RSS data
+export default async function AINewsPage() {
+  // Fetch real RSS data from our API
+  const rssData = await fetchRSSFeed()
+  const lastUpdated = new Date(rssData.lastUpdated).toLocaleString()
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
@@ -258,7 +228,7 @@ export default function AINewsPage() {
       {/* News Articles */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
-          <NewsArticles articles={articles} />
+          <NewsArticles articles={rssData.articles} error={rssData.error} />
         </div>
       </section>
 
