@@ -59,13 +59,14 @@ function parseRSSXML(xmlText: string): RSSItem[] {
   }
 }
 
-// Server component to fetch RSS data
+// Server function to fetch RSS data
 async function fetchRSSFeed(): Promise<RSSItem[]> {
   try {
     const response = await fetch("https://news.smol.ai/rss.xml", {
       headers: {
         "User-Agent": "Confer Solutions AI News Reader",
       },
+      cache: "force-cache",
       next: { revalidate: 300 }, // Cache for 5 minutes
     })
 
@@ -124,7 +125,92 @@ function extractImageFromHTML(html: string): string | null {
   return match ? match[1] : null
 }
 
+// News Articles Component
+function NewsArticles({ articles }: { articles: RSSItem[] }) {
+  if (articles.length === 0) {
+    return (
+      <div className="text-center py-16">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-fintech-500 to-fintech-600 flex items-center justify-center mx-auto mb-4">
+          <Rss className="h-8 w-8 text-white" />
+        </div>
+        <h3 className="text-xl font-semibold mb-2">No articles available</h3>
+        <p className="text-muted-foreground">Unable to fetch the latest news at this time. Please try again later.</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {articles.map((article, index) => {
+        const imageUrl = extractImageFromHTML(article.description)
+        const cleanDescription = cleanHTML(article.description)
+        const readingTime = calculateReadingTime(article.description)
+
+        return (
+          <Card
+            key={article.guid || article.link || index}
+            className="border-0 bg-gradient-to-br from-background to-secondary/20 group hover:shadow-lg transition-all duration-300 flex flex-col"
+          >
+            {imageUrl && (
+              <div className="aspect-video bg-gradient-to-br from-fintech-100 to-fintech-200 dark:from-fintech-900 dark:to-fintech-800 relative overflow-hidden">
+                <img
+                  src={imageUrl || "/placeholder.svg"}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement
+                    target.style.display = "none"
+                  }}
+                />
+              </div>
+            )}
+
+            <CardHeader className="flex-grow">
+              <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
+                <div className="flex items-center">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  {formatDate(article.pubDate)}
+                </div>
+                <div className="flex items-center">
+                  <Clock className="h-4 w-4 mr-1" />
+                  {readingTime}
+                </div>
+              </div>
+              <CardTitle className="text-lg font-bold group-hover:text-fintech-600 dark:group-hover:text-fintech-400 transition-colors line-clamp-3">
+                {article.title}
+              </CardTitle>
+            </CardHeader>
+
+            <CardContent className="pt-0">
+              {cleanDescription && (
+                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{cleanDescription}</p>
+              )}
+              <Button
+                variant="outline"
+                className="w-full bg-transparent group-hover:bg-fintech-50 dark:group-hover:bg-fintech-950"
+                asChild
+              >
+                <Link
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  Read Full Article
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        )
+      })}
+    </div>
+  )
+}
+
+// Main page component - Server Component
 export default async function AINewsPage() {
+  // Fetch articles on the server
   const articles = await fetchRSSFeed()
   const lastUpdated = new Date().toLocaleString()
 
@@ -163,83 +249,7 @@ export default async function AINewsPage() {
       {/* News Articles */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
-          {articles.length === 0 ? (
-            <div className="text-center py-16">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-fintech-500 to-fintech-600 flex items-center justify-center mx-auto mb-4">
-                <Rss className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">No articles available</h3>
-              <p className="text-muted-foreground">
-                Unable to fetch the latest news at this time. Please try again later.
-              </p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.map((article, index) => {
-                const imageUrl = extractImageFromHTML(article.description)
-                const cleanDescription = cleanHTML(article.description)
-                const readingTime = calculateReadingTime(article.description)
-
-                return (
-                  <Card
-                    key={article.guid || article.link || index}
-                    className="border-0 bg-gradient-to-br from-background to-secondary/20 group hover:shadow-lg transition-all duration-300 flex flex-col"
-                  >
-                    {imageUrl && (
-                      <div className="aspect-video bg-gradient-to-br from-fintech-100 to-fintech-200 dark:from-fintech-900 dark:to-fintech-800 relative overflow-hidden">
-                        <img
-                          src={imageUrl || "/placeholder.svg"}
-                          alt={article.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement
-                            target.style.display = "none"
-                          }}
-                        />
-                      </div>
-                    )}
-
-                    <CardHeader className="flex-grow">
-                      <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
-                        <div className="flex items-center">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          {formatDate(article.pubDate)}
-                        </div>
-                        <div className="flex items-center">
-                          <Clock className="h-4 w-4 mr-1" />
-                          {readingTime}
-                        </div>
-                      </div>
-                      <CardTitle className="text-lg font-bold group-hover:text-fintech-600 dark:group-hover:text-fintech-400 transition-colors line-clamp-3">
-                        {article.title}
-                      </CardTitle>
-                    </CardHeader>
-
-                    <CardContent className="pt-0">
-                      {cleanDescription && (
-                        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{cleanDescription}</p>
-                      )}
-                      <Button
-                        variant="outline"
-                        className="w-full bg-transparent group-hover:bg-fintech-50 dark:group-hover:bg-fintech-950"
-                        asChild
-                      >
-                        <Link
-                          href={article.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center"
-                        >
-                          Read Full Article
-                          <ExternalLink className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                )
-              })}
-            </div>
-          )}
+          <NewsArticles articles={articles} />
         </div>
       </section>
 
