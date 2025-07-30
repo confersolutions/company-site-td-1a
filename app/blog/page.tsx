@@ -23,6 +23,86 @@ export default function BlogPage() {
 
   const allPosts = [
     {
+      title: "AI Virtual Assistant for Small Business: Real-World Case Studies That Deliver",
+      excerpt:
+        "Discover how AI virtual assistants are transforming small businesses through real case studies. Learn implementation strategies, ROI metrics, and success stories from companies achieving 40% efficiency gains.",
+      date: "Dec 15, 2024",
+      author: "Yatin Karnik",
+      slug: "ai-virtual-assistant-small-business",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: "Case Studies",
+      readTime: "8 min read",
+    },
+    {
+      title: "Unlocking Agentic AI: A Step-by-Step Guide to Smarter Business Automation",
+      excerpt:
+        "Master agentic AI implementation with our comprehensive guide. Learn how autonomous AI agents can transform your business operations, reduce costs by 35%, and drive intelligent decision-making.",
+      date: "Dec 10, 2024",
+      author: "Yatin Karnik",
+      slug: "unlocking-agentic-ai-step-by-step-guide",
+      image:
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: "AI Innovation",
+      readTime: "10 min read",
+    },
+    {
+      title: "AI in Healthcare: Transforming Patient Care",
+      excerpt:
+        "Explore how AI is revolutionizing healthcare delivery, improving patient outcomes by 45%, and reducing diagnostic errors. Learn about implementation strategies and real-world applications.",
+      date: "Dec 5, 2024",
+      author: "Yatin Karnik",
+      slug: "ai-healthcare-transforming-patient-care",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: "Healthcare Innovation",
+      readTime: "9 min read",
+    },
+    {
+      title: "Integrating AI for Predictive Analytics in Finance",
+      excerpt:
+        "Discover how AI-powered predictive analytics is transforming financial services. Learn implementation strategies, risk management techniques, and achieve 60% improvement in forecasting accuracy.",
+      date: "Nov 30, 2024",
+      author: "Yatin Karnik",
+      slug: "integrating-ai-predictive-analytics-finance",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: "Financial Technology",
+      readTime: "11 min read",
+    },
+    {
+      title: "Developing Custom AI Solutions for Small Businesses",
+      excerpt:
+        "Learn how to develop tailored AI solutions for small businesses. Discover cost-effective strategies, implementation frameworks, and achieve 50% operational efficiency improvements.",
+      date: "Nov 25, 2024",
+      author: "Yatin Karnik",
+      slug: "developing-custom-ai-solutions-small-businesses",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: "Custom Development",
+      readTime: "12 min read",
+    },
+    {
+      title: "AI-Powered Process Automation: Effortlessly Revolutionizing Your Business Efficiency",
+      excerpt:
+        "Discover how AI-powered process automation can transform your business operations. Learn implementation strategies, best practices, and achieve up to 70% efficiency improvements.",
+      date: "Nov 20, 2024",
+      author: "Yatin Karnik",
+      slug: "ai-powered-process-automation-revolutionizing-business-efficiency",
+      image:
+        "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: "Process Automation",
+      readTime: "10 min read",
+    },
+    {
+      title: "Leveraging AI Agents to Enhance Customer Support",
+      excerpt:
+        "Learn how AI agents are transforming customer support operations. Discover implementation strategies, best practices, and achieve 80% faster response times with improved satisfaction.",
+      date: "Nov 15, 2024",
+      author: "Yatin Karnik",
+      slug: "leveraging-ai-agents-enhance-customer-support",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      category: "Customer Experience",
+      readTime: "9 min read",
+    },
+    {
       title: "Self-Healing AI in Mortgage Automation: Transforming Document Processing",
       excerpt:
         "Discover how Self-Healing AI is transforming mortgage automation by correcting OCR errors, reducing manual review, and continuously learning from feedback.",
@@ -89,6 +169,11 @@ export default function BlogPage() {
     "Business Intelligence",
     "Risk Management",
     "Process Automation",
+    "Case Studies",
+    "Healthcare Innovation",
+    "Financial Technology",
+    "Custom Development",
+    "Customer Experience",
   ]
 
   return (
