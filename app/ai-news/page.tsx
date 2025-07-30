@@ -6,9 +6,6 @@ import { ConsultationButton } from "@/components/consultation-button"
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight, ExternalLink, RefreshCw, Rss } from "lucide-react"
 
-// RSS Parser import
-const Parser = require("rss-parser")
-
 export const metadata: Metadata = {
   title: "Latest AI News | Confer Solutions AI",
   description:
@@ -20,29 +17,67 @@ interface RSSItem {
   title: string
   link: string
   pubDate: string
-  contentSnippet?: string
-  content?: string
-  enclosure?: {
-    url: string
-    type: string
-  }
+  description: string
   guid?: string
+}
+
+// Simple XML parser for RSS
+function parseRSSXML(xmlText: string): RSSItem[] {
+  try {
+    // Extract items using regex (simple approach for RSS)
+    const itemRegex = /<item>([\s\S]*?)<\/item>/gi
+    const items: RSSItem[] = []
+    let match
+
+    while ((match = itemRegex.exec(xmlText)) !== null) {
+      const itemContent = match[1]
+
+      // Extract individual fields
+      const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>|<title>(.*?)<\/title>/i)
+      const linkMatch = itemContent.match(/<link>(.*?)<\/link>/i)
+      const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/i)
+      const descriptionMatch = itemContent.match(
+        /<description><!\[CDATA\[(.*?)\]\]><\/description>|<description>(.*?)<\/description>/i,
+      )
+      const guidMatch = itemContent.match(/<guid.*?>(.*?)<\/guid>/i)
+
+      if (titleMatch && linkMatch && pubDateMatch) {
+        items.push({
+          title: (titleMatch[1] || titleMatch[2] || "").trim(),
+          link: linkMatch[1].trim(),
+          pubDate: pubDateMatch[1].trim(),
+          description: (descriptionMatch?.[1] || descriptionMatch?.[2] || "").trim(),
+          guid: guidMatch?.[1]?.trim(),
+        })
+      }
+    }
+
+    return items
+  } catch (error) {
+    console.error("Error parsing RSS XML:", error)
+    return []
+  }
 }
 
 // Server component to fetch RSS data
 async function fetchRSSFeed(): Promise<RSSItem[]> {
   try {
-    const parser = new Parser({
-      timeout: 10000,
+    const response = await fetch("https://news.smol.ai/rss.xml", {
       headers: {
         "User-Agent": "Confer Solutions AI News Reader",
       },
+      next: { revalidate: 300 }, // Cache for 5 minutes
     })
 
-    const feed = await parser.parseURL("https://news.smol.ai/rss.xml")
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+
+    const xmlText = await response.text()
+    const items = parseRSSXML(xmlText)
 
     // Sort by most recent first
-    const sortedItems = feed.items.sort((a: any, b: any) => {
+    const sortedItems = items.sort((a, b) => {
       return new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
     })
 
@@ -77,12 +112,15 @@ function calculateReadingTime(content: string): string {
   return `${minutes} min read`
 }
 
-// Extract image from content
-function extractImageFromContent(content: string): string | null {
-  if (!content) return null
+// Clean HTML from description
+function cleanHTML(html: string): string {
+  return html.replace(/<[^>]*>/g, "").substring(0, 150) + "..."
+}
 
+// Extract image from HTML content
+function extractImageFromHTML(html: string): string | null {
   const imgRegex = /<img[^>]+src="([^">]+)"/i
-  const match = content.match(imgRegex)
+  const match = html.match(imgRegex)
   return match ? match[1] : null
 }
 
@@ -138,10 +176,9 @@ export default async function AINewsPage() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {articles.map((article, index) => {
-                const imageUrl = article.enclosure?.url || extractImageFromContent(article.content || "")
-                const snippet =
-                  article.contentSnippet || article.content?.replace(/<[^>]*>/g, "").substring(0, 150) + "..." || ""
-                const readingTime = article.content ? calculateReadingTime(article.content) : "2 min read"
+                const imageUrl = extractImageFromHTML(article.description)
+                const cleanDescription = cleanHTML(article.description)
+                const readingTime = calculateReadingTime(article.description)
 
                 return (
                   <Card
@@ -179,7 +216,9 @@ export default async function AINewsPage() {
                     </CardHeader>
 
                     <CardContent className="pt-0">
-                      {snippet && <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{snippet}</p>}
+                      {cleanDescription && (
+                        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{cleanDescription}</p>
+                      )}
                       <Button
                         variant="outline"
                         className="w-full bg-transparent group-hover:bg-fintech-50 dark:group-hover:bg-fintech-950"
