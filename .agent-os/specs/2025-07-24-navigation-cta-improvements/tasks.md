@@ -103,4 +103,4 @@ These are the tasks to be completed for the spec detailed in @.agent-os/specs/20
   - [ ] 5.3 Cross-Browser Testing
     - [ ] Write cross-browser compatibility tests
     - [ ] Test navigation and forms in Chrome, Firefox, Safari, and Edge
-    - [ ] All functionality works consistently across browsers 
+    - [ ] All functionality works consistently across browsers
