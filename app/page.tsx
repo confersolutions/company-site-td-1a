@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import { HeroSection } from "@/components/hero-section"
 import { WhyConferSection } from "@/components/why-confer-section"
 import { SolutionsSection } from "@/components/solutions-section"
@@ -85,8 +86,107 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Confer Inc.",
+    "alternateName": "Confer Solutions AI",
+    "url": "https://confersolutions.ai",
+    "logo": "https://confersolutions.ai/logo.png",
+    "description": "AI-powered business solutions that automate workflows, enhance decision-making, and drive measurable impact",
+    "foundingDate": "2024",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7540 TX-121 Suite 200",
+      "addressLocality": "McKinney",
+      "addressRegion": "TX",
+      "postalCode": "75070",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-469-945-7357",
+      "contactType": "customer service",
+      "email": "info@confersolutions.ai"
+    },
+    "sameAs": [
+      "https://www.facebook.com/Confer.today",
+      "https://x.com/confer_inc",
+      "https://www.linkedin.com/company/80769992/",
+      "https://www.instagram.com/mortgage.mentorpro/"
+    ]
+  }
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Confer Inc.",
+    "image": "https://confersolutions.ai/logo.png",
+    "description": "AI-powered business solutions for mortgage automation and financial services",
+    "url": "https://confersolutions.ai",
+    "telephone": "+1-469-945-7357",
+    "email": "info@confersolutions.ai",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7540 TX-121 Suite 200",
+      "addressLocality": "McKinney",
+      "addressRegion": "TX",
+      "postalCode": "75070",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.1972,
+      "longitude": -96.6397
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    "priceRange": "$$",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.1972,
+        "longitude": -96.6397
+      },
+      "geoRadius": "50000"
+    }
+  }
+
+  const aggregateRatingSchema = {
+    "@context": "https://schema.org",
+    "@type": "AggregateRating",
+    "itemReviewed": {
+      "@type": "Organization",
+      "name": "Confer Inc."
+    },
+    "ratingValue": "4.9",
+    "reviewCount": "150",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+
   return (
     <>
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="aggregate-rating-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
       <HeroSection />
       <AsSeenOnSection />
       <WhyConferSection />

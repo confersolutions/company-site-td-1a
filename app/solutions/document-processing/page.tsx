@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {
@@ -93,8 +94,60 @@ export const metadata: Metadata = {
 }
 
 export default function DocumentProcessingPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of documents can your system process?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our system can process a wide range of financial documents, with specialized capabilities for mortgage documents including Loan Estimates (LE), Closing Disclosures (CD), income verification documents, bank statements, tax returns, property appraisals, and more. Our self-healing PDF parser can adapt to various document layouts and formats, even handling non-standard or poorly scanned documents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes your 'self-healing' PDF parser different?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Traditional PDF parsers rely on fixed templates and break when document formats change. Our self-healing parser uses AI to dynamically adapt to different document layouts, versions, and quality issues. It learns from corrections, automatically adjusts extraction strategies when it encounters errors, and continuously improves its accuracy over time. This means it can handle document variations without requiring constant template updates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is your document processing solution?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our document processing solution achieves 99.5% accuracy for standard fields in LE/CD documents and 95%+ accuracy for complex fields. The self-healing capabilities further improve accuracy over time as the system learns from corrections. We provide confidence scores for all extracted data, allowing you to set thresholds for manual review when needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the MCP Mortgage Server and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The MCP (Mortgage Cloud Platform) Server is our open-source backend platform specifically designed for mortgage document processing workflows. It provides the infrastructure for document ingestion, processing, validation, and integration with your existing systems. The MCP Server includes mortgage-specific data models, workflow automation capabilities, and a comprehensive API for seamless integration. It can be deployed in your environment or hosted in our secure cloud."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you ensure data security and compliance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We implement bank-grade security measures including end-to-end encryption, secure document handling, and comprehensive audit logging. Our solution is SOC 2 Type II compliant and designed to meet financial industry regulatory requirements. We can deploy in your secure environment or VPC, and our data handling practices are designed to comply with GDPR, CCPA, and other relevant standards."
+        }
+      }
+    ]
+  }
+
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-fintech-950 via-fintech-900 to-fintech-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
