@@ -94,7 +94,7 @@ export default function Home() {
     "url": "https://confersolutions.ai",
     "logo": "https://confersolutions.ai/logo.png",
     "description": "AI-powered business solutions that automate workflows, enhance decision-making, and drive measurable impact",
-    "foundingDate": "2024",
+    "foundingDate": "2021-11",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "7540 TX-121 Suite 200",
@@ -142,8 +142,8 @@ export default function Home() {
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
+      "opens": "08:00",
+      "closes": "18:00"
     },
     "priceRange": "$$",
     "serviceArea": {
@@ -170,6 +170,58 @@ export default function Home() {
     "worstRating": "1"
   }
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does Confer build AI agents for industries beyond finance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. While we have deep expertise in financial services, Confer's AI agents are designed to be domain-agnostic. We've built solutions for healthcare, retail, logistics, and professional services — all tailored to their specific workflows, data, and customer needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Confer's AI agents initiate real-world actions like emails, texts, or calls?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our AI agents do more than just analyze or summarize — they're designed to nudge humans to act. Whether it's sending a follow-up email, triggering a text notification, or even prompting a scheduled phone call, our agents are built to move tasks forward intelligently and contextually."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "I'm new to AI — can you help me understand where to start?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Of course. Many of our clients are just starting their AI journey. We begin with a quick consultation to understand your operations, then provide tailored suggestions — from simple automations to full agentic workflows — based on your business goals and comfort level."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "We're not sure how AI fits into our business. Can Confer help us figure that out?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Definitely. You don't need to come in with a perfect plan. We specialize in helping organizations explore practical AI use cases, even if they're new to the space. We'll assess your current tools, data, and goals — and recommend where AI can deliver quick wins and long-term value."
+        }
+      }
+    ]
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://confersolutions.ai"
+      }
+    ]
+  }
+
   return (
     <>
       <Script
@@ -186,6 +238,16 @@ export default function Home() {
         id="aggregate-rating-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <HeroSection />
       <AsSeenOnSection />
