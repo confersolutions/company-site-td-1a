@@ -34,7 +34,7 @@ export default function UnderwritingAgentPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

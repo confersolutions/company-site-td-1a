@@ -127,7 +127,7 @@ export default function HealthcarePage() {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 p-8 backdrop-blur-sm border border-blue-200/50 dark:border-blue-800/50">
                   <Image
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="Healthcare Research and AI"
                     width={600}
                     height={400}

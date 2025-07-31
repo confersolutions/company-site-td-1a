@@ -427,6 +427,32 @@ docker logs <container-name>
 - **Module Resolution:** ES modules and dynamic imports may behave differently
 - **Runtime Limitations:** Some packages that work locally may fail on V0
 
+### Babel Configuration Management
+
+#### File Naming Convention
+The `babel.config.js` file must be managed differently for different deployment environments:
+
+- **Repository State**: File is named `babel.config.jsc` (with `.jsc` extension)
+- **V0 Deployment**: File must be renamed to `babel.config.js` for V0 compatibility
+- **Coolify/VPS Deployment**: File remains as `babel.config.jsc` to avoid Next.js font loading conflicts
+
+#### Deployment Process
+```bash
+# For V0 deployment
+mv babel.config.jsc babel.config.js
+# Deploy to V0
+# After deployment, rename back for repository consistency
+mv babel.config.js babel.config.jsc
+
+# For Coolify/VPS deployment
+# File remains as babel.config.jsc (no action needed)
+```
+
+#### Technical Background
+- **V0 Requirement**: V0 requires the file to be named `babel.config.js` for proper module resolution
+- **Next.js Conflict**: The babel configuration conflicts with Next.js font loading when named `babel.config.js`
+- **Solution**: Use `.jsc` extension in repository to avoid conflicts while maintaining V0 compatibility through renaming
+
 ### Flowise Integration Best Practices
 
 #### Recommended Approach: CDN Integration

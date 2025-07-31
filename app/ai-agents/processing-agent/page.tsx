@@ -49,10 +49,10 @@ export default function ProcessingAgentPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative z-10">
+            <div>
               <div className="flex items-center gap-3 mb-6">
                 <Badge className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-0 px-4 py-2">
                   <Sparkles className="w-4 h-4 mr-2" />

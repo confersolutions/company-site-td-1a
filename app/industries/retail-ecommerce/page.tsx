@@ -127,7 +127,7 @@ export default function RetailEcommercePage() {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 p-8 backdrop-blur-sm border border-blue-200/50 dark:border-blue-800/50">
                   <Image
-                    src="/placeholder.svg?height=400&width=600&text=E-commerce+Dashboard"
+                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="AI E-commerce Dashboard"
                     width={600}
                     height={400}
@@ -489,7 +489,7 @@ export default function RetailEcommercePage() {
                 className="px-8 py-4 text-lg border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
                 asChild
               >
-                <Link href="/ai-agents">Explore AI Agents</Link>
+                <Link href="/ai-agents/autonomous-mortgage-bank">Explore AI Agents</Link>
               </Button>
               <Button
                 variant="outline"

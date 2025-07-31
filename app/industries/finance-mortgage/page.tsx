@@ -98,7 +98,7 @@ export default function FinanceMortgagePage() {
                     className="px-8 py-4 text-lg bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm"
                     asChild
                   >
-                    <Link href="/ai-agents">Explore AI Agents</Link>
+                    <Link href="/ai-agents/autonomous-mortgage-bank">Explore AI Agents</Link>
                   </Button>
                 </div>
 
@@ -483,7 +483,7 @@ export default function FinanceMortgagePage() {
                 className="px-8 py-4 text-lg border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
                 asChild
               >
-                <Link href="/ai-agents">Explore AI Agents</Link>
+                <Link href="/ai-agents/autonomous-mortgage-bank">Explore AI Agents</Link>
               </Button>
               <Button
                 variant="outline"
