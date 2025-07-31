@@ -1,16 +1,32 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Calendar, User, Clock, Tag } from "lucide-react"
+import {
+  ArrowLeft,
+  Calendar,
+  User,
+  Clock,
+  Tag,
+  Share2,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Brain,
+  Zap,
+  Target,
+  Settings,
+  TestTube,
+  Rocket,
+} from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Unlocking Agentic AI: A Step-by-Step Guide to Smarter Business Automation - Confer Solutions AI",
   description:
-    "Master agentic AI implementation with our comprehensive guide. Learn how autonomous AI agents can transform your business operations, reduce costs by 35%, and drive intelligent decision-making.",
+    "Learn how to implement agentic AI in your organization — from architecture to execution — with real tools, real patterns, and real results.",
   openGraph: {
     title: "Unlocking Agentic AI: A Step-by-Step Guide to Smarter Business Automation",
     description:
-      "Master agentic AI implementation with our comprehensive guide. Learn how autonomous AI agents can transform your business operations, reduce costs by 35%, and drive intelligent decision-making.",
+      "Learn how to implement agentic AI in your organization — from architecture to execution — with real tools, real patterns, and real results.",
     type: "article",
     publishedTime: "2024-12-10T14:30:00.000Z",
     authors: ["Yatin Karnik"],
@@ -20,39 +36,94 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <div className="bg-gradient-to-br from-primary via-primary/90 to-primary/80 py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        ></div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <Link href="/blog" className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Blog
           </Link>
-          <div className="max-w-4xl">
-            <div className="flex items-center space-x-4 text-white/80 text-sm mb-4">
-              <div className="flex items-center">
-                <Calendar className="h-4 w-4 mr-1" />
-                December 10, 2024
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              {/* Meta Information */}
+              <div className="flex flex-wrap items-center gap-4 text-white/80 text-sm mb-6">
+                <div className="flex items-center">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  December 10, 2024
+                </div>
+                <div className="flex items-center">
+                  <User className="h-4 w-4 mr-1" />
+                  Yatin Karnik
+                </div>
+                <div className="flex items-center">
+                  <Clock className="h-4 w-4 mr-1" />
+                  12 min read
+                </div>
+                <div className="flex items-center">
+                  <Tag className="h-4 w-4 mr-1" />
+                  AI Innovation
+                </div>
               </div>
-              <div className="flex items-center">
-                <User className="h-4 w-4 mr-1" />
-                Yatin Karnik
-              </div>
-              <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-1" />
-                10 min read
-              </div>
-              <div className="flex items-center">
-                <Tag className="h-4 w-4 mr-1" />
-                AI Innovation
+
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Unlocking{" "}
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Agentic AI
+                </span>
+                : A Step-by-Step Guide
+              </h1>
+
+              <p className="text-xl text-white/90 mb-8 leading-relaxed">
+                Learn how to implement agentic AI in your organization — from architecture to execution — with real
+                tools, real patterns, and real results.
+              </p>
+
+              {/* Social Sharing */}
+              <div className="flex items-center space-x-4">
+                <span className="text-white/60 text-sm">Share:</span>
+                <div className="flex space-x-3">
+                  <button className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+                    <Twitter className="h-4 w-4 text-white" />
+                  </button>
+                  <button className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+                    <Linkedin className="h-4 w-4 text-white" />
+                  </button>
+                  <button className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+                    <Facebook className="h-4 w-4 text-white" />
+                  </button>
+                  <button className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+                    <Share2 className="h-4 w-4 text-white" />
+                  </button>
+                </div>
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Unlocking Agentic AI: A Step-by-Step Guide to Smarter Business Automation
-            </h1>
-            <p className="text-xl text-white/90">
-              Master agentic AI implementation with our comprehensive guide. Learn how autonomous AI agents can
-              transform your business operations, reduce costs by 35%, and drive intelligent decision-making.
-            </p>
+
+            {/* Hero Illustration */}
+            <div className="relative">
+              <div className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-white/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="AI Orchestra Conductor coordinating digital tools"
+                  fill
+                  className="object-cover opacity-80"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent"></div>
+
+                {/* Floating AI Status Indicator */}
+                <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                  <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+                  AI Active
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,294 +132,393 @@ export default function BlogPost() {
       <article className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            {/* Featured Image */}
-            <div className="relative h-64 md:h-96 mb-12 rounded-2xl overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Agentic AI Business Automation"
-                fill
-                className="object-cover"
-              />
+            {/* Opening Section */}
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-2xl p-8 mb-12 border border-blue-100 dark:border-blue-800/30">
+              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                From Chatbots to Autonomous Agents
+              </h2>
+              <p className="text-lg text-muted-foreground mb-4">
+                The AI world is evolving fast — and the next major shift isn't just better answers.
+              </p>
+              <p className="text-xl font-semibold text-foreground mb-4">It's smarter action.</p>
+              <p className="text-lg text-muted-foreground">
+                Agentic AI unlocks this next level. These systems don't just respond — they carry out multi-step tasks,
+                trigger real-world workflows, and act as autonomous teammates.
+              </p>
             </div>
 
-            <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-muted-foreground mb-8">
-                Agentic AI represents the next evolution in business automation—moving beyond simple task execution to
-                intelligent, goal-oriented decision-making. This comprehensive guide will walk you through implementing
-                agentic AI systems that can autonomously manage complex business processes.
-              </p>
+            {/* What Is Agentic AI Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 flex items-center">
+                <Brain className="h-8 w-8 mr-3 text-purple-600" />
+                What Is Agentic AI?
+              </h2>
 
-              <h2>What is Agentic AI?</h2>
-              <p>
-                Agentic AI refers to artificial intelligence systems that can operate autonomously to achieve specific
-                goals. Unlike traditional automation that follows predetermined rules, agentic AI can:
-              </p>
-              <ul>
-                <li>Make decisions based on changing circumstances</li>
-                <li>Learn from outcomes and adjust strategies</li>
-                <li>Coordinate multiple tasks toward a common objective</li>
-                <li>Interact with various systems and stakeholders</li>
-              </ul>
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20 rounded-2xl p-8 border border-purple-100 dark:border-purple-800/30">
+                <p className="text-lg mb-6">At its core, agentic AI means:</p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg">Task-driven behavior</h4>
+                      <p className="text-muted-foreground">(not just Q&A)</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg">Tool and memory access</h4>
+                      <p className="text-muted-foreground">External integrations</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg">Internal decision loops</h4>
+                      <p className="text-muted-foreground">Self-reasoning capability</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-xs">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg">Autonomy with oversight</h4>
+                      <p className="text-muted-foreground">Supervised intelligence</p>
+                    </div>
+                  </div>
+                </div>
 
-              <h2>The Business Case for Agentic AI</h2>
-              <p>Organizations implementing agentic AI systems report significant improvements:</p>
-              <ul>
-                <li>
-                  <strong>35% reduction</strong> in operational costs
-                </li>
-                <li>
-                  <strong>50% faster</strong> decision-making processes
-                </li>
-                <li>
-                  <strong>60% improvement</strong> in process accuracy
-                </li>
-                <li>
-                  <strong>24/7 operations</strong> without human intervention
-                </li>
-              </ul>
+                <div className="mt-8 p-6 bg-white/50 dark:bg-black/20 rounded-xl border border-purple-200 dark:border-purple-700/30">
+                  <p className="text-lg font-medium">
+                    <strong>Think:</strong> AI that knows when it's wrong, retries a failed API call, chooses the right
+                    next step, or decides it needs to ask for help.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-              <h2>Step 1: Identify Suitable Use Cases</h2>
-              <p>Not every business process is suitable for agentic AI. Look for scenarios that involve:</p>
+            {/* Step-by-Step Framework */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center">Step-by-Step Framework to Unlock Agentic AI</h2>
 
-              <h3>High-Volume Decision Making</h3>
-              <ul>
-                <li>Customer service routing and escalation</li>
-                <li>Inventory management and reordering</li>
-                <li>Financial transaction processing</li>
-                <li>Quality control assessments</li>
-              </ul>
+              {/* Step 1 */}
+              <div className="mb-12 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-2xl p-8 border border-green-100 dark:border-green-800/30">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                    <Target className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-green-800 dark:text-green-300">
+                    Step 1: Define One High-Value Use Case
+                  </h3>
+                </div>
 
-              <h3>Multi-Step Workflows</h3>
-              <ul>
-                <li>Lead qualification and nurturing</li>
-                <li>Employee onboarding processes</li>
-                <li>Compliance monitoring and reporting</li>
-                <li>Project management coordination</li>
-              </ul>
+                <p className="text-lg mb-6">Pick a use case where:</p>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold">•</span>
+                    <span>A human today is doing a series of actions</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold">•</span>
+                    <span>There's clear structure or decision logic</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-green-600 font-bold">•</span>
+                    <span>You want to reduce time, cost, or bottlenecks</span>
+                  </li>
+                </ul>
 
-              <h3>Data-Driven Optimization</h3>
-              <ul>
-                <li>Marketing campaign management</li>
-                <li>Resource allocation</li>
-                <li>Pricing strategy adjustments</li>
-                <li>Performance monitoring</li>
-              </ul>
+                <div className="bg-white/70 dark:bg-black/20 rounded-xl p-6 border border-green-200 dark:border-green-700/30">
+                  <h4 className="font-semibold mb-3 text-green-800 dark:text-green-300">Examples:</h4>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                      <span>Loan estimate parsing</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                      <span>Support ticket triage</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                      <span>Inventory restocking</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                      <span>Compliance summaries</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <h2>Step 2: Design Your Agent Architecture</h2>
-              <p>Successful agentic AI systems require careful architectural planning:</p>
+              {/* Step 2 */}
+              <div className="mb-12 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 rounded-2xl p-8 border border-blue-100 dark:border-blue-800/30">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">2</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300">
+                    Step 2: Break it Down into Sub-Tasks
+                  </h3>
+                </div>
 
-              <h3>Core Components</h3>
-              <ol>
-                <li>
-                  <strong>Perception Layer:</strong> Data collection and environmental awareness
-                </li>
-                <li>
-                  <strong>Decision Engine:</strong> Goal-oriented reasoning and planning
-                </li>
-                <li>
-                  <strong>Action Layer:</strong> Task execution and system integration
-                </li>
-                <li>
-                  <strong>Learning Module:</strong> Continuous improvement and adaptation
-                </li>
-              </ol>
+                <p className="text-lg mb-6">Map the workflow into steps:</p>
+                <div className="space-y-4">
+                  {[
+                    { step: "Intake", desc: "(e.g., file, form, email)" },
+                    { step: "Classify or extract data", desc: "" },
+                    { step: "Lookup or call external services", desc: "" },
+                    { step: "Decide based on logic or history", desc: "" },
+                    { step: "Output or escalate", desc: "" },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-4 p-4 bg-white/70 dark:bg-black/20 rounded-lg border border-blue-200 dark:border-blue-700/30"
+                    >
+                      <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        {index + 1}
+                      </div>
+                      <div>
+                        <span className="font-semibold">{item.step}</span>
+                        {item.desc && <span className="text-muted-foreground ml-2">{item.desc}</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-              <h3>Integration Points</h3>
-              <p>Map out all systems your agent will need to interact with:</p>
-              <ul>
-                <li>CRM and customer databases</li>
-                <li>ERP and financial systems</li>
-                <li>Communication platforms</li>
-                <li>External APIs and data sources</li>
-              </ul>
+                <div className="mt-6 p-4 bg-blue-100 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-700/30">
+                  <p className="text-blue-800 dark:text-blue-300 font-medium">
+                    Each step can become a skill or agent in a modular pipeline.
+                  </p>
+                </div>
+              </div>
 
-              <h2>Step 3: Implement Goal-Oriented Planning</h2>
-              <p>The heart of agentic AI is its ability to plan and execute strategies to achieve defined goals:</p>
+              {/* Step 3 */}
+              <div className="mb-12 bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-950/20 dark:to-violet-950/20 rounded-2xl p-8 border border-purple-100 dark:border-purple-800/30">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                    <Settings className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">
+                    Step 3: Choose the Agent Framework
+                  </h3>
+                </div>
 
-              <h3>Goal Definition Framework</h3>
-              <ul>
-                <li>
-                  <strong>Primary Objectives:</strong> Main business outcomes to achieve
-                </li>
-                <li>
-                  <strong>Success Metrics:</strong> Quantifiable measures of progress
-                </li>
-                <li>
-                  <strong>Constraints:</strong> Boundaries and limitations to respect
-                </li>
-                <li>
-                  <strong>Priorities:</strong> Hierarchy of objectives when conflicts arise
-                </li>
-              </ul>
+                <p className="text-lg mb-6">Popular options:</p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    { name: "LangGraph", desc: "for stateful, multi-agent flows" },
+                    { name: "CrewAI", desc: "for modular roles and async reasoning" },
+                    { name: "AutoGen", desc: "for dynamic collaborative agents" },
+                    { name: "Flowise", desc: "low-code visual agent design" },
+                  ].map((framework, index) => (
+                    <div
+                      key={index}
+                      className="p-4 bg-white/70 dark:bg-black/20 rounded-lg border border-purple-200 dark:border-purple-700/30"
+                    >
+                      <h4 className="font-bold text-purple-800 dark:text-purple-300 mb-2">{framework.name}</h4>
+                      <p className="text-muted-foreground">{framework.desc}</p>
+                    </div>
+                  ))}
+                </div>
 
-              <h3>Planning Algorithms</h3>
-              <p>Choose appropriate planning approaches based on your use case:</p>
-              <ul>
-                <li>
-                  <strong>Rule-Based Planning:</strong> For well-defined, predictable scenarios
-                </li>
-                <li>
-                  <strong>Machine Learning Models:</strong> For pattern recognition and prediction
-                </li>
-                <li>
-                  <strong>Reinforcement Learning:</strong> For optimization through trial and error
-                </li>
-                <li>
-                  <strong>Hybrid Approaches:</strong> Combining multiple techniques for robustness
-                </li>
-              </ul>
+                <div className="mt-6 p-4 bg-purple-100 dark:bg-purple-900/30 rounded-lg border border-purple-200 dark:border-purple-700/30">
+                  <p className="text-purple-800 dark:text-purple-300">
+                    You can also build from scratch using LLM + memory + tools.
+                  </p>
+                </div>
+              </div>
 
-              <h2>Step 4: Build Learning and Adaptation Capabilities</h2>
-              <p>What sets agentic AI apart is its ability to improve over time:</p>
+              {/* Step 4 */}
+              <div className="mb-12 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20 rounded-2xl p-8 border border-orange-100 dark:border-orange-800/30">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                    <Zap className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-orange-800 dark:text-orange-300">
+                    Step 4: Add Tools + Memory + Guardrails
+                  </h3>
+                </div>
 
-              <h3>Feedback Loops</h3>
-              <ul>
-                <li>Outcome tracking and analysis</li>
-                <li>Performance metric monitoring</li>
-                <li>User satisfaction measurement</li>
-                <li>Error detection and correction</li>
-              </ul>
+                <p className="text-lg mb-6">Agents need:</p>
+                <div className="space-y-6">
+                  <div className="p-6 bg-white/70 dark:bg-black/20 rounded-lg border border-orange-200 dark:border-orange-700/30">
+                    <h4 className="font-bold text-orange-800 dark:text-orange-300 mb-3">Memory:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {["Qdrant", "Pinecone", "Supabase"].map((tool) => (
+                        <span
+                          key={tool}
+                          className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-sm font-medium"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-              <h3>Continuous Learning Strategies</h3>
-              <ul>
-                <li>
-                  <strong>Online Learning:</strong> Real-time adaptation to new data
-                </li>
-                <li>
-                  <strong>Batch Learning:</strong> Periodic model updates with accumulated data
-                </li>
-                <li>
-                  <strong>Transfer Learning:</strong> Applying knowledge from one domain to another
-                </li>
-                <li>
-                  <strong>Human-in-the-Loop:</strong> Incorporating expert feedback for improvement
-                </li>
-              </ul>
+                  <div className="p-6 bg-white/70 dark:bg-black/20 rounded-lg border border-orange-200 dark:border-orange-700/30">
+                    <h4 className="font-bold text-orange-800 dark:text-orange-300 mb-3">Tools:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {["Internal APIs", "Document search", "Schedulers"].map((tool) => (
+                        <span
+                          key={tool}
+                          className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-sm font-medium"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-              <h2>Step 5: Ensure Safety and Control</h2>
-              <p>Autonomous systems require robust safety mechanisms:</p>
+                  <div className="p-6 bg-white/70 dark:bg-black/20 rounded-lg border border-orange-200 dark:border-orange-700/30">
+                    <h4 className="font-bold text-orange-800 dark:text-orange-300 mb-3">Guardrails:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {["Retry logic", "Evals", "Fallback prompts"].map((tool) => (
+                        <span
+                          key={tool}
+                          className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-sm font-medium"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
 
-              <h3>Safety Measures</h3>
-              <ul>
-                <li>
-                  <strong>Boundary Conditions:</strong> Clear limits on agent actions
-                </li>
-                <li>
-                  <strong>Approval Workflows:</strong> Human oversight for critical decisions
-                </li>
-                <li>
-                  <strong>Rollback Capabilities:</strong> Ability to undo problematic actions
-                </li>
-                <li>
-                  <strong>Monitoring Systems:</strong> Real-time performance and behavior tracking
-                </li>
-              </ul>
+                <div className="mt-6 p-4 bg-orange-100 dark:bg-orange-900/30 rounded-lg border border-orange-200 dark:border-orange-700/30">
+                  <p className="text-orange-800 dark:text-orange-300 font-medium">
+                    This turns a chatbot into a trusted business workflow.
+                  </p>
+                </div>
+              </div>
 
-              <h3>Governance Framework</h3>
-              <ul>
-                <li>Clear accountability structures</li>
-                <li>Regular audit and review processes</li>
-                <li>Compliance with relevant regulations</li>
-                <li>Ethical guidelines and principles</li>
-              </ul>
+              {/* Step 5 */}
+              <div className="mb-12 bg-gradient-to-br from-teal-50 to-green-50 dark:from-teal-950/20 dark:to-green-950/20 rounded-2xl p-8 border border-teal-100 dark:border-teal-800/30">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center mr-4">
+                    <TestTube className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-teal-800 dark:text-teal-300">
+                    Step 5: Test, Evaluate, and Observe
+                  </h3>
+                </div>
 
-              <h2>Step 6: Implementation Roadmap</h2>
-              <p>Follow this phased approach for successful deployment:</p>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-bold text-teal-800 dark:text-teal-300 mb-4">Use eval frameworks like:</h4>
+                    <div className="space-y-3">
+                      {["LangSmith", "Promptfoo", "Custom eval chains"].map((framework) => (
+                        <div
+                          key={framework}
+                          className="flex items-center space-x-3 p-3 bg-white/70 dark:bg-black/20 rounded-lg border border-teal-200 dark:border-teal-700/30"
+                        >
+                          <span className="w-2 h-2 bg-teal-600 rounded-full"></span>
+                          <span className="font-medium">{framework}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
 
-              <h3>Phase 1: Proof of Concept (Weeks 1-4)</h3>
-              <ul>
-                <li>Select a single, well-defined use case</li>
-                <li>Build a minimal viable agent</li>
-                <li>Test in a controlled environment</li>
-                <li>Gather initial performance data</li>
-              </ul>
+                  <div>
+                    <h4 className="font-bold text-teal-800 dark:text-teal-300 mb-4">Track:</h4>
+                    <div className="space-y-3">
+                      {["Success/failure per step", "Token cost and speed", "Edge cases and hallucinations"].map(
+                        (metric) => (
+                          <div
+                            key={metric}
+                            className="flex items-center space-x-3 p-3 bg-white/70 dark:bg-black/20 rounded-lg border border-teal-200 dark:border-teal-700/30"
+                          >
+                            <span className="w-2 h-2 bg-teal-600 rounded-full"></span>
+                            <span className="font-medium">{metric}</span>
+                          </div>
+                        ),
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <h3>Phase 2: Pilot Deployment (Weeks 5-12)</h3>
-              <ul>
-                <li>Deploy to a limited production environment</li>
-                <li>Implement monitoring and safety measures</li>
-                <li>Collect user feedback and performance metrics</li>
-                <li>Refine and optimize based on results</li>
-              </ul>
+            {/* Quote Section */}
+            <div className="mb-16">
+              <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 text-center">
+                <blockquote className="text-2xl md:text-3xl font-bold text-white leading-relaxed">
+                  {'"The magic of agentic AI is not just that it can act — it\'s that it can learn to act better."'}
+                </blockquote>
+              </div>
+            </div>
 
-              <h3>Phase 3: Full Production (Weeks 13-24)</h3>
-              <ul>
-                <li>Scale to full production environment</li>
-                <li>Implement comprehensive monitoring</li>
-                <li>Establish ongoing maintenance procedures</li>
-                <li>Plan for additional use cases</li>
-              </ul>
+            {/* Conclusion */}
+            <div className="mb-16 bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-950/20 dark:to-gray-950/20 rounded-2xl p-8 border border-slate-100 dark:border-slate-800/30">
+              <h2 className="text-3xl font-bold mb-6 flex items-center">
+                <Rocket className="h-8 w-8 mr-3 text-slate-600" />
+                Conclusion: Agentic AI is Infrastructure, Not Just Interaction
+              </h2>
 
-              <h2>Common Pitfalls and How to Avoid Them</h2>
+              <div className="space-y-6 text-lg">
+                <p>If you think of this as just "another chatbot," you'll miss the opportunity.</p>
+                <p>
+                  The best teams treat agentic AI like systems engineering:{" "}
+                  <strong>modular, observable, improvable</strong>.
+                </p>
+                <div className="bg-white/70 dark:bg-black/20 rounded-xl p-6 border border-slate-200 dark:border-slate-700/30">
+                  <p className="font-semibold text-slate-800 dark:text-slate-200">
+                    Build your first agent. Then scale the framework.
+                  </p>
+                  <p className="text-slate-600 dark:text-slate-400 mt-2">Your business will never be the same.</p>
+                </div>
+              </div>
+            </div>
 
-              <h3>Over-Automation</h3>
-              <p>
-                <strong>Problem:</strong> Trying to automate everything at once.
-                <br />
-                <strong>Solution:</strong> Start with high-impact, low-risk processes and gradually expand.
-              </p>
+            {/* CTA Section */}
+            <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-3xl p-12 text-center overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-10"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fillOpacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
+                }}
+              ></div>
 
-              <h3>Insufficient Training Data</h3>
-              <p>
-                <strong>Problem:</strong> Poor performance due to inadequate learning data.
-                <br />
-                <strong>Solution:</strong> Invest in data collection and quality before deployment.
-              </p>
+              <div className="relative z-10">
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Need help designing or deploying your first AI agent?
+                </h3>
+                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                  We've built modular agent stacks across finance, healthcare, and retail. Let's talk about how to get
+                  yours running.
+                </p>
 
-              <h3>Lack of Human Oversight</h3>
-              <p>
-                <strong>Problem:</strong> Autonomous systems making inappropriate decisions.
-                <br />
-                <strong>Solution:</strong> Maintain human oversight for critical decisions and edge cases.
-              </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                  <Link
+                    href="/about/contact"
+                    className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    Book a Call with Our AI Architects →
+                  </Link>
+                </div>
 
-              <h2>Measuring Success</h2>
-              <p>Track these key performance indicators to measure your agentic AI success:</p>
-
-              <h3>Operational Metrics</h3>
-              <ul>
-                <li>Task completion rate and accuracy</li>
-                <li>Processing time and efficiency gains</li>
-                <li>Error rates and quality measures</li>
-                <li>System uptime and reliability</li>
-              </ul>
-
-              <h3>Business Impact</h3>
-              <ul>
-                <li>Cost reduction and ROI</li>
-                <li>Customer satisfaction scores</li>
-                <li>Employee productivity improvements</li>
-                <li>Revenue impact and growth</li>
-              </ul>
-
-              <h2>Future Considerations</h2>
-              <p>As agentic AI technology evolves, consider these emerging trends:</p>
-              <ul>
-                <li>
-                  <strong>Multi-Agent Systems:</strong> Coordinated teams of specialized agents
-                </li>
-                <li>
-                  <strong>Explainable AI:</strong> Better understanding of agent decision-making
-                </li>
-                <li>
-                  <strong>Edge Computing:</strong> Distributed intelligence for faster response times
-                </li>
-                <li>
-                  <strong>Quantum Computing:</strong> Enhanced processing power for complex optimization
-                </li>
-              </ul>
-
-              <h2>Conclusion</h2>
-              <p>
-                Agentic AI represents a significant leap forward in business automation capabilities. By following this
-                step-by-step guide, organizations can successfully implement intelligent, autonomous systems that not
-                only execute tasks but actively work toward business objectives.
-              </p>
-              <p>
-                The key to success lies in careful planning, gradual implementation, and continuous monitoring and
-                improvement. Start small, learn fast, and scale thoughtfully to unlock the full potential of agentic AI
-                for your business.
-              </p>
+                <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm">
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                    Free 30-minute session
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                    No commitment required
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                    Custom implementation roadmap
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Author Bio */}
