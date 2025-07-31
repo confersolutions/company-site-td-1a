@@ -15,14 +15,18 @@ interface ConsultationModalProps {
   onClose: () => void
   title?: string
   buttonText?: string
+  source?: string
 }
 
 export function ConsultationModal({
   isOpen,
   onClose,
-  title = "Get a Free AI Consultation",
+  title,
   buttonText = "Schedule Consultation",
+  source = "consultation",
 }: ConsultationModalProps) {
+  // Set default title based on source if not provided
+  const modalTitle = title || (source === "demo" ? "Get Free Demo" : "Get Free AI Consultation")
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -38,14 +42,14 @@ export function ConsultationModal({
     setIsSubmitting(true)
 
     try {
-      const message = formData.message || `Consultation request fromm ${formData.firstName} ${formData.lastName}`
+      const message = formData.message || `${source === "demo" ? "Demo" : "Consultation"} request from ${formData.firstName} ${formData.lastName}`
 
       const success = await sendEmail(
         `${formData.firstName} ${formData.lastName}`,
         formData.email,
         message,
-        "AI Consultation Request",
-        "consultation",
+        source === "demo" ? "Demo Request" : "AI Consultation Request",
+        source === "demo" ? "demo" : "consultation",
       )
 
       if (success) {
@@ -84,7 +88,7 @@ export function ConsultationModal({
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999] p-4 overflow-y-auto">
       <div className="bg-background text-foreground rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto my-8">
         <div className="flex items-center justify-between p-6 border-b">
-          <h2 className="text-xl font-semibold text-left">{title}</h2>
+          <h2 className="text-xl font-semibold text-left">{modalTitle}</h2>
           <Button variant="ghost" size="icon" onClick={onClose}>
             <X className="h-4 w-4" />
           </Button>
@@ -142,12 +146,13 @@ export function ConsultationModal({
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium mb-1">
-                Message (Optional)
+                Message *
               </label>
               <Textarea
                 id="message"
                 rows={4}
-                placeholder="Tell us about your AI needs..."
+                required
+                placeholder={source === "demo" ? "Tell us about your demo requirements..." : "Tell us about your AI needs..."}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               />

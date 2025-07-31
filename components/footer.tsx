@@ -224,7 +224,7 @@ export function Footer() {
       <ConsultationModal
         isOpen={isConsultationModalOpen}
         onClose={() => setIsConsultationModalOpen(false)}
-        title="Contact Sales"
+        source="consultation"
         buttonText="Send Message"
       />
     </footer>

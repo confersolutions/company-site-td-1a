@@ -70,6 +70,7 @@ export default function ProcessingAgentPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <ConsultationButton
                   size="lg"
+                  source="demo"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white border-0 shadow-lg shadow-cyan-500/25"
                 >
                   <Brain className="w-5 h-5 mr-2" />

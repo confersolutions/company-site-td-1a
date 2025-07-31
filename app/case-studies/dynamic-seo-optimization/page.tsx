@@ -738,7 +738,7 @@ export default function DynamicSEOCaseStudy() {
         </div>
       </section>
 
-      <ConsultationModal isOpen={isConsultationOpen} onClose={() => setIsConsultationOpen(false)} />
+      <ConsultationModal isOpen={isConsultationOpen} onClose={() => setIsConsultationOpen(false)} source="demo" />
     </div>
   )
 }

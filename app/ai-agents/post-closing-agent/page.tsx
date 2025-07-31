@@ -53,13 +53,13 @@ export default function PostClosingAgentPage() {
                 trails for examinations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationButton size="lg">Schedule Demo</ConsultationButton>
+                <ConsultationButton size="lg" source="demo">Schedule Demo</ConsultationButton>
               </div>
             </div>
             {/* Interactive Post-Closing Compliance Dashboard */}
             <div className="relative">
               <div
-                className="w-full h-[500px] bg-cover bg-center rounded-xl shadow-2xl relative overflow-hidden"
+                                  className="w-full h-[600px] bg-cover bg-center rounded-xl shadow-2xl relative overflow-hidden"
                 style={{
                   backgroundImage:
                     "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center')",

@@ -46,7 +46,7 @@ export default function UnderwritingAgentPage() {
                 regulatory compliance across all loan programs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationButton size="lg">Schedule Demo</ConsultationButton>
+                <ConsultationButton size="lg" source="demo">Schedule Demo</ConsultationButton>
               </div>
             </div>
             {/* Interactive Underwriting Dashboard Overlay */}
@@ -598,7 +598,7 @@ export default function UnderwritingAgentPage() {
             documentation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ConsultationButton size="lg" variant="secondary">
+            <ConsultationButton size="lg" variant="secondary" source="demo">
               Schedule Underwriting Demo
             </ConsultationButton>
             <ConsultationButton

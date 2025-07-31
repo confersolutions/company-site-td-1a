@@ -95,7 +95,7 @@ export default function SalesAgentClientPage() {
               {/* Interactive Sales Dashboard Overlay */}
               <div className="relative">
                 <div
-                  className="w-full h-[500px] bg-cover bg-center rounded-xl shadow-2xl relative overflow-hidden"
+                  className="w-full h-[600px] bg-cover bg-center rounded-xl shadow-2xl relative overflow-hidden"
                   style={{
                     backgroundImage:
                       "url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&crop=center')",
