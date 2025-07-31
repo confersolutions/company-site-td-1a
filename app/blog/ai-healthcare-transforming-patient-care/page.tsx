@@ -23,16 +23,81 @@ import {
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "AI in Healthcare: Transforming Patient Care - Confer Solutions AI",
+  title: "AI in Healthcare: Transforming Patient Care with Intelligent Automation | Confer Solutions",
   description:
-    "Explore how AI is reshaping healthcare — from diagnostics and documentation to virtual agents and personalized treatment plans.",
+    "Explore how AI is reshaping healthcare — from diagnostics and documentation to virtual agents and personalized treatment plans. Comprehensive guide to healthcare AI implementation.",
+  keywords: [
+    "AI in healthcare",
+    "healthcare AI transformation",
+    "AI patient care",
+    "medical AI technology",
+    "healthcare automation",
+    "AI medical diagnosis",
+    "healthcare AI solutions",
+    "digital health AI",
+    "AI medical records",
+    "healthcare process automation",
+    "AI virtual health assistants",
+    "medical AI applications",
+    "healthcare technology innovation",
+    "AI telemedicine",
+    "smart healthcare systems"
+  ],
+  authors: [{ name: "Yatin Karnik" }, { name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/blog/ai-healthcare-transforming-patient-care",
+  },
   openGraph: {
-    title: "AI in Healthcare: Transforming Patient Care",
+    title: "AI in Healthcare: Transforming Patient Care with Intelligent Automation",
     description:
-      "Explore how AI is reshaping healthcare — from diagnostics and documentation to virtual agents and personalized treatment plans.",
+      "Explore how AI is reshaping healthcare — from diagnostics and documentation to virtual agents and personalized treatment plans. Comprehensive guide to healthcare AI implementation.",
+    url: "https://confersolutions.ai/blog/ai-healthcare-transforming-patient-care",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "AI in Healthcare - Transforming Patient Care with Intelligent Technology",
+      },
+    ],
+    locale: "en_US",
     type: "article",
     publishedTime: "2024-12-05T09:15:00.000Z",
     authors: ["Yatin Karnik"],
+    tags: ["AI Healthcare", "Patient Care", "Medical Technology", "Healthcare Innovation", "Digital Health"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI in Healthcare: Transforming Patient Care with Intelligent Automation",
+    description:
+      "Explore how AI is reshaping healthcare — from diagnostics and documentation to virtual agents and personalized treatment plans. Comprehensive guide to healthcare AI implementation.",
+    images: [
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 }
 
@@ -102,8 +167,8 @@ export default function BlogPost() {
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
                 <div className="relative h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-white/20 to-white/5">
                   <Image
-                    src="/placeholder.svg?height=320&width=400&text=AI+Healthcare+Assistant"
-                    alt="AI Healthcare Assistant"
+                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="AI Healthcare Assistant - Medical tablet with AI symbols and stethoscope"
                     fill
                     className="object-cover"
                   />

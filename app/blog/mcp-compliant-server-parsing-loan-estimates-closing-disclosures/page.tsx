@@ -1,6 +1,85 @@
+import type { Metadata } from "next"
 import { ArrowLeft, Calendar, User, Clock, Github, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: "MCP-Compliant Server for Parsing Loan Estimates & Closing Disclosures | Confer Solutions",
+  description: "Discover our MCP-compliant server for automated parsing of loan estimates (LE) and closing disclosures (CD). Advanced AI technology for mortgage document processing with 99.7% accuracy.",
+  keywords: [
+    "MCP compliant server",
+    "loan estimate parsing",
+    "closing disclosure parsing",
+    "LE CD parsing",
+    "mortgage document automation",
+    "TRID compliance",
+    "loan estimate AI",
+    "closing disclosure AI",
+    "mortgage technology",
+    "automated underwriting",
+    "document processing AI",
+    "mortgage compliance",
+    "financial document parsing",
+    "AI mortgage solutions",
+    "mortgage workflow automation"
+  ],
+  authors: [{ name: "Yatin Karnik" }, { name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/blog/mcp-compliant-server-parsing-loan-estimates-closing-disclosures",
+  },
+  openGraph: {
+    title: "MCP-Compliant Server for Parsing Loan Estimates & Closing Disclosures",
+    description:
+      "Discover our MCP-compliant server for automated parsing of loan estimates (LE) and closing disclosures (CD). Advanced AI technology for mortgage document processing with 99.7% accuracy.",
+    url: "https://confersolutions.ai/blog/mcp-compliant-server-parsing-loan-estimates-closing-disclosures",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "MCP-Compliant Server for Mortgage Document Processing - Loan Estimates and Closing Disclosures",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+    publishedTime: "2025-04-12T00:00:00.000Z",
+    authors: ["Yatin Karnik"],
+    tags: ["MCP", "Loan Estimates", "Closing Disclosures", "Mortgage Technology", "AI"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MCP-Compliant Server for Parsing Loan Estimates & Closing Disclosures",
+    description:
+      "Discover our MCP-compliant server for automated parsing of loan estimates (LE) and closing disclosures (CD). Advanced AI technology for mortgage document processing with 99.7% accuracy.",
+    images: [
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+}
 
 export default function MCPServerBlogPost() {
   return (
@@ -41,7 +120,7 @@ export default function MCPServerBlogPost() {
           {/* Hero Image */}
           <div className="relative w-full h-64 md:h-96 mb-8 rounded-xl overflow-hidden">
             <Image
-              src="/images/blog/mcp-server-blog.png"
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
               alt="MCP Server Architecture Diagram"
               fill
               className="object-cover"

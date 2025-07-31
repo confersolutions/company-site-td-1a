@@ -265,6 +265,8 @@ export function categorizePages(pages: string[]): SitemapCategory[] {
     'Industries': [],
     'Solutions': [],
     'Case Studies': [],
+    'Blog': [],
+    'Landing Pages': [],
     'About Pages': [],
     'Resources': [],
     'Other': []
@@ -312,7 +314,7 @@ function getPageTitle(path: string): string {
 }
 
 function getCategoryFromPath(path: string): string {
-  if (path === '/' || path === '/about' || path === '/login' || path === '/blog') {
+  if (path === '/' || path === '/about' || path === '/login') {
     return 'Main Pages'
   }
   
@@ -320,6 +322,8 @@ function getCategoryFromPath(path: string): string {
   if (path.startsWith('/industries')) return 'Industries'
   if (path.startsWith('/solutions')) return 'Solutions'
   if (path.startsWith('/case-studies')) return 'Case Studies'
+  if (path.startsWith('/blog/')) return 'Blog'
+  if (path.startsWith('/landing/')) return 'Landing Pages'
   if (path.startsWith('/about/')) return 'About Pages'
   if (path === '/sitemap' || path === '/ai-news') return 'Resources'
   
@@ -346,6 +350,8 @@ function getCategoryIcon(categoryName: string): string {
     'Industries': 'Building2',
     'Solutions': 'Wrench',
     'Case Studies': 'FileText',
+    'Blog': 'FileText',
+    'Landing Pages': 'Target',
     'About Pages': 'Globe',
     'Resources': 'BookOpen',
     'Other': 'FolderOpen'

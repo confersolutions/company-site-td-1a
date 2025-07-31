@@ -96,7 +96,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
@@ -110,7 +110,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Tabs */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <Tabs defaultValue="chatbot" className="w-full">
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-12">

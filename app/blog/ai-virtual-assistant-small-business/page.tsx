@@ -19,16 +19,81 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 export const metadata: Metadata = {
-  title: "AI Virtual Assistant for Small Business: Real-World Case Studies That Deliver - Confer Solutions AI",
+  title: "AI Virtual Assistant for Small Business: Real-World Case Studies That Deliver | Confer Solutions",
   description:
-    "Explore how small businesses are leveraging AI virtual assistants to improve operations, reduce cost, and deliver faster service — with proven results.",
+    "Explore how small businesses are leveraging AI virtual assistants to improve operations, reduce costs, and deliver faster service with proven results. Real case studies and implementation strategies.",
+  keywords: [
+    "AI virtual assistant small business",
+    "small business AI automation",
+    "virtual assistant for business",
+    "AI customer service",
+    "business process automation",
+    "small business AI solutions",
+    "virtual assistant implementation",
+    "AI business efficiency",
+    "automated customer support",
+    "small business technology",
+    "AI virtual receptionist",
+    "business automation tools",
+    "AI productivity tools",
+    "virtual assistant ROI",
+    "small business AI case studies"
+  ],
+  authors: [{ name: "Yatin Karnik" }, { name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/blog/ai-virtual-assistant-small-business",
+  },
   openGraph: {
     title: "AI Virtual Assistant for Small Business: Real-World Case Studies That Deliver",
     description:
-      "Explore how small businesses are leveraging AI virtual assistants to improve operations, reduce cost, and deliver faster service — with proven results.",
+      "Explore how small businesses are leveraging AI virtual assistants to improve operations, reduce costs, and deliver faster service with proven results. Real case studies and implementation strategies.",
+    url: "https://confersolutions.ai/blog/ai-virtual-assistant-small-business",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "AI Virtual Assistant for Small Business - Case Studies and Implementation Guide",
+      },
+    ],
+    locale: "en_US",
     type: "article",
     publishedTime: "2024-12-15T10:00:00.000Z",
     authors: ["Yatin Karnik"],
+    tags: ["AI Virtual Assistant", "Small Business", "Automation", "Case Studies", "Business Efficiency"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Virtual Assistant for Small Business: Real-World Case Studies That Deliver",
+    description:
+      "Explore how small businesses are leveraging AI virtual assistants to improve operations, reduce costs, and deliver faster service with proven results. Real case studies and implementation strategies.",
+    images: [
+      "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 }
 
@@ -108,7 +173,7 @@ export default function BlogPost() {
             <div className="relative">
               <div className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Small+Business+AI+Assistant"
+                  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Small business with AI virtual assistant helping with operations"
                   fill
                   className="object-cover opacity-80"

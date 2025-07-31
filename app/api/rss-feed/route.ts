@@ -116,14 +116,14 @@ export async function GET() {
     const allItems = parseRSSXML(xmlText)
     console.log("Parsed items:", allItems.length)
 
-    // Sort by date (most recent first) and limit to 5
+    // Sort by date (most recent first) and limit to 6
     const sortedItems = allItems
       .sort((a, b) => {
         const dateA = new Date(a.pubDate).getTime()
         const dateB = new Date(b.pubDate).getTime()
         return dateB - dateA // Most recent first
       })
-      .slice(0, 5)
+      .slice(0, 6)
 
     console.log("Returning", sortedItems.length, "articles")
 

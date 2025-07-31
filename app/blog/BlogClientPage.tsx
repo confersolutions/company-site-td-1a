@@ -177,12 +177,22 @@ export default function BlogClientPage() {
     setSubscriptionMessage("")
 
     try {
-      // Simulate API call - replace with actual newsletter API endpoint
-      console.log("Newsletter subscription for:", email)
-      await new Promise((resolve) => setTimeout(resolve, 1000)) // Simulate network delay
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email.trim() }),
+      })
 
-      setSubscriptionMessage("Successfully subscribed! Check your email for confirmation.")
-      setEmail("")
+      const data = await response.json()
+
+      if (response.ok && data.success) {
+        setSubscriptionMessage("Successfully subscribed! You'll receive updates on AI innovation in financial services.")
+        setEmail("")
+      } else {
+        setSubscriptionMessage(data.error || "Subscription failed. Please try again.")
+      }
     } catch (error) {
       setSubscriptionMessage("Subscription failed. Please try again.")
       console.error("Newsletter subscription error:", error)

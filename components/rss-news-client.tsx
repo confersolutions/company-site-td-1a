@@ -224,7 +224,7 @@ export function RSSNewsClient() {
     )
   }
 
-  // Display only the first 6 articles
+  // Display the first 6 articles from the RSS feed
   const displayArticles = rssData.articles.slice(0, 6)
 
   return (

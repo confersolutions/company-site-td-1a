@@ -20,16 +20,81 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Unlocking Agentic AI: A Step-by-Step Guide to Smarter Business Automation - Confer Solutions AI",
+  title: "Unlocking Agentic AI: A Step-by-Step Guide to Smarter Business Automation | Confer Solutions",
   description:
-    "Learn how to implement agentic AI in your organization — from architecture to execution — with real tools, real patterns, and real results.",
+    "Learn how to implement agentic AI in your organization — from architecture to execution — with real tools, real patterns, and real results. Complete implementation guide.",
+  keywords: [
+    "agentic AI",
+    "agentic AI implementation",
+    "AI agent architecture",
+    "business automation AI",
+    "autonomous AI systems",
+    "AI workflow automation",
+    "agentic AI development",
+    "AI agent design patterns",
+    "intelligent automation",
+    "AI system architecture",
+    "autonomous business processes",
+    "agentic AI framework",
+    "AI decision making",
+    "enterprise AI agents",
+    "agentic AI guide"
+  ],
+  authors: [{ name: "Yatin Karnik" }, { name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/blog/unlocking-agentic-ai-step-by-step-guide",
+  },
   openGraph: {
     title: "Unlocking Agentic AI: A Step-by-Step Guide to Smarter Business Automation",
     description:
-      "Learn how to implement agentic AI in your organization — from architecture to execution — with real tools, real patterns, and real results.",
+      "Learn how to implement agentic AI in your organization — from architecture to execution — with real tools, real patterns, and real results. Complete implementation guide.",
+    url: "https://confersolutions.ai/blog/unlocking-agentic-ai-step-by-step-guide",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Unlocking Agentic AI - Step-by-Step Implementation Guide for Business Automation",
+      },
+    ],
+    locale: "en_US",
     type: "article",
     publishedTime: "2024-12-10T14:30:00.000Z",
     authors: ["Yatin Karnik"],
+    tags: ["Agentic AI", "AI Automation", "Business Process", "AI Implementation", "Autonomous Systems"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Unlocking Agentic AI: A Step-by-Step Guide to Smarter Business Automation",
+    description:
+      "Learn how to implement agentic AI in your organization — from architecture to execution — with real tools, real patterns, and real results. Complete implementation guide.",
+    images: [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 }
 
