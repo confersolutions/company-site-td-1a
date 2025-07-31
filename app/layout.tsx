@@ -56,6 +56,9 @@ export const metadata: Metadata = {
       { url: "/images/confer-logo.png", sizes: "16x16", type: "image/png" },
     ],
   },
+  other: {
+    "theme-color": "#0f172a", // slate-900 color for dark theme
+  },
 }
 
 export default function RootLayout({
