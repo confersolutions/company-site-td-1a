@@ -38,14 +38,22 @@ export default function BlogPost() {
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 py-20 overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60\" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fillRule="evenodd"%3E%3Cg fill="%23ffffff" fillOpacity="0.1"%3E%3Ccircle cx="7" cy="7" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        \
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        ></div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Link href="/blog" className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors group">
+          <Link
+            href="/blog"
+            className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors group"
+          >
             <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
             Back to Blog
           </Link>
-          
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               {/* Meta Information */}
@@ -63,8 +71,7 @@ export default function BlogPost() {
                   Yatin Karnik
                 </div>
                 <div className="flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  8 min read
+                  <Clock className="h-4 w-4 mr-1" />8 min read
                 </div>
               </div>
 
@@ -74,9 +81,10 @@ export default function BlogPost() {
                   Small Business
                 </span>
               </h1>
-              
+
               <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                Real-world case studies that deliver proven results — explore how small businesses are leveraging AI virtual assistants to improve operations, reduce costs, and deliver faster service.
+                Real-world case studies that deliver proven results — explore how small businesses are leveraging AI
+                virtual assistants to improve operations, reduce costs, and deliver faster service.
               </p>
 
               {/* Key Stats */}
@@ -120,7 +128,6 @@ export default function BlogPost() {
       <article className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            
             {/* Opening Section */}
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-2xl p-8 mb-12 border border-blue-100 dark:border-blue-800">
               <div className="flex items-start space-x-4">
@@ -128,13 +135,11 @@ export default function BlogPost() {
                   <Users className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                    Small Teams. Big Impact.
-                  </h2>
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Small Teams. Big Impact.</h2>
                   <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                    AI virtual assistants are no longer a futuristic concept — they're real, affordable, and delivering 
-                    <span className="font-semibold text-blue-600 dark:text-blue-400"> measurable ROI</span> for small and 
-                    mid-sized businesses right now.
+                    AI virtual assistants are no longer a futuristic concept — they're real, affordable, and delivering
+                    <span className="font-semibold text-blue-600 dark:text-blue-400"> measurable ROI</span> for small
+                    and mid-sized businesses right now.
                   </p>
                 </div>
               </div>
@@ -143,9 +148,7 @@ export default function BlogPost() {
             {/* Case Studies Section */}
             <div className="space-y-12 mb-16">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Real Success Stories
-                </h2>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Real Success Stories</h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400">
                   See how businesses like yours are transforming operations with AI
                 </p>
@@ -166,10 +169,10 @@ export default function BlogPost() {
                         Smart Inbox Triage for a Local Service Business
                       </h3>
                       <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                        A local HVAC company deployed a virtual assistant that auto-categorizes incoming emails, 
-                        flags urgent jobs, and responds with booking availability.
+                        A local HVAC company deployed a virtual assistant that auto-categorizes incoming emails, flags
+                        urgent jobs, and responds with booking availability.
                       </p>
-                      
+
                       <div className="grid md:grid-cols-3 gap-4">
                         <div className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center">
                           <div className="text-2xl font-bold text-green-600 mb-1">40%</div>
@@ -204,14 +207,16 @@ export default function BlogPost() {
                         Invoice Reminders + Matching for a Boutique Retailer
                       </h3>
                       <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                        Using OpenAI and a vector database, a small clothing brand created an assistant that handles 
+                        Using OpenAI and a vector database, a small clothing brand created an assistant that handles
                         invoice processing with intelligent automation.
                       </p>
-                      
+
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="h-5 w-5 text-green-500" />
-                          <span className="text-gray-700 dark:text-gray-300">Parses incoming invoices automatically</span>
+                          <span className="text-gray-700 dark:text-gray-300">
+                            Parses incoming invoices automatically
+                          </span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="h-5 w-5 text-green-500" />
@@ -219,14 +224,18 @@ export default function BlogPost() {
                         </div>
                         <div className="flex items-center space-x-3">
                           <CheckCircle className="h-5 w-5 text-green-500" />
-                          <span className="text-gray-700 dark:text-gray-300">Sends polite reminders or approval summaries</span>
+                          <span className="text-gray-700 dark:text-gray-300">
+                            Sends polite reminders or approval summaries
+                          </span>
                         </div>
                       </div>
 
                       <div className="bg-gradient-to-r from-purple-100 to-violet-100 dark:from-purple-900/30 dark:to-violet-900/30 rounded-lg p-4">
                         <div className="text-center">
                           <div className="text-3xl font-bold text-purple-600 mb-1">12 hours</div>
-                          <div className="text-gray-600 dark:text-gray-400">Saved per week in manual back-office work</div>
+                          <div className="text-gray-600 dark:text-gray-400">
+                            Saved per week in manual back-office work
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -249,10 +258,10 @@ export default function BlogPost() {
                         Lead Follow-Up Assistant for a Solo Consultant
                       </h3>
                       <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                        A solopreneur trained an AI assistant on past client emails and proposals. The intelligent agent 
+                        A solopreneur trained an AI assistant on past client emails and proposals. The intelligent agent
                         transformed her business development process.
                       </p>
-                      
+
                       <div className="grid md:grid-cols-3 gap-4 mb-6">
                         <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
                           <div className="font-semibold text-gray-900 dark:text-white mb-2">Personalize</div>
@@ -289,26 +298,32 @@ export default function BlogPost() {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
                 What Makes These Assistants Work
               </h2>
-              
+
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Technical Foundation</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-700 dark:text-gray-300">Built on LLMs with custom memory and retrieval</span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        Built on LLMs with custom memory and retrieval
+                      </span>
                     </li>
                     <li className="flex items-center space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-700 dark:text-gray-300">Tailored to business-specific tone and workflows</span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        Tailored to business-specific tone and workflows
+                      </span>
                     </li>
                     <li className="flex items-center space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-500" />
-                      <span className="text-gray-700 dark:text-gray-300">Deployed via chat widgets, WhatsApp, or Slack</span>
+                      <span className="text-gray-700 dark:text-gray-300">
+                        Deployed via chat widgets, WhatsApp, or Slack
+                      </span>
                     </li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
                   <div className="text-center">
                     <div className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -324,13 +339,11 @@ export default function BlogPost() {
 
             {/* How to Start Section */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-2xl p-8 mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-                How to Start
-              </h2>
-              
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">How to Start</h2>
+
               <div className="text-center mb-8">
                 <p className="text-xl text-gray-700 dark:text-gray-300">
-                  Start with <span className="font-bold text-blue-600">one assistant</span>. 
+                  Start with <span className="font-bold text-blue-600">one assistant</span>.
                   <span className="font-bold text-purple-600"> One task</span>.
                 </p>
               </div>
@@ -357,7 +370,7 @@ export default function BlogPost() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What You Need</h3>
                   <ul className="space-y-3">
@@ -381,35 +394,40 @@ export default function BlogPost() {
             {/* Conclusion Quote */}
             <div className="text-center mb-12">
               <blockquote className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-relaxed">
-                "In the hands of small businesses, AI virtual assistants are like{" "}
+                {"In the hands of small businesses, AI virtual assistants are like "}
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                   superpowers
-                </span>{" "}
-                — invisible, tireless, and laser-focused on results."
+                </span>
+                {" — invisible, tireless, and laser-focused on results."}
               </blockquote>
             </div>
 
             {/* CTA Section */}
             <div className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-8 md:p-12 text-center overflow-hidden">
               {/* Background Pattern */}
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60\" height=\"60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg\"%3E%3Cg fill="none" fillRule="evenodd\"%3E%3Cg fill="%23ffffff" fillOpacity="0.1\"%3E%3Ccircle cx="7" cy="7" r="1\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-              
+              <div
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23ffffff' fillOpacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                }}
+              ></div>
+
               <div className="relative">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Want to build your own AI assistant for your business?
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                  Let's talk about use cases and deployment — we've done this before.
+                  {"Let's talk about use cases and deployment — we've done this before."}
                 </p>
-                
-                <Button 
-                  size="lg" 
+
+                <Button
+                  size="lg"
                   className="bg-white text-indigo-600 hover:bg-gray-100 font-semibold px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   Book a Strategy Session
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                
+
                 <div className="mt-6 flex items-center justify-center space-x-6 text-white/80 text-sm">
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 mr-1" />
