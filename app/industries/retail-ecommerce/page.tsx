@@ -36,12 +36,68 @@ export const metadata: Metadata = {
     "vendor intelligence",
     "retail automation",
     "marketplace AI",
+    "retail technology",
+    "e-commerce AI solutions",
+    "smart retail systems",
+    "AI inventory management",
+    "retail analytics AI",
+    "e-commerce optimization",
+    "AI-powered retail",
+    "retail workflow automation",
+    "digital commerce AI"
   ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/industries/retail-ecommerce",
+  },
   openGraph: {
     title: "AI-Driven Retail & E-commerce Solutions | Confer Solutions AI",
     description:
       "Transform retail operations with AI-powered content generation, production support, and vendor intelligence. Reduce costs by 85% with 24/7 automation.",
+    url: "https://confersolutions.ai/industries/retail-ecommerce",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "AI-Driven Retail & E-commerce Solutions - Transform Operations with Smart Automation",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI-Driven Retail & E-commerce Solutions | Confer Solutions AI",
+    description:
+      "Transform retail operations with AI-powered content generation, production support, and vendor intelligence. Reduce costs by 85% with 24/7 automation.",
+    images: [
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 }
 
@@ -93,9 +149,9 @@ export default function RetailEcommercePage() {
                   <ConsultationButton
                     size="lg"
                     className="px-8 py-4 text-lg bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
+                    showArrow={false}
                   >
                     Schedule Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
                   </ConsultationButton>
                   <Button
                     variant="outline"
@@ -479,9 +535,8 @@ export default function RetailEcommercePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <ConsultationButton size="lg" source="demo" className="px-8 py-4 text-lg bg-white text-blue-600 hover:bg-blue-50">
+              <ConsultationButton size="lg" source="demo" className="px-8 py-4 text-lg bg-white text-blue-600 hover:bg-blue-50" showArrow={false}>
                 Schedule Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
               </ConsultationButton>
               <Button
                 variant="outline"

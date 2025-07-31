@@ -1,18 +1,64 @@
-import type { Metadata } from "next"
+"use client"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import Link from "next/link"
-import { Eye, Mail, Lock, ArrowLeft } from "lucide-react"
+import { Eye, Mail, Lock, ArrowLeft, AlertCircle } from "lucide-react"
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { useAuth } from "@/hooks/use-auth"
 
-export const metadata: Metadata = {
-  title: "Login | Confer Solutions AI",
-  description: "Access your Confer Solutions AI account to manage your AI agents and view analytics.",
-}
+// User credentials from the provided list
+const VALID_CREDENTIALS = [
+  { username: "admin", password: "ConferSamplePass1234*", role: "Admin" },
+  { username: "yatin", password: "ConferSamplePass1234*", role: "Executive" },
+  { username: "apoorva", password: "ConferSamplePass1234*", role: "Executive" },
+  { username: "employee", password: "ConferSamplePass1234*", role: "Employee" },
+  { username: "internaluser", password: "ConferSamplePass1234*", role: "Internal" },
+]
 
 export default function LoginPage() {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [showPassword, setShowPassword] = useState(false)
+  const [error, setError] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
+  const { login } = useAuth()
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    setError("")
+
+    // Simple validation
+    if (!email || !password) {
+      setError("Please enter both email and password")
+      setIsLoading(false)
+      return
+    }
+
+    // Check credentials
+    const user = VALID_CREDENTIALS.find(
+      cred => cred.username.toLowerCase() === email.toLowerCase() && cred.password === password
+    )
+
+    if (user) {
+      // Use the auth hook to login
+      login(user.username, user.role)
+      
+      // Redirect to sitemap
+      router.push("/sitemap")
+    } else {
+      setError("Invalid email or password")
+    }
+
+    setIsLoading(false)
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20 flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md">
@@ -40,19 +86,29 @@ export default function LoginPage() {
           </CardHeader>
 
           <CardContent className="space-y-6">
+            {/* Error Message */}
+            {error && (
+              <div className="flex items-center space-x-2 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                <AlertCircle className="h-4 w-4 text-red-600" />
+                <span className="text-sm text-red-600 dark:text-red-400">{error}</span>
+              </div>
+            )}
+
             {/* Login Form */}
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-sm font-medium">
-                  Email Address
+                  Username
                 </Label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="email"
-                    type="email"
-                    placeholder="Enter your email"
+                    type="text"
+                    placeholder="Enter your username"
                     className="pl-10 bg-background border-border focus:border-fintech-500 focus:ring-fintech-500"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
@@ -66,14 +122,17 @@ export default function LoginPage() {
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
                     id="password"
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     placeholder="Enter your password"
                     className="pl-10 pr-10 bg-background border-border focus:border-fintech-500 focus:ring-fintech-500"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     required
                   />
                   <button
                     type="button"
                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                    onClick={() => setShowPassword(!showPassword)}
                   >
                     <Eye className="h-4 w-4" />
                   </button>
@@ -101,11 +160,24 @@ export default function LoginPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-fintech-600 to-fintech-700 hover:from-fintech-700 hover:to-fintech-800 text-white"
+                disabled={isLoading}
+                className="w-full bg-gradient-to-r from-fintech-600 to-fintech-700 hover:from-fintech-700 hover:to-fintech-800 text-white disabled:opacity-50"
               >
-                Sign In
+                {isLoading ? "Signing In..." : "Sign In"}
               </Button>
             </form>
+
+            {/* Demo Credentials Info */}
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+              <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">Demo Credentials:</h4>
+              <div className="text-xs text-blue-700 dark:text-blue-300 space-y-1">
+                <div><strong>All Users:</strong> Use password: <code className="bg-blue-100 dark:bg-blue-800 px-1 rounded">ConferSamplePass1234*</code></div>
+                <div><strong>Admin:</strong> admin</div>
+                <div><strong>Executive:</strong> yatin, apoorva</div>
+                <div><strong>Employee:</strong> employee</div>
+                <div><strong>Internal:</strong> internaluser</div>
+              </div>
+            </div>
 
             {/* Divider */}
             <div className="relative">
@@ -119,7 +191,7 @@ export default function LoginPage() {
 
             {/* Social Login */}
             <div className="grid grid-cols-2 gap-4">
-              <Button variant="outline" className="bg-transparent">
+              <Button variant="outline" className="bg-transparent" disabled>
                 <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -140,7 +212,7 @@ export default function LoginPage() {
                 </svg>
                 Google
               </Button>
-              <Button variant="outline" className="bg-transparent">
+              <Button variant="outline" className="bg-transparent" disabled>
                 <svg className="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.024-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z" />
                 </svg>

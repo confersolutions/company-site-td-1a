@@ -6,6 +6,7 @@ import { Menu, X, ChevronDown } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ConsultationButton } from "@/components/consultation-button"
 import { Button } from "@/components/ui/button"
+import { LogoutButton } from "@/components/logout-button"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,6 +27,10 @@ export function Header() {
 
   const closeDropdowns = () => {
     setActiveDropdown(null)
+  }
+
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false)
   }
 
   return (
@@ -303,6 +308,7 @@ export function Header() {
 
             <div className="flex items-center space-x-4">
               <ThemeToggle />
+              <LogoutButton />
               <ConsultationButton size="sm">Get a Demo</ConsultationButton>
             </div>
           </div>
@@ -321,7 +327,7 @@ export function Header() {
         <div className="md:hidden bg-background border-b">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href="/" className="text-foreground/80 hover:text-foreground transition-colors py-2">
+              <Link href="/" className="text-foreground/80 hover:text-foreground transition-colors py-2" onClick={closeMobileMenu}>
                 Home
               </Link>
 
@@ -332,18 +338,21 @@ export function Header() {
                   <Link
                     href="/industries/finance-mortgage"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Finance & Mortgage
                   </Link>
                   <Link
                     href="/industries/retail-ecommerce"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Retail & E-commerce
                   </Link>
                   <Link
                     href="/industries/healthcare"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Healthcare
                   </Link>
@@ -357,48 +366,56 @@ export function Header() {
                   <Link
                     href="/ai-agents/autonomous-mortgage-bank"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Autonomous AI Mortgage Bank
                   </Link>
                   <Link
                     href="/ai-agents/sales-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Sales Agent
                   </Link>
                   <Link
                     href="/ai-agents/processing-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Processing Agent
                   </Link>
                   <Link
                     href="/ai-agents/underwriting-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Underwriting Agent
                   </Link>
                   <Link
                     href="/ai-agents/closing-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Closing Agent
                   </Link>
                   <Link
                     href="/ai-agents/post-closing-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Post-Closing Agent
                   </Link>
                   <Link
                     href="/ai-agents/voice-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Voice Agent
                   </Link>
                   <Link
                     href="/ai-agents/worker-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Worker Agent
                   </Link>
@@ -412,42 +429,49 @@ export function Header() {
                   <Link
                     href="/solutions"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     All Solutions
                   </Link>
                   <Link
                     href="/solutions/ai-mortgage-agent"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     AI Mortgage Agent
                   </Link>
                   <Link
                     href="/solutions/rag-chatbot"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     RAG Chatbot
                   </Link>
                   <Link
                     href="/solutions/document-processing"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Document Processing
                   </Link>
                   <Link
                     href="/solutions/risk-assessment"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Risk Assessment
                   </Link>
                   <Link
                     href="/solutions/data-analytics"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Data Analytics
                   </Link>
                   <Link
                     href="/solutions/fraud-detection"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Fraud Detection
                   </Link>
@@ -458,46 +482,50 @@ export function Header() {
               <div className="py-2">
                 <div className="text-foreground/80 font-medium mb-2">About</div>
                 <div className="pl-4 space-y-2">
-                  <Link href="/about" className="block text-foreground/60 hover:text-foreground transition-colors py-1">
+                  <Link href="/about" className="block text-foreground/60 hover:text-foreground transition-colors py-1" onClick={closeMobileMenu}>
                     About Us
                   </Link>
                   <Link
                     href="/case-studies"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Case Studies
                   </Link>
                   <Link
                     href="/about/pricing"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Pricing
                   </Link>
-                  <Link href="/blog" className="block text-foreground/60 hover:text-foreground transition-colors py-1">
+                  <Link href="/blog" className="block text-foreground/60 hover:text-foreground transition-colors py-1" onClick={closeMobileMenu}>
                     Blog
                   </Link>
                   <Link
                     href="/about/newsroom"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     Newsroom
                   </Link>
                   <Link
                     href="/ai-news"
                     className="block text-foreground/60 hover:text-foreground transition-colors py-1"
+                    onClick={closeMobileMenu}
                   >
                     AI News
                   </Link>
-                  <Link href="/login" className="block text-foreground/60 hover:text-foreground transition-colors py-1">
+                  <Link href="/login" className="block text-foreground/60 hover:text-foreground transition-colors py-1" onClick={closeMobileMenu}>
                     Login
                   </Link>
                 </div>
               </div>
 
-              <Link href="/about/contact" className="text-foreground/80 hover:text-foreground transition-colors py-2">
+              <Link href="/about/contact" className="text-foreground/80 hover:text-foreground transition-colors py-2" onClick={closeMobileMenu}>
                 Contact
               </Link>
-              <ConsultationButton className="w-full mt-2">Get a Demo</ConsultationButton>
+              <ConsultationButton className="w-full mt-2" onClick={closeMobileMenu}>Get a Demo</ConsultationButton>
             </nav>
           </div>
         </div>

@@ -13,6 +13,7 @@ interface ConsultationButtonProps {
   size?: "default" | "sm" | "lg" | "icon"
   className?: string
   source?: string
+  showArrow?: boolean
 }
 
 export function ConsultationButton({
@@ -21,6 +22,7 @@ export function ConsultationButton({
   size = "default",
   className = "",
   source = "consultation",
+  showArrow = true,
 }: ConsultationButtonProps) {
   // Auto-detect demo buttons based on children text
   const autoSource = children?.toString().toLowerCase().includes("demo") ? "demo" : source
@@ -30,7 +32,7 @@ export function ConsultationButton({
     <>
       <Button variant={variant} size={size} className={className} onClick={() => setIsModalOpen(true)}>
         {children}
-        <ArrowRight className="ml-2 h-4 w-4" />
+        {showArrow && <ArrowRight className="ml-2 h-4 w-4" />}
       </Button>
 
       <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} source={autoSource} />

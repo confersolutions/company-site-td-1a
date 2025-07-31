@@ -30,12 +30,68 @@ export const metadata: Metadata = {
     "LP DU GUS integration",
     "mortgage automation",
     "financial AI",
+    "mortgage technology",
+    "automated loan processing",
+    "financial services AI",
+    "mortgage lending automation",
+    "AI underwriting software",
+    "mortgage compliance automation",
+    "smart mortgage solutions",
+    "AI-powered lending",
+    "mortgage workflow automation"
   ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/industries/finance-mortgage",
+  },
   openGraph: {
     title: "AI-Powered Finance & Mortgage Solutions | Confer Solutions AI",
     description:
       "Revolutionize mortgage banking with AI agents for underwriting, compliance, and document processing. LP/DU/GUS integration, TRID compliance, 99.7% accuracy.",
+    url: "https://confersolutions.ai/industries/finance-mortgage",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "AI-Powered Finance & Mortgage Solutions - Automated Underwriting and Compliance",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI-Powered Finance & Mortgage Solutions | Confer Solutions AI",
+    description:
+      "Revolutionize mortgage banking with AI agents for underwriting, compliance, and document processing. LP/DU/GUS integration, TRID compliance, 99.7% accuracy.",
+    images: [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 }
 
@@ -88,9 +144,9 @@ export default function FinanceMortgagePage() {
                   <ConsultationButton
                     size="lg"
                     className="px-8 py-4 text-lg bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
+                    showArrow={false}
                   >
                     Schedule Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
                   </ConsultationButton>
                   <Button
                     variant="outline"
@@ -473,9 +529,8 @@ export default function FinanceMortgagePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <ConsultationButton size="lg" source="demo" className="px-8 py-4 text-lg bg-white text-blue-600 hover:bg-blue-50">
+              <ConsultationButton size="lg" source="demo" className="px-8 py-4 text-lg bg-white text-blue-600 hover:bg-blue-50" showArrow={false}>
                 Schedule Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
               </ConsultationButton>
               <Button
                 variant="outline"

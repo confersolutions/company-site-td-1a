@@ -9,6 +9,76 @@ export const metadata: Metadata = {
   title: "RAG Chatbot Solutions | Confer Solutions",
   description:
     "Enterprise-grade Retrieval-Augmented Generation (RAG) chatbots for financial services, delivering accurate, context-aware responses with secure data integration.",
+  keywords: [
+    "RAG chatbot",
+    "retrieval augmented generation",
+    "enterprise chatbot solutions",
+    "AI chatbot for finance",
+    "intelligent chatbot",
+    "context-aware chatbot",
+    "financial services chatbot",
+    "AI virtual assistant",
+    "knowledge base chatbot",
+    "conversational AI",
+    "chatbot development",
+    "AI customer service",
+    "enterprise AI assistant",
+    "smart chatbot platform",
+    "financial AI chatbot"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/solutions/rag-chatbot",
+  },
+  openGraph: {
+    title: "RAG Chatbot Solutions | Confer Solutions",
+    description:
+      "Enterprise-grade Retrieval-Augmented Generation (RAG) chatbots for financial services, delivering accurate, context-aware responses with secure data integration.",
+    url: "https://confersolutions.ai/solutions/rag-chatbot",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "RAG Chatbot Solutions - Enterprise-Grade Conversational AI for Financial Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RAG Chatbot Solutions | Confer Solutions",
+    description:
+      "Enterprise-grade Retrieval-Augmented Generation (RAG) chatbots for financial services, delivering accurate, context-aware responses with secure data integration.",
+    images: [
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function RAGChatbotPage() {

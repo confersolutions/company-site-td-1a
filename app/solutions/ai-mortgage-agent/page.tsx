@@ -9,6 +9,76 @@ export const metadata: Metadata = {
   title: "AI Mortgage Agent Solutions | Confer Solutions",
   description:
     "Deploy autonomous AI mortgage agents that revolutionize lending operations. From application to closing, experience intelligent automation with 99.9% accuracy.",
+  keywords: [
+    "AI mortgage agent",
+    "autonomous lending operations",
+    "mortgage automation software",
+    "AI lending solutions",
+    "intelligent mortgage processing",
+    "automated underwriting AI",
+    "mortgage technology platform",
+    "AI-powered lending",
+    "mortgage workflow automation",
+    "smart lending solutions",
+    "autonomous mortgage processing",
+    "AI mortgage technology",
+    "automated loan processing",
+    "mortgage AI platform",
+    "intelligent lending automation"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/solutions/ai-mortgage-agent",
+  },
+  openGraph: {
+    title: "AI Mortgage Agent Solutions | Confer Solutions",
+    description:
+      "Deploy autonomous AI mortgage agents that revolutionize lending operations. From application to closing, experience intelligent automation with 99.9% accuracy.",
+    url: "https://confersolutions.ai/solutions/ai-mortgage-agent",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "AI Mortgage Agent Solutions - Autonomous Lending Operations Dashboard",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Mortgage Agent Solutions | Confer Solutions",
+    description:
+      "Deploy autonomous AI mortgage agents that revolutionize lending operations. From application to closing, experience intelligent automation with 99.9% accuracy.",
+    images: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function AIMortgageAgentPage() {

@@ -1,8 +1,78 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Confer Solutions terms of service and user agreement.",
+  title: "Terms of Service | Confer Solutions AI",
+  description: "Confer Solutions terms of service and user agreement. Review our comprehensive terms and conditions for using our AI-powered financial solutions and services.",
+  keywords: [
+    "terms of service",
+    "user agreement",
+    "terms and conditions",
+    "service agreement",
+    "legal terms",
+    "user terms",
+    "AI service terms",
+    "platform terms",
+    "software license",
+    "service conditions",
+    "usage agreement",
+    "platform agreement",
+    "AI platform terms",
+    "financial services terms",
+    "technology service terms"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/about/terms",
+  },
+  openGraph: {
+    title: "Terms of Service | Confer Solutions AI",
+    description:
+      "Confer Solutions terms of service and user agreement. Review our comprehensive terms and conditions for using our AI-powered financial solutions and services.",
+    url: "https://confersolutions.ai/about/terms",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Terms of Service - Legal Documentation and User Agreement",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Confer Solutions AI",
+    description:
+      "Confer Solutions terms of service and user agreement. Review our comprehensive terms and conditions for using our AI-powered financial solutions and services.",
+    images: [
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function TermsOfServicePage() {

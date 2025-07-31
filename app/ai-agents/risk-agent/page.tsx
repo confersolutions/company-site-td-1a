@@ -8,13 +8,83 @@ export const metadata: Metadata = {
   title: "Risk Agent | AI Risk Assessment | Confer Solutions AI",
   description:
     "Advanced risk assessment with our AI Risk Agent. Real-time risk scoring, fraud detection, and predictive analytics for financial services.",
+  keywords: [
+    "AI risk agent",
+    "risk assessment AI",
+    "financial risk analysis",
+    "fraud detection AI",
+    "predictive risk analytics",
+    "real-time risk scoring",
+    "risk management automation",
+    "AI fraud prevention",
+    "financial risk monitoring",
+    "risk intelligence platform",
+    "automated risk assessment",
+    "AI risk modeling",
+    "risk analytics software",
+    "predictive risk management",
+    "AI risk detection"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/ai-agents/risk-agent",
+  },
+  openGraph: {
+    title: "Risk Agent | AI Risk Assessment | Confer Solutions AI",
+    description:
+      "Advanced risk assessment with our AI Risk Agent. Real-time risk scoring, fraud detection, and predictive analytics for financial services.",
+    url: "https://confersolutions.ai/ai-agents/risk-agent",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "AI Risk Agent - Advanced Risk Assessment and Fraud Detection Analytics",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Risk Agent | AI Risk Assessment | Confer Solutions AI",
+    description:
+      "Advanced risk assessment with our AI Risk Agent. Real-time risk scoring, fraud detection, and predictive analytics for financial services.",
+    images: [
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function RiskAgentPage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-fintech-600 to-fintech-800 py-20">
+      <div className="bg-gradient-to-r from-fintech-600 to-fintech-800 pt-20 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -24,7 +94,7 @@ export default function RiskAgentPage() {
                 predictive analytics that protect your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationButton size="lg" className="bg-white text-fintech-600 hover:bg-white/90">
+                <ConsultationButton size="lg" className="bg-white text-fintech-600 hover:bg-white/90" source="demo" showArrow={false}>
                   Get a Demo
                 </ConsultationButton>
                 <Button

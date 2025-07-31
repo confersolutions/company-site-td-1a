@@ -1,8 +1,78 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "End User License Agreement (EULA)",
-  description: "Confer Solutions End User License Agreement.",
+  title: "End User License Agreement (EULA) | Confer Solutions AI",
+  description: "Confer Solutions End User License Agreement. Review the software license terms and conditions for using our AI-powered platform and services.",
+  keywords: [
+    "EULA",
+    "end user license agreement",
+    "software license",
+    "license agreement",
+    "user license",
+    "software terms",
+    "license terms",
+    "AI software license",
+    "platform license",
+    "software usage agreement",
+    "license conditions",
+    "software agreement",
+    "user agreement",
+    "technology license",
+    "application license"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/about/eula",
+  },
+  openGraph: {
+    title: "End User License Agreement (EULA) | Confer Solutions AI",
+    description:
+      "Confer Solutions End User License Agreement. Review the software license terms and conditions for using our AI-powered platform and services.",
+    url: "https://confersolutions.ai/about/eula",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "End User License Agreement - Software License Terms and Conditions",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "End User License Agreement (EULA) | Confer Solutions AI",
+    description:
+      "Confer Solutions End User License Agreement. Review the software license terms and conditions for using our AI-powered platform and services.",
+    images: [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function EulaPage() {

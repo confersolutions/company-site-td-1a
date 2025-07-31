@@ -42,7 +42,68 @@ export const metadata: Metadata = {
     "ServiceNow automation",
     "IT operations",
     "incident management",
+    "autonomous support system",
+    "AI-powered incident response",
+    "production monitoring AI",
+    "IT automation platform",
+    "DevOps automation",
+    "intelligent incident management",
+    "automated IT support",
+    "AI operations center"
   ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/case-studies/autonomous-production-support",
+  },
+  openGraph: {
+    title: "24/7 Autonomous Production Support Case Study | Confer Solutions AI",
+    description:
+      "Discover how MCP server-powered AI agents transformed production support, achieving 95% automation rate and 8-minute resolution times using JIRA, Confluence, Slack, and ServiceNow integration.",
+    url: "https://confersolutions.ai/case-studies/autonomous-production-support",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "24/7 Autonomous Production Support - AI-Powered IT Operations and Incident Management",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "24/7 Autonomous Production Support Case Study | Confer Solutions AI",
+    description:
+      "Discover how MCP server-powered AI agents transformed production support, achieving 95% automation rate and 8-minute resolution times using JIRA, Confluence, Slack, and ServiceNow integration.",
+    images: [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function AutonomousProductionSupportPage() {
@@ -247,7 +308,7 @@ export default function AutonomousProductionSupportPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ConsultationButton size="lg" className="px-8 py-3">
+              <ConsultationButton size="lg" className="px-8 py-3" showArrow={false}>
                 Schedule Demo
               </ConsultationButton>
               <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent">

@@ -1,8 +1,78 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Disclaimers",
-  description: "Confer Solutions disclaimers and limitation of liability statement.",
+  title: "Disclaimers | Confer Solutions AI",
+  description: "Confer Solutions disclaimers and limitation of liability statement. Review important legal disclaimers and liability limitations for our AI-powered services.",
+  keywords: [
+    "disclaimers",
+    "liability disclaimer",
+    "limitation of liability",
+    "legal disclaimers",
+    "liability statement",
+    "service disclaimers",
+    "legal notices",
+    "liability limitations",
+    "risk disclaimer",
+    "legal terms",
+    "disclaimer notice",
+    "liability terms",
+    "service limitations",
+    "AI service disclaimers",
+    "platform disclaimers"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/about/disclaimers",
+  },
+  openGraph: {
+    title: "Disclaimers | Confer Solutions AI",
+    description:
+      "Confer Solutions disclaimers and limitation of liability statement. Review important legal disclaimers and liability limitations for our AI-powered services.",
+    url: "https://confersolutions.ai/about/disclaimers",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1606890658317-687463a67487?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Disclaimers - Legal Notices and Liability Limitations",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Disclaimers | Confer Solutions AI",
+    description:
+      "Confer Solutions disclaimers and limitation of liability statement. Review important legal disclaimers and liability limitations for our AI-powered services.",
+    images: [
+      "https://images.unsplash.com/photo-1606890658317-687463a67487?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function DisclaimersPage() {

@@ -29,13 +29,63 @@ export const metadata: Metadata = {
   title: "AI Solutions | Confer Solutions AI",
   description:
     "Comprehensive AI-powered solutions for finance, retail, and healthcare industries. Automate workflows, enhance decision-making, and drive measurable impact.",
+  keywords: "AI solutions, artificial intelligence, business automation, workflow optimization, decision making, finance AI, retail AI, healthcare AI, AI technology, business intelligence",
+  authors: [{ name: "Confer Solutions AI" }],
+  creator: "Confer Solutions AI",
+  publisher: "Confer Solutions AI",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/solutions",
+  },
+  openGraph: {
+    title: "AI Solutions | Confer Solutions AI",
+    description: "Comprehensive AI-powered solutions for finance, retail, and healthcare industries. Automate workflows, enhance decision-making, and drive measurable impact.",
+    url: "https://confersolutions.ai/solutions",
+    siteName: "Confer Solutions AI",
+    images: [
+      {
+        url: "https://confersolutions.ai/og-solutions.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Solutions Overview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Solutions | Confer Solutions AI",
+    description: "Comprehensive AI-powered solutions for finance, retail, and healthcare industries. Automate workflows, enhance decision-making, and drive measurable impact.",
+    images: ["https://confersolutions.ai/og-solutions.jpg"],
+    creator: "@confersolutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
             <Badge variant="outline" className="mb-6 px-4 py-2 text-sm font-medium">
@@ -52,9 +102,6 @@ export default function SolutionsPage() {
               <ConsultationButton size="lg" className="px-8 py-3">
                 Get Started Today
               </ConsultationButton>
-              <Button variant="outline" size="lg" className="px-8 py-3 bg-transparent" asChild>
-                <Link href="/about/contact">Learn More</Link>
-              </Button>
             </div>
           </div>
         </div>

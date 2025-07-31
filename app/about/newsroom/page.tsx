@@ -8,6 +8,76 @@ export const metadata: Metadata = {
   title: "Confer News Room | Featured in Forbes, Benzinga & Major Financial Publications",
   description:
     "Confer Solutions AI featured in Forbes, Benzinga, National Mortgage News, and 20+ major publications. Latest press coverage of our mortgage technology innovations.",
+  keywords: [
+    "Confer Solutions news",
+    "Forbes AI coverage",
+    "Benzinga fintech",
+    "mortgage technology news",
+    "AI mortgage press",
+    "financial AI news",
+    "fintech press coverage",
+    "mortgage innovation news",
+    "AI technology media",
+    "financial technology press",
+    "mortgage AI articles",
+    "Confer Solutions media",
+    "AI automation news",
+    "mortgage industry news",
+    "financial services press"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/about/newsroom",
+  },
+  openGraph: {
+    title: "Confer News Room | Featured in Forbes, Benzinga & Major Financial Publications",
+    description:
+      "Confer Solutions AI featured in Forbes, Benzinga, National Mortgage News, and 20+ major publications. Latest press coverage of our mortgage technology innovations.",
+    url: "https://confersolutions.ai/about/newsroom",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Newsroom - Confer Solutions AI Press Coverage and Media Features",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Confer News Room | Featured in Forbes, Benzinga & Major Financial Publications",
+    description:
+      "Confer Solutions AI featured in Forbes, Benzinga, National Mortgage News, and 20+ major publications. Latest press coverage of our mortgage technology innovations.",
+    images: [
+      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function NewsroomPage() {

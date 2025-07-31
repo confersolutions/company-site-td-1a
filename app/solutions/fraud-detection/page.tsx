@@ -9,6 +9,76 @@ export const metadata: Metadata = {
   title: "Fraud Detection Solutions | Confer Solutions",
   description:
     "Protect your financial operations with advanced AI-powered fraud detection. Real-time monitoring, pattern recognition, and automated threat prevention.",
+  keywords: [
+    "AI fraud detection",
+    "financial fraud prevention",
+    "real-time fraud monitoring",
+    "fraud detection software",
+    "AI fraud prevention",
+    "automated threat detection",
+    "financial security AI",
+    "fraud pattern recognition",
+    "anti-fraud technology",
+    "intelligent fraud detection",
+    "fraud monitoring system",
+    "AI security solutions",
+    "financial crime prevention",
+    "fraud detection platform",
+    "advanced fraud protection"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/solutions/fraud-detection",
+  },
+  openGraph: {
+    title: "Fraud Detection Solutions | Confer Solutions",
+    description:
+      "Protect your financial operations with advanced AI-powered fraud detection. Real-time monitoring, pattern recognition, and automated threat prevention.",
+    url: "https://confersolutions.ai/solutions/fraud-detection",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Fraud Detection Solutions - AI-Powered Financial Security and Threat Prevention",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fraud Detection Solutions | Confer Solutions",
+    description:
+      "Protect your financial operations with advanced AI-powered fraud detection. Real-time monitoring, pattern recognition, and automated threat prevention.",
+    images: [
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function FraudDetectionPage() {

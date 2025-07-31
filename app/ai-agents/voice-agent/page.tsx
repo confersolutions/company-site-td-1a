@@ -7,6 +7,56 @@ export const metadata: Metadata = {
   title: "Voice Agent | Revolutionary AI Voice Coordination | Confer Solutions AI",
   description:
     "The paradigm shift: When AI makes humans take action. Revolutionary conversational AI that directs human workflows.",
+  keywords: "AI voice agent, conversational AI, voice coordination, human workflow automation, mortgage voice automation, AI phone calls, voice technology, conversational intelligence",
+  authors: [{ name: "Confer Solutions AI" }],
+  creator: "Confer Solutions AI",
+  publisher: "Confer Solutions AI",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/ai-agents/voice-agent",
+  },
+  openGraph: {
+    title: "Voice Agent | Revolutionary AI Voice Coordination | Confer Solutions AI",
+    description: "The paradigm shift: When AI makes humans take action. Revolutionary conversational AI that directs human workflows.",
+    url: "https://confersolutions.ai/ai-agents/voice-agent",
+    siteName: "Confer Solutions AI",
+    images: [
+      {
+        url: "https://confersolutions.ai/og-voice-agent.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Voice Agent Dashboard",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Voice Agent | Revolutionary AI Voice Coordination | Confer Solutions AI",
+    description: "The paradigm shift: When AI makes humans take action. Revolutionary conversational AI that directs human workflows.",
+    images: ["https://confersolutions.ai/og-voice-agent.jpg"],
+    creator: "@confersolutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function VoiceAgentPage() {
@@ -37,7 +87,7 @@ export default function VoiceAgentPage() {
                 When AI makes humans take action.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationButton size="lg" source="demo">Schedule Demo</ConsultationButton>
+                <ConsultationButton size="lg" source="demo" showArrow={false}>Schedule Demo</ConsultationButton>
               </div>
             </div>
             {/* Interactive Voice Agent Dashboard */}

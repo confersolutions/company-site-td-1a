@@ -8,13 +8,83 @@ export const metadata: Metadata = {
   title: "Compliance Agent | AI Regulatory Compliance | Confer Solutions AI",
   description:
     "Ensure regulatory compliance with our AI Compliance Agent. Automated monitoring, risk assessment, and reporting for financial services.",
+  keywords: [
+    "AI compliance agent",
+    "regulatory compliance automation",
+    "financial compliance monitoring",
+    "risk assessment AI",
+    "compliance reporting software",
+    "regulatory technology",
+    "automated compliance checks",
+    "financial services compliance",
+    "compliance risk management",
+    "regulatory monitoring AI",
+    "compliance automation platform",
+    "AI regulatory oversight",
+    "compliance audit automation",
+    "regtech solutions",
+    "AI compliance monitoring"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/ai-agents/compliance-agent",
+  },
+  openGraph: {
+    title: "Compliance Agent | AI Regulatory Compliance | Confer Solutions AI",
+    description:
+      "Ensure regulatory compliance with our AI Compliance Agent. Automated monitoring, risk assessment, and reporting for financial services.",
+    url: "https://confersolutions.ai/ai-agents/compliance-agent",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "AI Compliance Agent - Automated Regulatory Monitoring and Risk Assessment",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Compliance Agent | AI Regulatory Compliance | Confer Solutions AI",
+    description:
+      "Ensure regulatory compliance with our AI Compliance Agent. Automated monitoring, risk assessment, and reporting for financial services.",
+    images: [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function ComplianceAgentPage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-fintech-600 to-fintech-800 py-20">
+      <div className="bg-gradient-to-r from-fintech-600 to-fintech-800 pt-20 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -24,7 +94,7 @@ export default function ComplianceAgentPage() {
                 real-time alerts, and comprehensive reporting.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationButton size="lg" className="bg-white text-fintech-600 hover:bg-white/90">
+                <ConsultationButton size="lg" className="bg-white text-fintech-600 hover:bg-white/90" source="demo" showArrow={false}>
                   Get a Demo
                 </ConsultationButton>
                 <Button

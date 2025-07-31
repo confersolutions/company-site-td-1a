@@ -7,6 +7,56 @@ export const metadata: Metadata = {
   title: "Autonomous Mortgage Bank | Confer Solutions AI",
   description:
     "Zero Ops Staff. Zero Compliance Analysts. Zero Offshore Support. Turn on five AI agents, and you're in business.",
+  keywords: "autonomous mortgage bank, AI mortgage automation, zero ops staff, mortgage compliance automation, AI agents, mortgage technology, automated lending, mortgage software",
+  authors: [{ name: "Confer Solutions AI" }],
+  creator: "Confer Solutions AI",
+  publisher: "Confer Solutions AI",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/ai-agents/autonomous-mortgage-bank",
+  },
+  openGraph: {
+    title: "Autonomous Mortgage Bank | Confer Solutions AI",
+    description: "Zero Ops Staff. Zero Compliance Analysts. Zero Offshore Support. Turn on five AI agents, and you're in business.",
+    url: "https://confersolutions.ai/ai-agents/autonomous-mortgage-bank",
+    siteName: "Confer Solutions AI",
+    images: [
+      {
+        url: "https://confersolutions.ai/og-autonomous-mortgage-bank.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Autonomous Mortgage Bank Dashboard",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Autonomous Mortgage Bank | Confer Solutions AI",
+    description: "Zero Ops Staff. Zero Compliance Analysts. Zero Offshore Support. Turn on five AI agents, and you're in business.",
+    images: ["https://confersolutions.ai/og-autonomous-mortgage-bank.jpg"],
+    creator: "@confersolutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function AutonomousMortgageBankPage() {
@@ -28,7 +78,7 @@ export default function AutonomousMortgageBankPage() {
               lifecycle, from initial sales through post-closing compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ConsultationButton size="lg" className="text-lg px-8 py-4">
+              <ConsultationButton size="lg" className="text-lg px-8 py-4" showArrow={false}>
                 Schedule Demo
               </ConsultationButton>
               <ConsultationButton variant="outline" size="lg" className="text-lg px-8 py-4">

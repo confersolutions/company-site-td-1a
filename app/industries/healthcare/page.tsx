@@ -34,12 +34,69 @@ export const metadata: Metadata = {
     "medical research AI",
     "healthcare automation",
     "HIPAA compliant AI",
+    "AI patient care",
+    "medical AI solutions",
+    "healthcare technology",
+    "clinical AI tools",
+    "medical data analysis",
+    "AI diagnostics",
+    "healthcare workflow automation",
+    "medical AI platform",
+    "smart healthcare systems",
+    "AI-powered healthcare"
   ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/industries/healthcare",
+  },
   openGraph: {
     title: "AI Healthcare Solutions | Confer Solutions AI",
     description:
       "AI-Powered Healthcare Innovation. Advancing patient care through intelligent automation, research collaboration, and clinical decision support.",
+    url: "https://confersolutions.ai/industries/healthcare",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "AI Healthcare Solutions - Advancing Patient Care with Intelligent Automation",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Healthcare Solutions | Confer Solutions AI",
+    description:
+      "AI-Powered Healthcare Innovation. Advancing patient care through intelligent automation, research collaboration, and clinical decision support.",
+    images: [
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 }
 
@@ -93,9 +150,9 @@ export default function HealthcarePage() {
                   <ConsultationButton
                     size="lg"
                     className="px-8 py-4 text-lg bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
+                    showArrow={false}
                   >
                     Schedule Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
                   </ConsultationButton>
                   <Button
                     variant="outline"
@@ -550,9 +607,8 @@ export default function HealthcarePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <ConsultationButton size="lg" source="demo" className="px-8 py-4 text-lg bg-white text-blue-600 hover:bg-blue-50">
+              <ConsultationButton size="lg" source="demo" className="px-8 py-4 text-lg bg-white text-blue-600 hover:bg-blue-50" showArrow={false}>
                 Schedule Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
               </ConsultationButton>
               <Button
                 variant="outline"

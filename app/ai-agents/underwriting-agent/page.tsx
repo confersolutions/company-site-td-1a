@@ -28,6 +28,56 @@ export const metadata: Metadata = {
   title: "AI Underwriting Agent | Automated Mortgage Underwriting | Confer Solutions AI",
   description:
     "Revolutionary mortgage underwriting with institutional memory, real-time AUS integration, and 100% regulatory compliance across all loan programs.",
+  keywords: "AI underwriting agent, mortgage underwriting automation, AUS integration, LP DU GUS, mortgage compliance, automated underwriting, loan processing, mortgage technology, underwriting software",
+  authors: [{ name: "Confer Solutions AI" }],
+  creator: "Confer Solutions AI",
+  publisher: "Confer Solutions AI",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/ai-agents/underwriting-agent",
+  },
+  openGraph: {
+    title: "AI Underwriting Agent | Automated Mortgage Underwriting | Confer Solutions AI",
+    description: "Revolutionary mortgage underwriting with institutional memory, real-time AUS integration, and 100% regulatory compliance across all loan programs.",
+    url: "https://confersolutions.ai/ai-agents/underwriting-agent",
+    siteName: "Confer Solutions AI",
+    images: [
+      {
+        url: "https://confersolutions.ai/og-underwriting-agent.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Underwriting Agent Dashboard",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Underwriting Agent | Automated Mortgage Underwriting | Confer Solutions AI",
+    description: "Revolutionary mortgage underwriting with institutional memory, real-time AUS integration, and 100% regulatory compliance across all loan programs.",
+    images: ["https://confersolutions.ai/og-underwriting-agent.jpg"],
+    creator: "@confersolutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function UnderwritingAgentPage() {
@@ -46,7 +96,7 @@ export default function UnderwritingAgentPage() {
                 regulatory compliance across all loan programs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationButton size="lg" source="demo">Schedule Demo</ConsultationButton>
+                <ConsultationButton size="lg" source="demo" showArrow={false}>Schedule Demo</ConsultationButton>
               </div>
             </div>
             {/* Interactive Underwriting Dashboard Overlay */}

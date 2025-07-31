@@ -8,6 +8,56 @@ export const metadata: Metadata = {
   title: "Post-Closing Agent | Automated Compliance & Quality Assurance | Confer Solutions AI",
   description:
     "Ensure every loan meets investor standards and regulatory requirements while maintaining complete audit trails for examinations.",
+  keywords: "AI post-closing agent, mortgage compliance automation, quality assurance, audit trails, investor standards, regulatory compliance, post-closing software, mortgage audit",
+  authors: [{ name: "Confer Solutions AI" }],
+  creator: "Confer Solutions AI",
+  publisher: "Confer Solutions AI",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/ai-agents/post-closing-agent",
+  },
+  openGraph: {
+    title: "Post-Closing Agent | Automated Compliance & Quality Assurance | Confer Solutions AI",
+    description: "Ensure every loan meets investor standards and regulatory requirements while maintaining complete audit trails for examinations.",
+    url: "https://confersolutions.ai/ai-agents/post-closing-agent",
+    siteName: "Confer Solutions AI",
+    images: [
+      {
+        url: "https://confersolutions.ai/og-post-closing-agent.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Post-Closing Agent Dashboard",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Post-Closing Agent | Automated Compliance & Quality Assurance | Confer Solutions AI",
+    description: "Ensure every loan meets investor standards and regulatory requirements while maintaining complete audit trails for examinations.",
+    images: ["https://confersolutions.ai/og-post-closing-agent.jpg"],
+    creator: "@confersolutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function PostClosingAgentPage() {
@@ -53,7 +103,7 @@ export default function PostClosingAgentPage() {
                 trails for examinations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationButton size="lg" source="demo">Schedule Demo</ConsultationButton>
+                <ConsultationButton size="lg" source="demo" showArrow={false}>Schedule Demo</ConsultationButton>
               </div>
             </div>
             {/* Interactive Post-Closing Compliance Dashboard */}

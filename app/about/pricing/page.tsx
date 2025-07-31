@@ -19,7 +19,77 @@ import {
 
 export const metadata: Metadata = {
   title: "Pricing | Confer Solutions AI",
-  description: "Transparent pricing for AI-powered solutions. Chatbots, Voice Agents, Consulting, and Custom Projects.",
+  description: "Transparent pricing for AI-powered solutions. Chatbots, Voice Agents, Consulting, and Custom Projects. Flexible plans for businesses of all sizes.",
+  keywords: [
+    "AI pricing",
+    "chatbot pricing",
+    "voice agent pricing",
+    "AI consulting rates",
+    "custom AI development cost",
+    "AI solutions pricing",
+    "mortgage AI pricing",
+    "financial AI costs",
+    "AI automation pricing",
+    "enterprise AI pricing",
+    "AI development rates",
+    "AI platform pricing",
+    "transparent AI pricing",
+    "AI services cost",
+    "business AI pricing"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/about/pricing",
+  },
+  openGraph: {
+    title: "Pricing | Confer Solutions AI",
+    description:
+      "Transparent pricing for AI-powered solutions. Chatbots, Voice Agents, Consulting, and Custom Projects. Flexible plans for businesses of all sizes.",
+    url: "https://confersolutions.ai/about/pricing",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Pricing - Transparent AI Solutions Pricing for Every Business",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing | Confer Solutions AI",
+    description:
+      "Transparent pricing for AI-powered solutions. Chatbots, Voice Agents, Consulting, and Custom Projects. Flexible plans for businesses of all sizes.",
+    images: [
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function PricingPage() {

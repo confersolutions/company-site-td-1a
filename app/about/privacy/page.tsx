@@ -1,8 +1,78 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Confer Solutions privacy policy and data protection practices.",
+  title: "Privacy Policy | Confer Solutions AI",
+  description: "Confer Solutions privacy policy and data protection practices. Learn how we collect, use, and protect your personal information in compliance with privacy regulations.",
+  keywords: [
+    "privacy policy",
+    "data protection",
+    "privacy practices",
+    "data privacy",
+    "user privacy",
+    "GDPR compliance",
+    "data collection",
+    "privacy rights",
+    "information security",
+    "data usage",
+    "privacy statement",
+    "personal data protection",
+    "data processing",
+    "privacy compliance",
+    "AI privacy policy"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/about/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Confer Solutions AI",
+    description:
+      "Confer Solutions privacy policy and data protection practices. Learn how we collect, use, and protect your personal information in compliance with privacy regulations.",
+    url: "https://confersolutions.ai/about/privacy",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1551808525-51a94da548ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Privacy Policy - Data Protection and User Privacy Rights",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Confer Solutions AI",
+    description:
+      "Confer Solutions privacy policy and data protection practices. Learn how we collect, use, and protect your personal information in compliance with privacy regulations.",
+    images: [
+      "https://images.unsplash.com/photo-1551808525-51a94da548ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function PrivacyPage() {

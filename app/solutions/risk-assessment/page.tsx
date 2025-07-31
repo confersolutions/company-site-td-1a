@@ -20,6 +20,76 @@ export const metadata: Metadata = {
   title: "Risk Assessment Solutions | Confer Solutions",
   description:
     "Industry-leading AI/ML risk assessment solutions for financial services, delivering predictive insights, fraud detection, and regulatory compliance with unmatched accuracy.",
+  keywords: [
+    "AI risk assessment",
+    "financial risk management",
+    "predictive risk analytics",
+    "ML risk assessment",
+    "risk assessment software",
+    "financial risk analysis",
+    "automated risk assessment",
+    "risk modeling AI",
+    "credit risk assessment",
+    "operational risk management",
+    "risk prediction models",
+    "financial risk platform",
+    "risk intelligence solutions",
+    "regulatory compliance risk",
+    "enterprise risk management"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/solutions/risk-assessment",
+  },
+  openGraph: {
+    title: "Risk Assessment Solutions | Confer Solutions",
+    description:
+      "Industry-leading AI/ML risk assessment solutions for financial services, delivering predictive insights, fraud detection, and regulatory compliance with unmatched accuracy.",
+    url: "https://confersolutions.ai/solutions/risk-assessment",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Risk Assessment Solutions - AI-Powered Financial Risk Management and Predictive Analytics",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Risk Assessment Solutions | Confer Solutions",
+    description:
+      "Industry-leading AI/ML risk assessment solutions for financial services, delivering predictive insights, fraud detection, and regulatory compliance with unmatched accuracy.",
+    images: [
+      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function RiskAssessmentPage() {

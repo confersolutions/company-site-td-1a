@@ -30,6 +30,56 @@ export const metadata: Metadata = {
   title: "Processing Agent | Automated Loan Processing | Confer Solutions AI",
   description:
     "Process loans with the precision of a senior processor while maintaining complete audit trails and regulatory compliance.",
+  keywords: "AI processing agent, loan processing automation, mortgage processing, document processing, income verification, asset validation, mortgage technology, processing software",
+  authors: [{ name: "Confer Solutions AI" }],
+  creator: "Confer Solutions AI",
+  publisher: "Confer Solutions AI",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/ai-agents/processing-agent",
+  },
+  openGraph: {
+    title: "Processing Agent | Automated Loan Processing | Confer Solutions AI",
+    description: "Process loans with the precision of a senior processor while maintaining complete audit trails and regulatory compliance.",
+    url: "https://confersolutions.ai/ai-agents/processing-agent",
+    siteName: "Confer Solutions AI",
+    images: [
+      {
+        url: "https://confersolutions.ai/og-processing-agent.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Processing Agent Dashboard",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Processing Agent | Automated Loan Processing | Confer Solutions AI",
+    description: "Process loans with the precision of a senior processor while maintaining complete audit trails and regulatory compliance.",
+    images: ["https://confersolutions.ai/og-processing-agent.jpg"],
+    creator: "@confersolutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function ProcessingAgentPage() {

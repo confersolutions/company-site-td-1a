@@ -45,7 +45,7 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
+          <div className="order-1">
             <div className="space-y-6">
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm">
                 <span className="flex h-2 w-2 rounded-full bg-green-400 mr-2"></span>
@@ -78,7 +78,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 relative">
+          <div className="order-2 lg:order-2 relative">
             <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"

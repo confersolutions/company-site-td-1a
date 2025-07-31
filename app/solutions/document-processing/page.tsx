@@ -20,6 +20,76 @@ export const metadata: Metadata = {
   title: "Document Processing Solutions | Confer Solutions",
   description:
     "AI-powered document processing for mortgage and financial services, featuring advanced LE/CD extraction, self-healing PDF parser, and integration with our MCP Mortgage Server.",
+  keywords: [
+    "AI document processing",
+    "mortgage document automation",
+    "LE/CD extraction",
+    "loan estimate processing",
+    "closing disclosure AI",
+    "financial document AI",
+    "PDF processing automation",
+    "self-healing PDF parser",
+    "MCP mortgage server",
+    "document analysis AI",
+    "mortgage compliance automation",
+    "intelligent document extraction",
+    "financial document workflow",
+    "AI OCR solutions",
+    "automated document processing"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/solutions/document-processing",
+  },
+  openGraph: {
+    title: "Document Processing Solutions | Confer Solutions",
+    description:
+      "AI-powered document processing for mortgage and financial services, featuring advanced LE/CD extraction, self-healing PDF parser, and integration with our MCP Mortgage Server.",
+    url: "https://confersolutions.ai/solutions/document-processing",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Document Processing Solutions - AI-Powered Financial Document Automation",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Document Processing Solutions | Confer Solutions",
+    description:
+      "AI-powered document processing for mortgage and financial services, featuring advanced LE/CD extraction, self-healing PDF parser, and integration with our MCP Mortgage Server.",
+    images: [
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function DocumentProcessingPage() {

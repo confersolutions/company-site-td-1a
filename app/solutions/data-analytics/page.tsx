@@ -9,6 +9,76 @@ export const metadata: Metadata = {
   title: "Data Analytics Solutions | Confer Solutions",
   description:
     "Transform financial data into actionable intelligence with AI-powered analytics. Real-time insights, predictive modeling, and automated reporting for smarter business decisions.",
+  keywords: [
+    "AI data analytics",
+    "financial data intelligence",
+    "predictive modeling",
+    "real-time analytics",
+    "business intelligence AI",
+    "automated reporting",
+    "financial analytics platform",
+    "data-driven insights",
+    "AI analytics solutions",
+    "advanced data visualization",
+    "financial forecasting AI",
+    "smart analytics dashboard",
+    "AI-powered business intelligence",
+    "data analytics automation",
+    "financial performance analytics"
+  ],
+  authors: [{ name: "Confer Solutions" }],
+  creator: "Confer Solutions",
+  publisher: "Confer Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://confersolutions.ai"),
+  alternates: {
+    canonical: "/solutions/data-analytics",
+  },
+  openGraph: {
+    title: "Data Analytics Solutions | Confer Solutions",
+    description:
+      "Transform financial data into actionable intelligence with AI-powered analytics. Real-time insights, predictive modeling, and automated reporting for smarter business decisions.",
+    url: "https://confersolutions.ai/solutions/data-analytics",
+    siteName: "Confer Solutions",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+        width: 1200,
+        height: 630,
+        alt: "Data Analytics Solutions - AI-Powered Financial Intelligence Dashboard",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Data Analytics Solutions | Confer Solutions",
+    description:
+      "Transform financial data into actionable intelligence with AI-powered analytics. Real-time insights, predictive modeling, and automated reporting for smarter business decisions.",
+    images: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630",
+    ],
+    creator: "@confer_inc",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
 }
 
 export default function DataAnalyticsPage() {
