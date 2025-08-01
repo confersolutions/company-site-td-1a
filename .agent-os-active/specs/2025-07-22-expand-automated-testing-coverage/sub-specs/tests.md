@@ -1,6 +1,6 @@
 # Tests Specification
 
-This is the tests coverage details for the spec detailed in @.agent-os/specs/2025-07-22-expand-automated-testing-coverage/spec.md
+This is the tests coverage details for the spec detailed in @.agent-os-active/specs/2025-07-22-expand-automated-testing-coverage/spec.md
 
 > Created: 2025-07-22
 > Version: 1.0.0

@@ -20,7 +20,7 @@
 - Audit and improve Core Web Vitals (LCP, FID, CLS)
 
 ## Documentation
-- Document accessibility and SEO strategy in `.agent-os/product/tech-stack.md`
+- Document accessibility and SEO strategy in `.agent-os-active/product/tech-stack.md`
 - Add “How to test accessibility/SEO” to `README.md`
 
 ## Tools & Dependencies

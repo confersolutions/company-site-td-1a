@@ -67,7 +67,7 @@ npm update           # Update dependencies
 ## 📚 Full Documentation
 
 - **Development Guide**: `.agent-os/standards/development-deployment.md`
-- **Project Deployment**: `.agent-os/product/deployment.md`
+- **Project Deployment**: `.agent-os-active/product/deployment.md`
 - **Code Standards**: `.agent-os/standards/code-style.md`
 
 ## 🆘 Quick Troubleshooting

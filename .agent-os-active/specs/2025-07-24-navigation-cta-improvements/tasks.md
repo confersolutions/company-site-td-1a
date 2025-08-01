@@ -1,6 +1,6 @@
 # Spec Tasks
 
-These are the tasks to be completed for the spec detailed in @.agent-os/specs/2025-07-24-navigation-cta-improvements/spec.md
+These are the tasks to be completed for the spec detailed in @.agent-os-active/specs/2025-07-24-navigation-cta-improvements/spec.md
 
 > Created: 2025-07-24
 > Status: Ready for Implementation

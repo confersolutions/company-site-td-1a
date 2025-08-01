@@ -30,11 +30,11 @@ These standards are automatically referenced by Agent OS instructions:
 
 ## 🔄 Project-Specific Overrides
 
-Individual projects can override these standards in their `.agent-os/product/` directory:
+Individual projects can override these standards in their `.agent-os-active/product/` directory:
 
-- Project-specific deployment: `.agent-os/product/deployment.md`
-- Project-specific tech stack: `.agent-os/product/tech-stack.md`
-- Project-specific decisions: `.agent-os/product/decisions.md`
+- Project-specific deployment: `.agent-os-active/product/deployment.md`
+- Project-specific tech stack: `.agent-os-active/product/tech-stack.md`
+- Project-specific decisions: `.agent-os-active/product/decisions.md`
 
 ## 📝 Contributing
 

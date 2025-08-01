@@ -227,7 +227,7 @@ encoding: UTF-8
 </step_metadata>
 
 <verification_checklist>
-  - [ ] .agent-os/product/ directory created
+  - [ ] .agent-os-active/product/ directory created
   - [ ] All product documentation reflects actual codebase
   - [ ] Roadmap shows completed and planned features accurately
   - [ ] Tech stack matches installed dependencies
@@ -248,13 +248,13 @@ encoding: UTF-8
 
   ### What Was Created
 
-  - ✓ Product documentation in `.agent-os/product/`
+  - ✓ Product documentation in `.agent-os-active/product/`
   - ✓ Roadmap with completed work in Phase 0
   - ✓ Tech stack reflecting actual dependencies
 
   ### Next Steps
 
-  1. Review the generated documentation in `.agent-os/product/`
+  1. Review the generated documentation in `.agent-os-active/product/`
   2. Make any necessary adjustments to reflect your vision
   3. See the Agent OS README for usage instructions: https://github.com/buildermethods/agent-os
   4. Start using Agent OS for your next feature:

@@ -41,7 +41,7 @@ encoding: UTF-8
 
 Before creating a spec, ensure you have:
 
-- [ ] Product documentation in `.agent-os/product/` (mission.md, roadmap.md, tech-stack.md, decisions.md, overview.md)
+- [ ] Product documentation in `.agent-os-active/product/` (mission.md, roadmap.md, tech-stack.md, decisions.md, overview.md)
 - [ ] Development environment set up (see @.agent-os/standards/quick-start.md)
 - [ ] Understanding of current project state and priorities
 - [ ] Clear understanding of the feature or improvement needed
@@ -65,7 +65,7 @@ Before creating a spec, ensure you have:
     - "what should we work on next?"
   </trigger_phrases>
   <actions>
-    1. CHECK @.agent-os/product/roadmap.md
+    1. CHECK @.agent-os-active/product/roadmap.md
     2. FIND next uncompleted item
     3. SUGGEST item to user
     4. WAIT for approval
@@ -92,9 +92,9 @@ Before creating a spec, ensure you have:
 
 <step_metadata>
   <reads>
-    - @.agent-os/product/mission.md
-    - @.agent-os/product/roadmap.md
-    - @.agent-os/product/tech-stack.md
+    - @.agent-os-active/product/mission.md
+- @.agent-os-active/product/roadmap.md
+- @.agent-os-active/product/tech-stack.md
   </reads>
   <purpose>understand spec alignment</purpose>
 </step_metadata>
@@ -174,8 +174,8 @@ Before creating a spec, ensure you have:
   <primary_method>
     <name>File System Timestamp</name>
     <process>
-      1. CREATE directory if not exists: .agent-os/specs/
-      2. CREATE temporary file: .agent-os/specs/.date-check
+      1. CREATE directory if not exists: .agent-os-active/specs/
+2. CREATE temporary file: .agent-os-active/specs/.date-check
       3. READ file creation timestamp from filesystem
       4. EXTRACT date in YYYY-MM-DD format
       5. DELETE temporary file
@@ -227,7 +227,7 @@ Before creating a spec, ensure you have:
 
 <step_metadata>
   <creates>
-    - directory: .agent-os/specs/YYYY-MM-DD-spec-name/
+    - directory: .agent-os-active/specs/YYYY-MM-DD-spec-name/
   </creates>
   <uses>date from step 4</uses>
 </step_metadata>
@@ -263,7 +263,7 @@ Before creating a spec, ensure you have:
 
 <step_metadata>
   <creates>
-    - file: .agent-os/specs/YYYY-MM-DD-spec-name/spec.md
+    - file: .agent-os-active/specs/YYYY-MM-DD-spec-name/spec.md
   </creates>
 </step_metadata>
 

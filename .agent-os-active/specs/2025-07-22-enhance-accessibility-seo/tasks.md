@@ -28,7 +28,7 @@
 - [ ] Audit and improve Core Web Vitals (LCP, FID, CLS) - PENDING: Need to run performance audit
 
 ## Documentation
-- [ ] Document accessibility and SEO strategy in `.agent-os/product/tech-stack.md` - PENDING: Need to create documentation
+- [ ] Document accessibility and SEO strategy in `.agent-os-active/product/tech-stack.md` - PENDING: Need to create documentation
 - [ ] Add "How to test accessibility/SEO" to `README.md` - PENDING: Need to add testing instructions
 
 ## Manual Testing Issues (Found During Testing)

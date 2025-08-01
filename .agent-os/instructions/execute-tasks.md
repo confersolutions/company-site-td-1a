@@ -80,7 +80,7 @@ encoding: UTF-8
     - spec SRD file
 - spec tasks.md
 - all files in spec sub-specs/ folder
-    - @.agent-os/product/mission.md
+    - @.agent-os-active/product/mission.md
   </reads>
   <purpose>complete understanding of requirements</purpose>
 </step_metadata>
@@ -251,8 +251,8 @@ encoding: UTF-8
   <follow_exactly>
     - approved implementation plan
     - spec specifications
-    - @.agent-os/product/code-style.md
-    - @.agent-os/product/dev-best-practices.md
+    - @.agent-os-active/product/code-style.md
+    - @.agent-os-active/product/dev-best-practices.md
   </follow_exactly>
   <approach>test-driven development (TDD)</approach>
 </execution_standards>
@@ -394,7 +394,7 @@ encoding: UTF-8
 ### Step 10: Roadmap Progress Check
 
 <step_metadata>
-  <checks>@.agent-os/product/roadmap.md</checks>
+  <checks>@.agent-os-active/product/roadmap.md</checks>
   <updates>if spec completes roadmap item</updates>
 </step_metadata>
 
@@ -503,7 +503,7 @@ encoding: UTF-8
   <development_setup>
     <quick_start>@.agent-os/standards/quick-start.md</quick_start>
     <full_guide>@.agent-os/standards/development-deployment.md</full_guide>
-    <project_specific>@.agent-os/product/deployment.md</project_specific>
+    <project_specific>@.agent-os-active/product/deployment.md</project_specific>
   </development_setup>
   <testing>
     <coverage>comprehensive</coverage>
