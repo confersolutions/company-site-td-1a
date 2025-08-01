@@ -5,4 +5,4 @@ Allow: /
 Sitemap: https://confersolutions.ai/sitemap.xml
 
 # Crawl-delay
-Crawl-delay: 1 
+Crawl-delay: 1

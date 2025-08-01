@@ -26,4 +26,4 @@ ${sitemapData.map(page => `  <url>
     console.error('Error generating sitemap:', error)
     return new NextResponse('Error generating sitemap', { status: 500 })
   }
-} 
+}

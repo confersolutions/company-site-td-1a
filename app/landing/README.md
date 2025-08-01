@@ -4,7 +4,7 @@ This directory contains dedicated landing pages for specific marketing campaigns
 
 ## Structure
 
-```
+\`\`\`
 app/landing/
 ├── README.md
 ├── mortgage-automation/
@@ -13,7 +13,7 @@ app/landing/
 │   └── page.tsx
 └── chatbot-solutions/
     └── page.tsx
-```
+\`\`\`
 
 ## URL Structure
 
@@ -67,7 +67,7 @@ app/landing/
 
 ## Example Template
 
-```tsx
+\`\`\`tsx
 import type { Metadata } from "next"
 import { ConsultationButton } from "@/components/consultation-button"
 
@@ -97,4 +97,4 @@ export default function LandingPage() {
     </div>
   )
 }
-``` 
+\`\`\`

@@ -437,7 +437,7 @@ The `babel.config.js` file must be managed differently for different deployment 
 - **Coolify/VPS Deployment**: File remains as `babel.config.jsc` to avoid Next.js font loading conflicts
 
 #### Deployment Process
-```bash
+\`\`\`bash
 # For V0 deployment
 mv babel.config.jsc babel.config.js
 # Deploy to V0
@@ -446,7 +446,7 @@ mv babel.config.js babel.config.jsc
 
 # For Coolify/VPS deployment
 # File remains as babel.config.jsc (no action needed)
-```
+\`\`\`
 
 #### Technical Background
 - **V0 Requirement**: V0 requires the file to be named `babel.config.js` for proper module resolution
