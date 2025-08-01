@@ -1,6 +1,6 @@
 import { FileText, CheckCircle, Shield, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { OptimizedImage } from "@/components/ui/optimized-image"
 
 export function DocumentProcessingDetail() {
   const features = [
@@ -76,11 +76,14 @@ export function DocumentProcessingDetail() {
 
             <div className="relative">
               <div className="relative h-96 w-full rounded-xl overflow-hidden shadow-lg">
-                <Image
+                <OptimizedImage
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="AI-powered document processing system analyzing mortgage documents with a floating LE (Loan Estimate) document preview showing successful validation"
-                  fill
-                  className="object-cover"
+                  width={800}
+                  height={534}
+                  responsive={true}
+                  className="object-cover w-full h-full"
+                  priority={true}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-fintech-900/70 to-transparent"></div>
 

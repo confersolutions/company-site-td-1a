@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { ConsultationModal } from "./consultation-modal"
+import { OptimizedImage } from "@/components/ui/optimized-image"
 
 export function Footer() {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false)
@@ -15,7 +16,16 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-block mb-6">
               <div className="flex items-center">
-                <img src="/images/confer-logo.png" alt="Confer Solutions AI Logo" className="h-8 w-8 mr-2" />
+                <div className="relative h-8 w-8 mr-2">
+                  <OptimizedImage 
+                    src="/optimized/images/confer-logo.webp" 
+                    alt="Confer Solutions AI Logo" 
+                    width={32} 
+                    height={32}
+                    responsive={false}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
                   Confer Inc.
                 </span>

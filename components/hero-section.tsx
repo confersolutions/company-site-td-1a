@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { motion } from "framer-motion"
+import { OptimizedImage } from "@/components/ui/optimized-image"
 import { ConsultationButton } from "@/components/consultation-button"
 import Link from "next/link"
 
@@ -79,13 +80,15 @@ export function HeroSection() {
           </div>
 
           <div className="order-2 lg:order-2 relative">
-            <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl" style={{ height: '500px' }}>
+              <OptimizedImage
+                src="/images/optimized/hero-image.webp"
                 alt="Modern financial analytics dashboard displaying real-time market data, performance metrics, and interactive charts, showcasing AI-powered business intelligence capabilities"
-                fill
-                className="object-cover"
-                priority
+                width={1920}
+                height={1000}
+                responsive={true}
+                priority={true}
+                className="w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-fintech-950/80 to-transparent"></div>
 

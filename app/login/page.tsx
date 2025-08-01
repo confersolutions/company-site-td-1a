@@ -10,6 +10,7 @@ import { Eye, Mail, Lock, ArrowLeft, AlertCircle } from "lucide-react"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { useAuth } from "@/hooks/use-auth"
+import { OptimizedImage } from "@/components/ui/optimized-image"
 
 // User credentials from the provided list
 const VALID_CREDENTIALS = [
@@ -77,7 +78,17 @@ export default function LoginPage() {
         <Card className="border-0 bg-gradient-to-br from-background to-secondary/20 shadow-lg">
           <CardHeader className="text-center pb-6">
             <div className="flex justify-center mb-6">
-              <img src="/images/confer-logo.png" alt="Confer Solutions AI" className="h-12 w-12 rounded" />
+              <div className="relative h-12 w-12">
+                <OptimizedImage 
+                  src="/optimized/images/confer-logo.webp" 
+                  alt="Confer Solutions AI" 
+                  width={48} 
+                  height={48}
+                  responsive={false}
+                  priority={true}
+                  className="h-full w-full rounded"
+                />
+              </div>
             </div>
             <CardTitle className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
               Welcome Back

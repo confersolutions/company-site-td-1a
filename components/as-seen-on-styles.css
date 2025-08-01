@@ -1,0 +1,19 @@
+/* Animation for the infinite scroll effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * var(--logo-count, 6)));
+  }
+}
+
+.animate-infinite-scroll {
+  animation: scroll calc(20s + (var(--logo-count, 6) * 2s)) linear infinite;
+  display: flex;
+  width: calc(250px * (var(--logo-count, 6) * 2));
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}

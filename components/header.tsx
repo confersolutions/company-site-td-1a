@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { ConsultationButton } from "@/components/consultation-button"
@@ -43,7 +44,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img src="/images/confer-logo.png" alt="Confer Solutions AI - AI-Powered Business Solutions" className="h-10 w-10 mr-2 rounded" />
+              <Image 
+                src="/optimized/images/confer-logo.webp" 
+                alt="Confer Solutions AI - AI-Powered Business Solutions" 
+                width={40} 
+                height={40} 
+                className="h-10 w-10 mr-2 rounded" 
+                priority
+              />
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
                 Confer Solutions AI
               </span>

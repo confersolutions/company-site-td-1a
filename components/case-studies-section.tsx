@@ -2,9 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import Image from "next/image"
 import dynamic from "next/dynamic"
 import { useState, useCallback } from "react"
+import { OptimizedImage } from "@/components/ui/optimized-image"
 
 const NewsletterModal = dynamic(() => import("@/components/newsletter-modal").then((m) => m.default), { ssr: false })
 
@@ -48,11 +48,14 @@ export function CaseStudiesSection() {
         <div className="bg-card rounded-xl overflow-hidden shadow-lg border border-border">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="relative h-64 lg:h-auto">
-              <Image
+              <OptimizedImage
                 src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                 alt="Diverse team of professionals collaborating on financial data analysis in a modern office, representing the impact of AI solutions in financial services"
-                fill
-                className="object-cover"
+                width={1000}
+                height={667}
+                responsive={true}
+                className="object-cover w-full h-full"
+                priority={true}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-fintech-900/70 via-fintech-800/50 to-transparent"></div>
               <div className="absolute inset-0 flex items-center p-8">

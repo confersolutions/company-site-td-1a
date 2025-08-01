@@ -41,26 +41,45 @@ export default function PostClosingCTA() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             {!ctaSubmitted ? (
               <form className="space-y-4" onSubmit={handleCtaSubmit}>
-                <input
-                  name="name"
-                  placeholder="Your Name"
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 rounded px-4 py-2 w-full"
-                  required
-                />
-                <input
-                  name="email"
-                  placeholder="Company Email"
-                  type="email"
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 rounded px-4 py-2 w-full"
-                  required
-                />
-                <input
-                  name="phone"
-                  placeholder="Phone Number"
-                  type="tel"
-                  className="bg-white/20 border-white/30 text-white placeholder:text-white/70 rounded px-4 py-2 w-full"
-                  required
-                />
+                <div>
+                  <label htmlFor="name" className="sr-only">Your Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your Name"
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70 rounded px-4 py-2 w-full"
+                    required
+                    aria-required="true"
+                    aria-label="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="sr-only">Company Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Company Email"
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70 rounded px-4 py-2 w-full"
+                    required
+                    aria-required="true"
+                    aria-label="Your company email address"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="sr-only">Phone Number</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Phone Number"
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70 rounded px-4 py-2 w-full"
+                    required
+                    aria-required="true"
+                    aria-label="Your phone number"
+                  />
+                </div>
                 <button
                   type="submit"
                   className="w-full bg-white text-fintech-700 hover:bg-gray-100 font-semibold rounded px-4 py-2 text-lg disabled:opacity-60"
