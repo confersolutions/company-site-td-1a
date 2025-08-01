@@ -82,7 +82,7 @@ export function HeroSection() {
             <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                alt="Financial technology dashboard"
+                alt="Modern financial analytics dashboard displaying real-time market data, performance metrics, and interactive charts, showcasing AI-powered business intelligence capabilities"
                 fill
                 className="object-cover"
                 priority

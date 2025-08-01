@@ -43,7 +43,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img src="/images/confer-logo.png" alt="Confer Solutions AI Logo" className="h-10 w-10 mr-2 rounded" />
+              <img src="/images/confer-logo.png" alt="Confer Solutions AI - AI-Powered Business Solutions" className="h-10 w-10 mr-2 rounded" />
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fintech-600 to-fintech-800 dark:from-fintech-400 dark:to-fintech-600">
                 Confer Solutions AI
               </span>
@@ -525,7 +525,9 @@ export function Header() {
               <Link href="/about/contact" className="text-foreground/80 hover:text-foreground transition-colors py-2" onClick={closeMobileMenu}>
                 Contact
               </Link>
-              <ConsultationButton className="w-full mt-2" onClick={closeMobileMenu}>Get a Demo</ConsultationButton>
+              <div onClick={closeMobileMenu}>
+                <ConsultationButton className="w-full mt-2">Get a Demo</ConsultationButton>
+              </div>
             </nav>
           </div>
         </div>

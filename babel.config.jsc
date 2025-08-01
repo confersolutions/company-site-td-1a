@@ -1,0 +1,6 @@
+// Next.js 14+ has built-in support for the new JSX transform
+// This empty config allows Next.js to handle JSX transformation
+module.exports = {
+  presets: ["next/babel"],
+  plugins: []
+}

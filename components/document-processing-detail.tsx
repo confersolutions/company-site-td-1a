@@ -78,7 +78,7 @@ export function DocumentProcessingDetail() {
               <div className="relative h-96 w-full rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Document processing workflow"
+                  alt="AI-powered document processing system analyzing mortgage documents with a floating LE (Loan Estimate) document preview showing successful validation"
                   fill
                   className="object-cover"
                 />

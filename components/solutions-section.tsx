@@ -13,6 +13,7 @@ export function SolutionsSection() {
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-blue-600 to-indigo-700",
       link: "/solutions/ai-mortgage-agent",
+      alt: "Friendly AI assistant helping with mortgage application process"
     },
     {
       icon: <Brain className="h-8 w-8 text-white" />,
@@ -23,6 +24,7 @@ export function SolutionsSection() {
         "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-purple-600 to-indigo-700",
       link: "/solutions/rag-chatbot",
+      alt: "Modern chatbot interface with conversation bubbles showing helpful responses"
     },
     {
       icon: <FileText className="h-8 w-8 text-white" />,
@@ -32,6 +34,7 @@ export function SolutionsSection() {
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-cyan-600 to-blue-700",
       link: "/solutions/document-processing",
+      alt: "Hands working with digital documents and data extraction visualization"
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-white" />,
@@ -41,6 +44,7 @@ export function SolutionsSection() {
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-green-600 to-emerald-700",
       link: "/solutions/risk-assessment",
+      alt: "Analytics dashboard displaying risk assessment metrics and trends"
     },
     {
       icon: <Database className="h-8 w-8 text-white" />,
@@ -49,6 +53,7 @@ export function SolutionsSection() {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-amber-600 to-orange-700",
       link: "/solutions/data-analytics",
+      alt: "Data visualization showing financial analytics and key performance indicators"
     },
     {
       icon: <ShieldCheck className="h-8 w-8 text-white" />,
@@ -58,6 +63,7 @@ export function SolutionsSection() {
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       color: "from-red-600 to-rose-700",
       link: "/solutions/fraud-detection",
+      alt: "Security shield with digital lock representing fraud prevention"
     },
   ]
 
@@ -77,7 +83,12 @@ export function SolutionsSection() {
           {solutions.map((solution, index) => (
             <div key={index} className="rounded-xl overflow-hidden shadow-lg card-hover">
               <div className="relative h-48">
-                <Image src={solution.image || "/placeholder.svg"} alt={solution.title} fill className="object-cover" />
+                <Image 
+                  src={solution.image || "/placeholder.svg"} 
+                  alt={solution.alt || solution.title} 
+                  fill 
+                  className="object-cover" 
+                />
                 <div className={`absolute inset-0 bg-gradient-to-r ${solution.color} opacity-80`}></div>
                 <div className="absolute inset-0 p-6 flex flex-col justify-between">
                   <div className="p-3 bg-white/20 backdrop-blur-sm rounded-lg w-fit">{solution.icon}</div>

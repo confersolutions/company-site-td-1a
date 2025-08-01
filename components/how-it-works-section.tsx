@@ -10,22 +10,22 @@ export function HowItWorksSection() {
       number: "01",
       title: "Consultation & Assessment",
       description: "We analyze your current processes and identify opportunities for AI-powered optimization.",
-      image:
-        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Business professionals in a meeting discussing strategy and data analysis"
     },
     {
       number: "02",
       title: "Custom Solution Development",
       description: "Our team develops tailored AI solutions that integrate seamlessly with your existing systems.",
-      image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Diverse team collaborating on software development and AI solution design"
     },
     {
       number: "03",
       title: "Implementation & Continuous Improvement",
       description: "We deploy, monitor, and continuously improve your AI solutions to maximize ROI.",
-      image:
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Team monitoring AI system performance on multiple computer screens"
     },
   ]
 
@@ -85,7 +85,7 @@ export function HowItWorksSection() {
                         <div className="relative h-64 w-full">
                           <Image
                             src={step.image || "/placeholder.svg"}
-                            alt={step.title}
+                            alt={step.alt || step.title}
                             fill
                             className="object-cover"
                           />

@@ -10,6 +10,7 @@ export function WhyConferSection() {
         "Streamline operations and reduce manual tasks with intelligent automation powered by cutting-edge AI technology.",
       image:
         "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      alt: "Close-up of a robotic arm assembling circuit boards, representing automation technology"
     },
     {
       icon: <Target className="h-10 w-10 text-fintech-600" />,
@@ -18,6 +19,7 @@ export function WhyConferSection() {
         "Enhance decision-making with precise data analysis and insights, minimizing errors and improving outcomes.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      alt: "Data analytics dashboard showing financial metrics and trends"
     },
     {
       icon: <Shield className="h-10 w-10 text-fintech-600" />,
@@ -26,6 +28,7 @@ export function WhyConferSection() {
         "Stay ahead of regulatory requirements with AI-powered compliance monitoring and risk assessment tools.",
       image:
         "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      alt: "Business professionals in a meeting discussing compliance documents"
     },
     {
       icon: <TrendingUp className="h-10 w-10 text-fintech-600" />,
@@ -33,6 +36,7 @@ export function WhyConferSection() {
       description:
         "Accelerate processes and response times, delivering faster service to your customers and stakeholders.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      alt: "Fast-moving digital data stream representing high-speed processing"
     },
   ]
 
@@ -53,7 +57,12 @@ export function WhyConferSection() {
           {benefits.map((benefit, index) => (
             <div key={index} className="bg-card rounded-xl overflow-hidden shadow-md border border-border card-hover">
               <div className="relative h-48 w-full">
-                <Image src={benefit.image || "/placeholder.svg"} alt={benefit.title} fill className="object-cover" />
+                <Image 
+                  src={benefit.image || "/placeholder.svg"} 
+                  alt={benefit.alt || benefit.title} 
+                  fill 
+                  className="object-cover" 
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 bg-white/90 p-2 rounded-lg">{benefit.icon}</div>
               </div>

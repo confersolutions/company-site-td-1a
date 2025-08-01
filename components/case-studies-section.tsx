@@ -50,7 +50,7 @@ export function CaseStudiesSection() {
             <div className="relative h-64 lg:h-auto">
               <Image
                 src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Business team analyzing data"
+                alt="Diverse team of professionals collaborating on financial data analysis in a modern office, representing the impact of AI solutions in financial services"
                 fill
                 className="object-cover"
               />
